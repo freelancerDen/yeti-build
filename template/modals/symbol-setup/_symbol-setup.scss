@@ -1,0 +1,74 @@
+.modal-symbol-setup {
+  width: 570px;
+  height: 300px;
+}
+
+.grid-selector {
+  display: flex;
+  align-items: start;
+}
+
+.leverege-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.max-position-wrap {
+  display: flex;
+  flex-direction: column;
+  .max-position-title {
+    margin-bottom: 5px;
+    text-align: start;
+  }
+}
+
+.fee-wrap {
+  display: flex;
+  justify-content: space-between;
+  .fee-text {
+    margin-bottom: 5px;
+  }
+}
+
+.margin-type-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.margin-type-title {
+  text-align: left;
+}
+
+.table-container {
+  border-radius: 6px;
+  margin-top: 10px;
+  margin-left: 45px;
+  .table-number {
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_top {
+      border-radius: 6px 0 0 0;
+    }
+    &_bottom {
+      border-radius: 0 0 0 6px;
+    }
+  }
+  .input-table {
+    height: 16px;
+  }
+  .table-cell {
+    width: 100%;
+    height: 14px;
+    border-radius: 0px;
+    &_top {
+      border-radius: 0 6px 0 0;
+    }
+    &_bottom {
+      border-radius: 0 0 6px 0;
+    }
+  }
+}

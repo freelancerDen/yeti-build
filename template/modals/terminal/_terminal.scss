@@ -1,0 +1,14 @@
+.modal-terminal {
+    width: 800px;
+    height: 500px;
+}
+
+.terminal-content {
+    background: #EAF2F5;
+    position: relative;
+    .button-non-press {
+        position: absolute;
+        bottom: 3px;
+        right: 3px;
+    }
+}

@@ -1,0 +1,16 @@
+.modal-reset {
+  width: 350px;
+  height: auto;
+
+  .modal-window-content {
+    margin: 0;
+    padding: 14px 30px 40px;
+  }
+}
+
+.reset-line-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 7px;
+}

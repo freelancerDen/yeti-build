@@ -1,0 +1,16 @@
+.runner-panel__grid {
+  display: grid;
+  grid-template-columns: 322px 322px 322px auto;
+  gap: 15px;
+}
+.runner-panel__subgrid {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+.runner-panel__box {
+  height: 500px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.02) inset;
+  background-color: rgba(234, 242, 245, 0.5);
+  border-radius: 4px;
+}/*# sourceMappingURL=runner-panel.css.map */

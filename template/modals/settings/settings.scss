@@ -1,0 +1,82 @@
+.modal-settings {
+  width: 612px;
+  height: auto;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 150px auto;
+  }
+
+  &__tab-panel {
+    display: grid;
+    align-content: space-between;
+    height: 100%;
+    min-height: 412px;
+    background-color: $super-light-blue-bg;
+  }
+
+  &__tab {
+    padding: 2px;
+    background-color: $background-inactive;
+    border: 1px solid $white;
+    cursor: pointer;
+
+    &.active {
+      background-color: #cddfe7;
+      box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15) inset;
+    }
+
+    & + & {
+      margin-top: -1px;
+    }
+  }
+
+  &__content-grid {
+    display: grid;
+    height: 100%;
+
+    &--binance-futures {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+      gap: 50px 30px;
+      padding: 25px 40px 25px 35px;
+    }
+
+    &--api,
+    &--hedge-mode {
+      gap: 15px;
+      align-content: center;
+      justify-content: center;
+      padding: 25px;
+    }
+
+    &--proxy {
+      grid-template-columns: 140px auto;
+      gap: 48px;
+      padding: 50px 40px 25px 35px;
+    }
+
+    &--demo-account {
+      gap: 112px;
+      align-content: end;
+      justify-content: center;
+      padding: 25px;
+    }
+
+    &--schedule {
+      padding: 15px 15px 20px;
+    }
+  }
+
+  &__content-subgrid {
+    display: grid;
+    gap: 10px;
+  }
+
+  &__content-footer {
+    display: grid;
+    grid-column: 1/-1;
+    justify-content: center;
+    margin-top: auto;
+  }
+}

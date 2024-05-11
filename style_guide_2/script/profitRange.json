@@ -1,0 +1,38 @@
+{
+  "position": true,
+  "leverage": "5x",
+  "cryptocurrency": "ETHUSDT",
+  "pnl_percentage": "+100.97%",
+  "total_profit": "+15430.3 USDT",
+  "account": "Real",
+  "runner": "Runner #174648",
+  "status": "Finished",
+  "strategy": "Reversal 5m",
+  "price": "2345.41 -> 2564.41 (1.4%)",
+  "pnl": "1456$ (+200.1%)",
+  "balance_pnl": "14.5%",
+  "rr": "2.6R",
+  "trailing": "1.5R (0.5%)",
+  "sl": "500$ (3.8%)",
+  "breakeven": "Done",
+  "tag": "Tag_namsdfsdfsdfsdfsdfsdfsdfsdfe",
+  "fee": "1.5$",
+  "margin": "1$",
+  "fr": "5.5$",
+  "create_duration": "2D 1h 43m 51s",
+  "start_duration": "12D 1h 43m 51s",
+  "create_time": {
+    "date": "21.04.24",
+    "time": "14:43:51"
+  },
+  "start_time": {
+    "date": "22.04.24",
+    "time": "14:43:51"
+  },
+  "end_time": {
+    "date": "24.04.24",
+    "time": "14:43:51"
+  },
+  "slogan": "“Bitcoin: Be your own bank.” - Satoshi Nakamoto",
+  "step": "3"
+}

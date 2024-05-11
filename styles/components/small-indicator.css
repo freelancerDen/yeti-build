@@ -1,0 +1,14 @@
+.small-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.small-indicator--green {
+  background: #00ffa3;
+}
+.small-indicator--red {
+  background: #d43449;
+}
+.small-indicator--grey {
+  background: #c0c9d8;
+}/*# sourceMappingURL=small-indicator.css.map */

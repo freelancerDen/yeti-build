@@ -1,0 +1,9 @@
+{
+  "fields": [
+    { "id": "preset01", "name": "Preset 01" },
+    { "id": "preset02", "name": "Preset 02" },
+    { "id": "preset03", "name": "Preset 03" },
+    { "id": "preset04", "name": "Preset 04" },
+    { "id": "preset05", "name": "Preset 05" }
+  ]
+}

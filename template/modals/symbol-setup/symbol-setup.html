@@ -1,0 +1,699 @@
+<div
+  class="modal-wrapper modal-symbol-setup modal-draggable d-none"
+  data-modal="symbol-setup">
+  <div class="modal-window-wrap">
+    <div class="modal-window-header modal-drag-drop">
+      <h4 class="modal-window-title text_regular text__color_dark-grey">
+        Symbol setup
+      </h4>
+      <img
+        class="modal-window-close-icon closeModalTrigger"
+        src="./style_guide_2/img/close.svg"
+        alt="close-cross" />
+    </div>
+
+    <div class="modal-window-content grid grid-sybol-setup">
+      <!-- titles -->
+      <p class="text_small text__color_dark-grey">Symbol</p>
+      <p></p>
+      <p class="text_small text__color_dark-grey">Tier</p>
+      <p class="text_small text__color_dark-grey">From</p>
+      <p class="text_small text__color_dark-grey">To</p>
+      <p class="text_small text__color_dark-grey">Margin</p>
+      <p class="text_small text__color_dark-grey">Maintenance</p>
+      <!-- selector -->
+      <div class="grid-selector">
+        <div class="selector-wrapper">
+          <div data-select="someSelect" class="selector selector_regular">
+            <div class="selector__header selector-arrow">
+              <div class="text-wrapp">
+                <p class="selector__inner-text text_large">Opusdt</p>
+              </div>
+            </div>
+
+            <div class="selector__dropdown">
+              <ul>
+                <li class="padding-contaier_xsmall">
+                  <p class="selector__dropdown-text text_large">ethusdt</p>
+                </li>
+                <li class="padding-contaier_xsmall">
+                  <p class="selector__dropdown-text text_large">btcusdt</p>
+                </li>
+                <li class="padding-contaier_xsmall">
+                  <p class="selector__dropdown-text text_large">maticusdt</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- leverege block -->
+      <div class="leverege-wrap grid-leverege">
+        <p class="text_small text__color_dark-grey">Leverage</p>
+        <div class="data-info-container data-info-container_tiny">
+          <div
+            class="input-container-wrap input-container-wrap_tiny"
+            data-input="input-field">
+            <div class="input-wrapp">
+              <input
+                class="input-field text_large text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="X"
+                data-min="1"
+                data-max="200" />
+            </div>
+            <div class="input-text-center input-border">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_large text__color_dark-grey">25</p>
+                <p class="text_small text__color_dark-grey">x</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- max position block -->
+      <div class="max-position-wrap grid-max-position">
+        <p class="text_small text__color_dark-grey max-position-title">
+          Max position size
+        </p>
+        <div class="data-info-container">
+          <div
+            class="input-container-wrap input-container-wrap_big"
+            data-input="input-field">
+            <div class="input-wrapp">
+              <input
+                class="input-field text_large text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_large text__color_dark-grey">49990</p>
+                <p class="text_small text__color_dark-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- fee block -->
+      <div class="fee-wrap grid-fee">
+        <div>
+          <p class="text_small text__color_dark-grey fee-text">Maker fee</p>
+          <div class="data-info-container data-info-container_tiny">
+            <div
+              class="input-container-wrap input-container-wrap_tiny"
+              data-input="input-field">
+              <div class="input-wrapp">
+                <input
+                  class="input-field text_large text__color_dark-grey"
+                  type="text"
+                  data-type="number"
+                  data-unit="%" />
+              </div>
+              <div class="input-text-center">
+                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                  <p class="text_large text__color_dark-grey">0.02</p>
+                  <p class="text_small text__color_dark-grey">%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="text_small text__color_dark-grey fee-text">Taker fee</p>
+          <div class="data-info-container data-info-container_tiny">
+            <div
+              class="input-container-wrap input-container-wrap_tiny"
+              data-input="input-field">
+              <div class="input-wrapp">
+                <input
+                  class="input-field text_large text__color_dark-grey"
+                  type="text"
+                  data-type="number"
+                  data-unit="%" />
+              </div>
+              <div class="input-text-center">
+                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                  <p class="text_large text__color_dark-grey">0.04</p>
+                  <p class="text_small text__color_dark-grey">%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- table -->
+      <div class="table-container grid-table">
+        <p
+          class="text_regular text__color_grey table-number table-number_top grid-table-num-1">
+          1
+        </p>
+        <p class="text_regular text__color_grey table-number grid-table-num-2">
+          2
+        </p>
+        <p class="text_regular text__color_grey table-number grid-table-num-3">
+          3
+        </p>
+        <p class="text_regular text__color_grey table-number grid-table-num-4">
+          4
+        </p>
+        <p class="text_regular text__color_grey table-number grid-table-num-5">
+          5
+        </p>
+        <p class="text_regular text__color_grey table-number grid-table-num-6">
+          6
+        </p>
+        <p
+          class="text_regular text__color_grey table-number table-number_bottom grid-table-num-7">
+          7
+        </p>
+        <!-- column from -->
+        <div class="data-info-container table-cell grid-col-from-1">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">0</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-from-2">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">10000</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-from-3">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">50000</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-from-4">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">600000</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-from-5">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">2000000</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-from-6">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">5000000</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-from-7">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey"></p>
+                <p class="text_small text__color_ligth-grey"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- column to -->
+        <div class="data-info-container table-cell grid-col-to-1">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">10000</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-to-2">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">50000</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-to-3">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">600000</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-to-4">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">2000000</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-to-5">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">5000000</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-to-6">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">7000000</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-to-7">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey"></p>
+                <p class="text_small text__color_ligth-grey"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- margin -->
+        <div class="data-info-container table-cell grid-col-margin-1">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="%" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">0.60</p>
+                <p class="text_small text__color_ligth-grey">%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-margin-2">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="%" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">1.00</p>
+                <p class="text_small text__color_ligth-grey">%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-margin-3">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="%" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">2.50</p>
+                <p class="text_small text__color_ligth-grey">%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-margin-4">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="%" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">5.00</p>
+                <p class="text_small text__color_ligth-grey">%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-margin-5">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="%" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">10.00</p>
+                <p class="text_small text__color_ligth-grey">%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-margin-6">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="%" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">12.50</p>
+                <p class="text_small text__color_ligth-grey">%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-margin-7">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="%" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey"></p>
+                <p class="text_small text__color_ligth-grey"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- column Maintenance -->
+        <div
+          class="data-info-container table-cell table-cell_top grid-col-Maintenance-1">
+          <div
+            class="input-container-wrap table-cell table-cell_top"
+            data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">0</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-Maintenance-2">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">40</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-Maintenance-3">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">790</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-Maintenance-4">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">15790</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-Maintenance-5">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">115790</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-info-container table-cell grid-col-Maintenance-6">
+          <div class="input-container-wrap table-cell" data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey">240790</p>
+                <p class="text_small text__color_ligth-grey">$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="data-info-container table-cell table-cell_bottom grid-col-Maintenance-7">
+          <div
+            class="input-container-wrap table-cell table-cell_bottom"
+            data-input="input-field">
+            <div class="input-wrapp hidden">
+              <input
+                class="input-field text_regular text__color_dark-grey"
+                type="text"
+                data-type="number"
+                data-unit="$" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                <p class="text_regular text__color_ligth-grey"></p>
+                <p class="text_small text__color_ligth-grey"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- margin type block -->
+      <div class="margin-type-wrap grid-margin-type">
+        <p class="text_small text__color_dark-grey margin-type-title">
+          Margin type
+        </p>
+        <div class="grid-selector">
+          <div class="selector-wrapper">
+            <div data-select="someSelect" class="selector selector_regular">
+              <div class="selector__header selector-arrow">
+                <div class="text-wrapp">
+                  <p class="selector__inner-text text_large">Crossed</p>
+                </div>
+              </div>
+
+              <div class="selector__dropdown">
+                <ul>
+                  <li class="padding-contaier_xsmall">
+                    <p class="selector__dropdown-text text_large">Isolated</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-window-button">
+      <button
+        class="button-modal button-modal-left text_small text__color_dark-grey">
+        Edit
+      </button>
+      <button
+        class="button-modal button-modal-right text_small text__color_dark-grey">
+        Save
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+.modal-risk-wrap {
+  width: 336px;
+  height: 572px;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+}
+.timer {
+  padding-top: 5px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.risk-text,
+.risk-text-2 {
+  text-align: left;
+}
+
+.switcher-inputs {
+  padding-left: 26px;
+}
+
+.grid-sl-position {
+  padding-left: 48px;
+}
+
+.grid-open-position {
+  padding-left: 31px;
+}
+
+.grid-balance-position {
+  padding-left: 58px;
+}
+
+.grid-risk-position {
+  padding-left: 74px;
+}
+
+.grid-btc-position {
+  padding-left: 10px;
+  .grid-time-box {
+    margin-left: 10px;
+  }
+}

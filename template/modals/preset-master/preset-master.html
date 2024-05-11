@@ -1,0 +1,69 @@
+<div class="modal-container d-none" data-modal="preset-master">
+  <div class="modal-overlay closeModalTrigger"></div>
+
+  <div class="modal-wrapper modal-preset-master">
+    <div class="modal-window-wrap">
+      <div class="modal-window-header">
+        <h4 class="modal-window-title text_regular text__color_grey">
+          Preset Master
+        </h4>
+        <img
+          class="modal-window-close-icon closeModalTrigger"
+          src="./style_guide_2/img/close.svg"
+          alt="close-cross" />
+      </div>
+      <div class="modal-preset-master__grid">
+        <div class="modal-preset-master__subgrid presetMasterContainer"></div>
+
+        <div class="modal-preset-master__row">
+          <div
+            class="input-container-wrap input-container-wrap_large-2"
+            data-input="input-field">
+            <div class="input-wrapp">
+              <input
+                class="input-field text_large text__color_dark-grey"
+                type="text" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="true">
+                <p
+                  class="text_large text__color_dark-grey createNewPresetInput"></p>
+                <p class="text_regular text__color_grey"></p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="button-new button-new-plus button-non-press text_large btn-shadow btn-plus createNewPresetButton">
+            +
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<template id="presetMasterRowTemplate">
+  <div class="modal-preset-master__row presetMasterRow" id="">
+    <div
+      class="input-container-wrap input-container-wrap_large-2"
+      data-input="input-field">
+      <div class="input-wrapp">
+        <input
+          class="input-field text_large text__color_dark-grey"
+          type="text" />
+      </div>
+      <div class="input-text-center">
+        <div class="data-wrap" data-type="dynamic" data-state="ture">
+          <p class="text_large text__color_dark-grey presetMasterName">
+            Preset 01
+          </p>
+          <p class="text_large text__color_dark-grey"></p>
+        </div>
+      </div>
+    </div>
+    <button
+      class="button-new button-new-small button-non-press text_large btn-shadow removePresetButton">
+      X
+    </button>
+  </div>
+</template>

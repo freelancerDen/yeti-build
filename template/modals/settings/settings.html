@@ -1,0 +1,1658 @@
+<div
+  class="modal-wrapper modal-settings modal-draggable d-none"
+  data-modal="settings">
+  <div class="modal-window-wrap">
+    <div class="modal-window-header modal-drag-drop">
+      <h4 class="modal-window-title text_regular text__color_dark-grey">
+        Yeti settings
+      </h4>
+
+      <img
+        class="modal-window-close-icon closeModalTrigger"
+        src="./style_guide_2/img/close.svg"
+        alt="close-cross" />
+    </div>
+
+    <div class="modal-settings__grid">
+      <div class="modal-settings__tab-panel" role="tablist">
+        <div class="modal-settings__tabs">
+          <div
+            class="modal-settings__tab text text-center text_regular text__color_dark-grey active"
+            id="binance-futures-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#binance-futures"
+            type="button"
+            role="tab"
+            aria-controls="binance-futures"
+            aria-selected="true">
+            Binance Futures
+          </div>
+
+          <div
+            class="modal-settings__tab text text-center text_regular text__color_dark-grey"
+            id="bybit-v5-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#bybit-v5"
+            type="button"
+            role="tab"
+            aria-controls="bybit-v5"
+            aria-selected="true">
+            Bybit v5
+          </div>
+
+          <div
+            class="modal-settings__tab text text-center text_regular text__color_dark-grey"
+            id="okx-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#okx"
+            type="button"
+            role="tab"
+            aria-controls="okx"
+            aria-selected="true">
+            Okx
+          </div>
+
+          <div
+            class="modal-settings__tab text text-center text_regular text__color_dark-grey"
+            id="apex-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#apex"
+            type="button"
+            role="tab"
+            aria-controls="apex"
+            aria-selected="true">
+            Apex
+          </div>
+
+          <div
+            class="modal-settings__tab text text-center text_regular text__color_dark-grey"
+            id="bingx-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#bingx"
+            type="button"
+            role="tab"
+            aria-controls="bingx"
+            aria-selected="true">
+            Bingx
+          </div>
+        </div>
+
+        <div class="modal-settings__tabs">
+          <div
+            class="modal-settings__tab text text-center text_regular text__color_dark-grey"
+            id="hedge-mode-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#hedge-mode"
+            type="button"
+            role="tab"
+            aria-controls="hedge-mode"
+            aria-selected="true">
+            Hedge mode
+          </div>
+
+          <div
+            class="modal-settings__tab text text-center text_regular text__color_dark-grey"
+            id="api-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#api"
+            type="button"
+            role="tab"
+            aria-controls="api"
+            aria-selected="true">
+            API
+          </div>
+
+          <div
+            class="modal-settings__tab text text-center text_regular text__color_dark-grey"
+            id="schedule-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#schedule"
+            type="button"
+            role="tab"
+            aria-controls="schedule"
+            aria-selected="true">
+            Schedule
+          </div>
+
+          <div
+            class="modal-settings__tab text text-center text_regular text__color_dark-grey"
+            id="demo-account-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#demo-account"
+            type="button"
+            role="tab"
+            aria-controls="demo-account"
+            aria-selected="true">
+            Demo account
+          </div>
+
+          <div
+            class="modal-settings__tab text text-center text_regular text__color_dark-grey"
+            id="proxy-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#proxy"
+            type="button"
+            role="tab"
+            aria-controls="proxy"
+            aria-selected="true">
+            Proxy
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-settings__content tab-content">
+        <div
+          class="tab-pane h-100 show active"
+          id="binance-futures"
+          role="tabpanel"
+          aria-labelledby="binance-futures-tab"
+          tabindex="0">
+          <div
+            class="modal-settings__content-grid modal-settings__content-grid--binance-futures">
+            <div class="modal-settings__content-subgrid">
+              <div>
+                <div class="text text_small text__color_dark-grey mb-1">
+                  Stream connector libary
+                </div>
+
+                <div class="handler-box">
+                  <div class="selector-wrapper">
+                    <div
+                      data-type="dynamic"
+                      data-state="ture"
+                      class="selector selector_regular">
+                      <div class="selector__header selector-arrow inactive">
+                        <div class="text-wrapp">
+                          <p class="selector__inner-text text_regular">
+                            Native (.Net)
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="selector__dropdown">
+                        <ul>
+                          <li class="padding-contaier_xsmall">
+                            <p class="selector__dropdown-text text_regular">
+                              Websocket4Net
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="text text_small text__color_dark-grey mb-1">
+                  Real-time trades source
+                </div>
+
+                <div class="handler-box">
+                  <div class="selector-wrapper">
+                    <div
+                      data-type="dynamic"
+                      data-state="ture"
+                      class="selector selector_regular">
+                      <div class="selector__header selector-arrow inactive">
+                        <div class="text-wrapp">
+                          <p class="selector__inner-text text_regular">
+                            Trades
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="selector__dropdown">
+                        <ul>
+                          <li class="padding-contaier_xsmall">
+                            <p class="selector__dropdown-text text_regular">
+                              Candle
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="text text_small text__color_dark-grey mb-1">
+                  Connection
+                </div>
+
+                <div class="handler-box">
+                  <div class="selector-wrapper">
+                    <div
+                      data-type="dynamic"
+                      data-state="ture"
+                      class="selector selector_regular">
+                      <div class="selector__header selector-arrow inactive">
+                        <div class="text-wrapp">
+                          <p class="selector__inner-text text_regular">Live</p>
+                        </div>
+                      </div>
+
+                      <div class="selector__dropdown">
+                        <ul>
+                          <li class="padding-contaier_xsmall">
+                            <p class="selector__dropdown-text text_regular">
+                              Live
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="text text_small text__color_dark-grey mb-1">
+                  API key
+                </div>
+
+                <div class="switcher-wrap switcher-wrap_gap-medium">
+                  <div class="handler-box">
+                    <div
+                      class="input-container-wrap input-container-wrap_big"
+                      data-input="input-field">
+                      <div class="input-wrapp">
+                        <input
+                          class="input-field text_large text__color_dark-grey hidden"
+                          type="text" />
+                      </div>
+                      <div class="input-text-center">
+                        <div
+                          class="data-wrap"
+                          data-type="dynamic"
+                          data-state="true">
+                          <p class="text_large text__color_ligth-grey">*****</p>
+                          <p class="text_small text__color_ligth-grey"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="table-switch">
+                    <input
+                      class="table-check-input"
+                      type="checkbox"
+                      role="switch" />
+                    <button
+                      class="data-z-index-top table-switcher size-small text_large text__color_dark-grey btn-active"
+                      data-state="false">
+                      L
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="text text_small text__color_dark-grey mb-1">
+                  Secret key
+                </div>
+
+                <div class="switcher-wrap switcher-wrap_gap-medium">
+                  <div class="handler-box">
+                    <div
+                      class="input-container-wrap input-container-wrap_big"
+                      data-input="input-field">
+                      <div class="input-wrapp">
+                        <input
+                          class="input-field text_large text__color_dark-grey"
+                          type="text" />
+                      </div>
+                      <div class="input-text-center">
+                        <div
+                          class="data-wrap"
+                          data-type="dynamic"
+                          data-state="true">
+                          <p class="text_large text__color_dark-grey">
+                            G56@837dkek
+                          </p>
+                          <p class="text_small text__color_dark-grey"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="table-switch">
+                    <input
+                      class="table-check-input"
+                      type="checkbox"
+                      role="switch"
+                      checked />
+                    <button
+                      class="data-z-index-top table-switcher size-small text_large text__color_dark-grey"
+                      data-state="true">
+                      L
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-settings__content-subgrid">
+              <div class="info-messages-panel">
+                <div class="info-messages-panel__content">
+                  <p class="text text_regular text__color_dark-grey">
+                    Status: Connected
+                  </p>
+                  <p class="text text_regular text__color_dark-grey">
+                    Ping: 21 ms
+                  </p>
+                  <p class="text text_regular text__color_dark-grey">
+                    Round-trip time: 261 ms
+                  </p>
+                  <p class="text text_regular text__color_dark-grey">
+                    Uptime: 2 days 14:29
+                  </p>
+                  <p class="text text_regular text__color_dark-grey">
+                    IP: 195.234.78.66
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div class="text text-center text_small text__color_dark-grey">
+                  Orders Limitation in a second
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <div
+                    class="input-container-wrap input-container-wrap_tiny"
+                    data-input="input-field">
+                    <div class="input-wrapp">
+                      <input
+                        class="input-field text_large text__color_dark-grey"
+                        type="text"
+                        data-type="number"
+                        data-unit="date" />
+                    </div>
+                    <div class="input-text-center">
+                      <div
+                        class="data-wrap"
+                        data-type="dynamic"
+                        data-state="ture">
+                        <p class="text_large text__color_dark-grey">5</p>
+                        <p class="text_small text__color_dark-grey"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-settings__content-footer">
+              <button
+                class="button-new button-new_large text_regular btn-active"
+                data-type="btn"
+                data-state-text="Connect">
+                Disconnect
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane h-100"
+          id="bybit-v5"
+          role="tabpanel"
+          aria-labelledby="bybit-v5-tab"
+          tabindex="0">
+          <div class="modal-settings__content-grid">bybit-v5</div>
+        </div>
+        <div
+          class="tab-pane h-100"
+          id="okx"
+          role="tabpanel"
+          aria-labelledby="okx-tab"
+          tabindex="0">
+          <div class="modal-settings__content-grid">okx</div>
+        </div>
+        <div
+          class="tab-pane h-100"
+          id="apex"
+          role="tabpanel"
+          aria-labelledby="apex-tab"
+          tabindex="0">
+          <div class="modal-settings__content-grid">apex</div>
+        </div>
+        <div
+          class="tab-pane h-100"
+          id="bingx"
+          role="tabpanel"
+          aria-labelledby="bingx-tab"
+          tabindex="0">
+          <div class="modal-settings__content-grid">bingx</div>
+        </div>
+        <div
+          class="tab-pane h-100"
+          id="hedge-mode"
+          role="tabpanel"
+          aria-labelledby="hedge-mode-tab"
+          tabindex="0">
+          <div
+            class="modal-settings__content-grid modal-settings__content-grid--hedge-mode">
+            <div
+              class="d-flex align-items-center justify-content-between gap-3">
+              <p class="text text_regular text__color_dark-grey">Hedge mode</p>
+
+              <button
+                class="button-new button-new_large text_regular"
+                data-type="btn"
+                disabled>
+                Disable
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane h-100"
+          id="api"
+          role="tabpanel"
+          aria-labelledby="api-tab"
+          tabindex="0">
+          <div
+            class="modal-settings__content-grid modal-settings__content-grid--api">
+            <div
+              class="d-flex align-items-center justify-content-between gap-3">
+              <p class="text text_regular text__color_dark-grey">
+                Yeti.trade API
+              </p>
+
+              <button
+                class="button-new button-new_large text_regular btn-active"
+                data-type="btn"
+                data-state-text="Connect">
+                Disconnect
+              </button>
+            </div>
+            <div
+              class="d-flex align-items-center justify-content-between gap-3">
+              <p class="text text_regular text__color_dark-grey">
+                Quantower API
+              </p>
+
+              <button
+                class="button-new button-new_large text_regular"
+                data-type="btn"
+                data-state-text="Disconnect">
+                Connect
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane h-100"
+          id="schedule"
+          role="tabpanel"
+          aria-labelledby="schedule-tab"
+          tabindex="0">
+          <div
+            class="modal-settings__content-grid modal-settings__content-grid--schedule">
+            <div class="schedule-table">
+              <div class="schedule-table__header">
+                <div
+                  class="text text-center text_regular text__color_grey text-uppercase">
+                  SUN
+                </div>
+                <div
+                  class="text text-center text_regular text__color_grey text-uppercase">
+                  MON
+                </div>
+                <div
+                  class="text text-center text_regular text__color_grey text-uppercase">
+                  TUE
+                </div>
+                <div
+                  class="text text-center text_regular text__color_grey text-uppercase">
+                  WED
+                </div>
+                <div
+                  class="text text-center text_regular text__color_grey text-uppercase">
+                  TRU
+                </div>
+                <div
+                  class="text text-center text_regular text__color_grey text-uppercase">
+                  FRI
+                </div>
+                <div
+                  class="text text-center text_regular text__color_grey text-uppercase">
+                  SAT
+                </div>
+              </div>
+
+              <div class="schedule-table__body">
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  00:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  00:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  00:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  00:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  00:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  00:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  00:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  01:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  01:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  01:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  01:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  01:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  01:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  01:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  02:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  02:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  02:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  02:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  02:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  02:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  02:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  03:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  03:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  03:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  03:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  03:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  03:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  03:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  04:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  04:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  04:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  04:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  04:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  04:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  04:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  05:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  05:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  05:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  05:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  05:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  05:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  05:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  06:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  06:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  06:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  06:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  06:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  06:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  06:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  07:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  07:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  07:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  07:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  07:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  07:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  07:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  08:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  08:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  08:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  08:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  08:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  08:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  08:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  09:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  09:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  09:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  09:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  09:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  09:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  09:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  10:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  10:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  10:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  10:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  10:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  10:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  10:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  11:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  11:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  11:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  11:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  11:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  11:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  11:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  12:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  12:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  12:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  12:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  12:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  12:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  12:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  13:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  13:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  13:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  13:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  13:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  13:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  13:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  14:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  14:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  14:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  14:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  14:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  14:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  14:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  15:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  15:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  15:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  15:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  15:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  15:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  15:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  16:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  16:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  16:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  16:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  16:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  16:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  16:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  17:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  17:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  17:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  17:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  17:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  17:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  17:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  18:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  18:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  18:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  18:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  18:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  18:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  18:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  19:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  19:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  19:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  19:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  19:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  19:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  19:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  20:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  20:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  20:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  20:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  20:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  20:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  20:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  21:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  21:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  21:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  21:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  21:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  21:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  21:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  22:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  22:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  22:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  22:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  22:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  22:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  22:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  23:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  23:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  23:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  23:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  23:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  23:00
+                </button>
+                <button
+                  class="schedule-table__button button-new text text-center text_regular text__color_dark-grey"
+                  data-type="btn">
+                  23:00
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane h-100"
+          id="demo-account"
+          role="tabpanel"
+          aria-labelledby="demo-account-tab"
+          tabindex="0">
+          <div
+            class="modal-settings__content-grid modal-settings__content-grid--demo-account">
+            <div class="modal-settings__content-subgrid">
+              <div
+                class="d-flex align-items-center justify-content-between gap-5">
+                <p class="text text_regular text__color_dark-grey">
+                  Initiation balance
+                </p>
+
+                <div
+                  class="input-container-wrap input-container-wrap_big"
+                  data-input="input-field">
+                  <div class="input-wrapp hidden">
+                    <input
+                      class="input-field text_large text__color_dark-grey"
+                      type="text"
+                      data-type="number"
+                      data-unit="$" />
+                  </div>
+                  <div class="input-text-center">
+                    <div
+                      class="data-wrap"
+                      data-type="dynamic"
+                      data-state="ture">
+                      <p class="text_large text__color_ligth-grey">10000</p>
+                      <p class="text_small text__color_ligth-grey">$</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="d-flex align-items-center justify-content-between gap-5">
+                <p class="text text_regular text__color_dark-grey">
+                  Initiation date
+                </p>
+
+                <div
+                  class="input-container-wrap input-container-wrap_big"
+                  data-input="input-field">
+                  <div class="input-wrapp hidden">
+                    <input
+                      class="input-field text_large text__color_dark-grey"
+                      type="text"
+                      data-type="date" />
+                  </div>
+                  <div class="input-text-center">
+                    <div
+                      class="data-wrap"
+                      data-type="dynamic"
+                      data-state="ture">
+                      <p class="text_large text__color_ligth-grey">
+                        27.03.2024
+                      </p>
+                      <p class="text_small text__color_ligth-grey"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="d-flex align-items-center justify-content-between gap-5">
+                <p class="text text_regular text__color_dark-grey">
+                  Current amount
+                </p>
+
+                <div
+                  class="input-container-wrap input-container-wrap_big"
+                  data-input="input-field">
+                  <div class="input-wrapp hidden">
+                    <input
+                      class="input-field text_large text__color_dark-grey"
+                      type="text"
+                      data-type="number"
+                      data-unit="$" />
+                  </div>
+                  <div class="input-text-center">
+                    <div
+                      class="data-wrap"
+                      data-type="dynamic"
+                      data-state="ture">
+                      <p class="text_large text__color_ligth-grey">14837</p>
+                      <p class="text_small text__color_ligth-grey">$</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+              <button
+                class="button-non-press button-new_large text_regular"
+                data-type="btn"
+                data-modal-name="reset">
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane h-100"
+          id="proxy"
+          role="tabpanel"
+          aria-labelledby="proxy-tab"
+          tabindex="0">
+          <div
+            class="modal-settings__content-grid modal-settings__content-grid--proxy">
+            <div class="modal-settings__content-subgrid">
+              <div>
+                <div class="text text_small text__color_dark-grey mb-1">
+                  Type of proxy
+                </div>
+
+                <div class="handler-box">
+                  <div class="selector-wrapper">
+                    <div
+                      data-type="dynamic"
+                      data-state="ture"
+                      class="selector selector_regular">
+                      <div class="selector__header selector-arrow">
+                        <div class="text-wrapp">
+                          <p class="selector__inner-text text_regular">HTTP</p>
+                        </div>
+                      </div>
+
+                      <div class="selector__dropdown">
+                        <ul>
+                          <li class="padding-contaier_xsmall">
+                            <p class="selector__dropdown-text text_regular">
+                              SOCKS 4
+                            </p>
+                          </li>
+                          <li class="padding-contaier_xsmall">
+                            <p class="selector__dropdown-text text_regular">
+                              SOCKS 5
+                            </p>
+                          </li>
+                          <li class="padding-contaier_xsmall">
+                            <p class="selector__dropdown-text text_regular">
+                              None
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="text text_small text__color_dark-grey mb-1">
+                  Proxy Host
+                </div>
+
+                <div
+                  class="input-container-wrap input-container-wrap_big"
+                  data-input="input-field">
+                  <div class="input-wrapp">
+                    <input
+                      class="input-field text_large text__color_dark-grey"
+                      type="text"
+                      data-type="ip" />
+                  </div>
+                  <div class="input-text-center">
+                    <div
+                      class="data-wrap"
+                      data-type="dynamic"
+                      data-state="ture">
+                      <p class="text_large text__color_dark-grey">
+                        154.195.105.143
+                      </p>
+                      <p class="text_small text__color_dark-grey"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="text text_small text__color_dark-grey mb-1">
+                  Proxy port
+                </div>
+
+                <div
+                  class="input-container-wrap input-container-wrap_big"
+                  data-input="input-field">
+                  <div class="input-wrapp">
+                    <input
+                      class="input-field text_large text__color_dark-grey"
+                      type="text"
+                      data-type="number"
+                      data-unit="int" />
+                  </div>
+                  <div class="input-text-center">
+                    <div
+                      class="data-wrap"
+                      data-type="dynamic"
+                      data-state="ture">
+                      <p class="text_large text__color_dark-grey">64702</p>
+                      <p class="text_small text__color_dark-grey"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="text text_small text__color_dark-grey mb-1">
+                  Proxy user
+                </div>
+
+                <div
+                  class="input-container-wrap input-container-wrap_big"
+                  data-input="input-field">
+                  <div class="input-wrapp">
+                    <input
+                      class="input-field text_large text__color_dark-grey"
+                      type="text" />
+                  </div>
+                  <div class="input-text-center">
+                    <div
+                      class="data-wrap"
+                      data-type="dynamic"
+                      data-state="ture">
+                      <p class="text_large text__color_dark-grey">8LQEPPPL</p>
+                      <p class="text_small text__color_dark-grey"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="text text_small text__color_dark-grey mb-1">
+                  Proxy password
+                </div>
+
+                <div
+                  class="input-container-wrap input-container-wrap_big"
+                  data-input="input-field">
+                  <div class="input-wrapp">
+                    <input
+                      class="input-field text_large text__color_dark-grey"
+                      type="text" />
+                  </div>
+                  <div class="input-text-center">
+                    <div
+                      class="data-wrap"
+                      data-type="dynamic"
+                      data-state="ture">
+                      <p class="text_large text__color_dark-grey">ewsdjh28</p>
+                      <p class="text_small text__color_dark-grey"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-settings__content-subgrid">
+              <div class="info-messages-panel">
+                <div class="info-messages-panel__content">
+                  <p class="text text_regular text__color_dark-grey">
+                    Proxy: connected
+                  </p>
+                  <p class="text text_regular text__color_dark-grey">
+                    IP: 195.234.78.66
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-settings__content-footer">
+              <button
+                class="button-new button-new_large text_regular btn-active"
+                data-type="btn"
+                data-state-text="Connect">
+                Disconnect
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

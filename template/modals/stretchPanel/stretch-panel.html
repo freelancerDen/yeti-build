@@ -1,0 +1,3045 @@
+<link rel="stylesheet" href="../../../styles/style.css" />
+
+<section class="section__stretch-panel stretch-panel" data-panel-id>
+  <div class="stretch-panel__body">
+    <div class="stretch-panel__header">
+      <div class="stretch-panel__header-logo d-flex align-items-center">
+        <div class="indicator_wrapper" data-modal-name="profit-range">
+          <!-- 
+              This div serves as a wrapper for the status indicator.
+              It may contain additional classes or attributes for styling or functionality.
+              Inside this wrapper, there's a commented-out section representing a status indicator for the "working" status.
+              This section includes:
+              - A div with the class "indicator-wrap me-3", which may have additional classes for styling purposes.
+              - Two data attributes:
+                - "data-name" with the value "working", representing the name of the status.
+                - "data-status" with the value "working", representing the status itself.
+              - Inside the indicator-wrap div, there's a div with the class "status-indicator status-indicator_normal status-indicator_green".
+              This div may contain additional classes for styling the status indicator based on its state or type.
+            -->
+          <!-- <div class="indicator-wrap me-3" data-name="working" data-status="working">
+            <div class="status-indicator status-indicator_normal status-indicator_green"></div>
+          </div> -->
+        </div>
+
+        <p class="text_large-3 text__weight_bold me-2">Limmiter</p>
+        <sub class="text_regular text_family_inconsolata">#54301</sub>
+      </div>
+      <div class="stretch-panel__header-info d-flex justify-content-center">
+        <!-- 
+          This div serves as a wrapper for the info line.
+          It contains three info line boxes representing different values.
+          Each info line box consists of:
+          - A div with the class "info-line-box" and a data attribute "data-value" indicating the field type.
+          - Inside the info-line-box div, there are two paragraphs:
+            - The first paragraph with the class "info-line-box_data" displays the numerical value.
+            - The second paragraph with the class "info-line-box_text" displays the unit or symbol.
+          The values displayed in the info line boxes are placeholders initially.
+
+          The initInfoLine function initializes the info line with provided values.
+          It takes three arguments representing the values for the three info line boxes.
+          The function finds the parent element with the class 'stretch-panel-info-line-wrapper'.
+          If the parent element is found, it updates the text content of each info line box with the provided values.
+          If a value is negative, it applies additional styling by adding the class 'text__color_red-info'.
+        -->
+        <div class="info-line-wrapper stretch-panel-info-line-wrapper">
+          <div class="info-line-box" data-value="data-field">
+            <p class="info-line-box_data text_huge text__color_dark-blue">0</p>
+            <p class="info-line-box_text text_regular text__color_dark-blue">
+              R
+            </p>
+          </div>
+          <div
+            class="info-line-box info-line-box_middle"
+            data-value="data-field">
+            <p class="info-line-box_data text_huge text__color_dark-blue">0</p>
+            <p class="info-line-box_text text_regular text__color_dark-blue">
+              %
+            </p>
+          </div>
+          <div class="info-line-box" data-value="data-field">
+            <p class="info-line-box_data text_huge text__color_dark-blue">0</p>
+            <p class="info-line-box_text text_regular text__color_dark-blue">
+              $
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="stretch-panel__header-actions pe-2 d-flex align-items-center justify-content-end gap-2">
+        <div class="status_wrapper">
+          <!-- 
+    This div serves as a wrapper for displaying status information.
+    It will contain dynamically generated status blocks based on the provided status and message.
+
+    The displayStatus function dynamically generates HTML content for the status block.
+    It takes two arguments: status and message.
+    - The status argument represents the status configuration object (e.g., Success, Warning, Error, Disabled).
+    - The message argument represents the message to be displayed within the status block.
+
+    The status block consists of:
+    - A div with the class "conection-block-wrap" and additional classes based on the status configuration.
+    - Inside the conection-block-wrap div, there are two child elements:
+      1. A div with the class "conection-image-wrap" containing an SVG element representing the status icon.
+      2. A div with the class "conection-text-wrap" containing a paragraph displaying the message.
+    The SVG element's appearance and message text color are determined by the status configuration.
+  -->
+        </div>
+        <div
+          class="stretch-panel__header-actions__block d-flex align-items-center">
+          <span class="indicator green"></span>
+          <button
+            class="button-non-press button-non-press-normal text_regular button-non-press_save-small"
+            data-type="btn"
+            data-modal-name="preset-save">
+            Save
+          </button>
+        </div>
+
+        <div
+          class="stretch-panel__header-actions__block d-flex gap-2 align-items-center">
+          <!-- Hide StretchPanel (stretchPanelActions.js) -->
+          <button type="button" class="button-new button-normalize button-hide">
+            <img
+              src="./style_guide_2/img/stretchPanel/icon-button-hide.svg"
+              alt="Icon" />
+          </button>
+          <!-- Close StretchPanel (stretchPanelActions.js) -->
+          <button
+            type="button"
+            class="button-new button-normalize"
+            data-modal-name="close-limit">
+            <img
+              src="./style_guide_2/img/stretchPanel/icon-button-close.svg"
+              alt="Icon" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="stretch-panel__wrapper">
+      <div class="stretch-panel__content content-stretch-panel grid-stretch-panel">
+        <div class="content-stretch-panel__side side-left side-left-cols-2">
+          <div class="side-left-col">
+            <div class="block-wrapper block-account">
+              <div class="block-container-wrap">
+                <div class="block-header-wrap overflow-hidden">
+                  <div class="button-new-wrap button-new-wrap_full btn-shadow">
+                    <button class="button-group button-group_block-button_1 text_regular" data-type="btn">
+                      Real account
+                    </button>
+                    <button class="button-group button-group_block-button_2 text_regular btn-active" data-type="btn">
+                      Demo account
+                    </button>
+                  </div>
+                  <!-- <div class="block-header-title">other title</div> -->
+                </div>
+                <div class="block-content-wrap">
+                  <div class="block-content-wrap__wrapper">
+                    <div class="line">
+                   
+                      <div class="grid grid-cols-2 line-grid align-items-end">
+                        <div>
+                          <div class="text text_regular text__color_dark-grey block-label">
+                            Account 
+                          </div>
+                          <div class="handler-box">
+                            <div class="selector-wrapper">
+                              <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                                <div class="selector__header selector-arrow">
+                                  <div class="text-wrapp">
+                                    <p class="selector__inner-text text_large" data-move="false">Binance Futures</p>
+                                  </div>
+                                </div>
+                    
+                                <div class="selector__dropdown">
+                                  <ul>
+                                    <li class="padding-contaier_xsmall">
+                                      <p class="selector__dropdown-text text_large">Disable</p>
+                                    </li>
+                                    <li class="padding-contaier_xsmall">
+                                      <p class="selector__dropdown-text text_large">Balance $</p>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                       
+                        <div class="data-info-container data-info-container_medium">
+                          <div class="input-container-wrap input-container-wrap_normal" data-input="input-field">
+                            <div class="input-wrapp hidden">
+                              <input class="input-field text_large text__color_dark-grey" type="text">
+                            </div>
+                            <div class="input-text-center input-border input-disabled">
+                              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                <p class="text_large text__color_grey">2501</p>
+                                <p class="text_small text__color_grey">$</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <div class="grid grid-cols-2 line-grid align-items-end">
+                        <div>
+                          <div class="text text_regular text__color_dark-grey block-label">
+                            Symbol 
+                          </div>
+                          <div class="handler-box">
+                            <div class="selector-wrapper">
+                              <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                                <div class="selector__header selector-arrow">
+                                  <div class="text-wrapp">
+                                    <p class="selector__inner-text text_large" data-move="false">FORTHUSDT      </p>
+                                  </div>
+                                </div>
+                    
+                                <div class="selector__dropdown">
+                                  <ul>
+                                    <li class="padding-contaier_xsmall">
+                                      <p class="selector__dropdown-text text_large">Disable</p>
+                                    </li>
+                                    <li class="padding-contaier_xsmall">
+                                      <p class="selector__dropdown-text text_large">Balance $</p>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="text text_regular text__color_dark-grey block-label text-center">
+                            Current price 
+                          </div>
+                          <div class="data-info-container data-info-container_medium">
+                            <div class="input-container-wrap input-container-wrap_normal" data-input="input-field">
+                              <div class="input-wrapp hidden">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center input-border input-disabled">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_grey">0.923434</p>
+                                  <p class="text_small text__color_grey"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <div class="grid grid-cols-2 line-grid align-items-end">
+                        <div>
+                          <div class="text text_regular text__color_dark-grey block-label text-center">
+                            Direction 
+                          </div>
+                          <div class="button-new-wrap button-new-wrap_normal btn-shadow">
+                            <button class="button-group button-group_normal-1 text_large"  data-type="btn">
+                              Long
+                            </button>
+                            <button class="button-group button-group_normal-2 text_large btn-active"  data-type="btn">
+                              Short
+                            </button>
+                          </div>
+                        </div>
+                        <div class="ms-auto">
+                          
+                          <div class="text text_regular text__color_dark-grey block-label text-center">
+                            Leverage 
+                          </div>
+                          <div class="data-info-container data-info-container_medium">
+                            <div class="input-container-wrap input-container-wrap_tiny left" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_left hidden">
+                                <input class="input-field input-field_left text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center input-border-left input-disabled">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_grey">25</p>
+                                  <p class="text_small text__color_grey">x</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="input-container-wrap input-container-wrap_tiny right" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_right hidden">
+                                <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center input-border-right input-disabled">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_grey">25.1</p>
+                                  <p class="text_small text__color_grey">k</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line">
+                   
+                      <div class="grid">
+                        <div>
+                          <div class="text text_regular text__color_dark-grey block-label">
+                            Preset 
+                          </div>
+                          <div class="selector-wrapper w-100">
+                            <div data-select="someSelect" class="selector selector_full selector_big">
+                              <div class="selector__header header-big">
+                                <div class="text-wrapp-big">
+                                  <p class="selector__inner-text text_large" data-move="true">
+                                    test 2222222222222222222223423234234234234234
+                                  </p>
+                                </div>
+                              </div>
+                
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 222222222222222222222
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 3</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                       
+                      </div>
+                    </div>
+                    <div class="line">
+                   
+                      <div class="grid">
+                        <div>
+                          <div class="text text_regular text__color_dark-grey block-label">
+                            Tag 
+                          </div>
+                          <div class="selector-wrapper w-100">
+                            <div data-select="someSelect" class="selector selector_full selector_big">
+                              <div class="selector__header header-big">
+                                <div class="text-wrapp-big">
+                                  <p class="selector__inner-text text_large" data-move="true">
+                                    test 2222222222222222222223423234234234234234
+                                  </p>
+                                </div>
+                              </div>
+                
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 222222222222222222222
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 3</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                       
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block-wrapper block-condition-settings">
+              <div class="block-container-wrap">
+                <div class="block-header-wrap overflow-hidden">
+                 
+                  <div class="block-header-title text_small text__color_grey">
+                    Condition settings
+                  </div>
+                  <!-- <div class="block-header-title">other title</div> -->
+                </div>
+                <div class="block-content-wrap">
+                  <div class="block-content-wrap__wrapper">
+                    <div class="line">
+                   
+                      <div class="grid grid-cols-2 line-grid align-items-end">
+                        <div>
+                          <div class="text text_regular text__color_dark-grey block-label">
+                            Activate limit 
+                          </div>
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="false">R/R</p>
+                                </div>
+                              </div>
+                  
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">Disable</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">Balance $</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                       
+                        <div class="data-info-container data-info-container_medium">
+                          <div class="input-container-wrap input-container-wrap_tiny left" data-input="input-field">
+                            <div class="input-wrapp input-wrapp_left">
+                              <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-unit="R">
+                            </div>
+                            <div class="input-text-center">
+                              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                <p class="text_large text__color_dark-grey">1.5</p>
+                                <p class="text_small text__color_dark-grey">R</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="input-container-wrap input-container-wrap_tiny right" data-input="input-field">
+                            <div class="input-wrapp input-wrapp_right hidden">
+                              <input class="input-field input-field_right text_large text__color_dark-grey" type="text" data-unit="%">
+                            </div>
+                            <div class="input-text-center right-small input-disabled">
+                              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                <p class="text_large text__color_grey">5.1</p>
+                                <p class="text_small text__color_grey">%</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <div class="switcher-wrap align-items-center justify-content-between line-grid grid-row-switcher-2">
+                        <div class="d-flex size-large  align-items-center switcher-wrap_gap-medium">
+                          <div class="form-switch">
+                            <input class="form-check-input custom-outline m-auto" type="checkbox" role="switch" checked="">
+                          </div>
+                          <div class="data-wrap">
+                            <p class="text text_regular text__color_dark-grey">
+                              Rejection on Price
+                            </p>
+                          </div>
+                        </div>
+                        <div class="handler-box">
+                          <div class="data-info-container data-info-container_medium">
+                            <div class="input-container-wrap input-container-wrap_normal" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">1764.56</p>
+                                  <p class="text_small text__color_dark-grey"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <div class="switcher-wrap align-items-center justify-content-between line-grid grid-row-switcher-2">
+                        <div class="d-flex size-large  align-items-center switcher-wrap_gap-medium">
+                          <div class="form-switch">
+                            <input class="form-check-input custom-outline m-auto" type="checkbox" role="switch" checked="">
+                          </div>
+                          <div class="data-wrap">
+                            <p class="text text_regular text__color_dark-grey">
+                              Rejection on SL
+                            </p>
+                          </div>
+                        </div>
+                        <div class="handler-box">
+                          <div class="data-info-container data-info-container_medium">
+                            <div class="input-container-wrap input-container-wrap_normal" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">1764.56</p>
+                                  <p class="text_small text__color_dark-grey"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <div class="switcher-wrap align-items-center justify-content-between line-grid grid-row-switcher-2">
+                        <div class="d-flex size-large  align-items-center switcher-wrap_gap-medium">
+                          <div class="form-switch">
+                            <input class="form-check-input custom-outline m-auto" type="checkbox" role="switch" checked="">
+                          </div>
+                          <div class="data-wrap">
+                            <p class="text text_regular text__color_dark-grey">
+                              Rejection on Bar
+                            </p>
+                          </div>
+                        </div>
+                        <div class="handler-box">
+                          <div class="data-info-container data-info-container_medium">
+                            <div class="input-container-wrap input-container-wrap_tiny-3 left" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_left">
+                                <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-unit="date">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">15</p>
+                                  <p class="text_small text__color_dark-grey" data-mode="minute">
+                                    m
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-input button-time right text_small" data-type="time" data-mode="minute">
+                              m
+                            </button>
+                            <div class="input-container-wrap input-container-wrap_small-3 right" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_right">
+                                <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">10</p>
+                                  <p class="text_small text__color_dark-grey">b</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block-wrapper block-booking-profit">
+              <div class="block-container-wrap">
+                <div class="block-header-wrap overflow-hidden">
+                 
+                  <div class="block-header-title text_small text__color_grey">
+                    Booking profit
+                  </div>
+                  <!-- <div class="block-header-title">other title</div> -->
+                </div>
+                <div class="block-content-wrap">
+                  <div class="block-content-wrap__wrapper">
+                    <div class="line">
+                   
+                      <div class="grid grid-cols-2 line-grid align-items-end">
+                   
+                       
+                        <div class="data-info-container data-info-container_medium">
+                          <div class="input-container-wrap input-container-wrap_tiny left" data-input="input-field">
+                            <div class="input-wrapp input-wrapp_left">
+                              <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-unit="R">
+                            </div>
+                            <div class="input-text-center">
+                              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                <p class="text_large text__color_dark-grey">10</p>
+                                <p class="text_small text__color_dark-grey">%</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="input-container-wrap input-container-wrap_tiny right" data-input="input-field">
+                            <div class="input-wrapp input-wrapp_right hidden">
+                              <input class="input-field input-field_right text_large text__color_dark-grey" type="text" data-unit="%">
+                            </div>
+                            <div class="input-text-center right-small input-disabled">
+                              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                <p class="text_large text__color_grey">125</p>
+                                <p class="text_small text__color_grey">$</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ms-auto">
+                          <button class="button-non-press button-non-press_big text_large" data-type="btn">
+                            Booking
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <div class="switcher-wrap align-items-center justify-content-between line-grid grid-row-switcher-2">
+                        <div class="d-flex align-items-center switcher-wrap_gap-medium">
+                          <div class="form-switch">
+                            <input class="form-check-input custom-outline m-auto" type="checkbox" role="switch" checked="">
+                          </div>
+                          <div class="data-wrap">
+                            <p class="text text_regular text__color_dark-grey">
+                              Auto
+                            </p>
+                          </div>
+                        </div>
+                        <div class="handler-box w-100">
+                          <div class="data-info-container w-100 gap-2 ms-auto justify-content-end">
+                            <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">3.0</p>
+                                  <p class="text_small text__color_dark-grey">R</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">10</p>
+                                  <p class="text_small text__color_dark-grey">%</p>
+                                </div>
+                              </div>
+                            </div>
+                
+                            <div class="data-info-container data-info-container_tiny grid-time-box">
+                              <div class="input-container-wrap input-container-wrap_tiny-3 left" data-input="input-field">
+                                <div class="input-wrapp">
+                                  <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-unit="date">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">4</p>
+                                    <p class="text_small text__color_dark-grey" data-mode="hour">
+                                      h
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <button class="button-input button-time-small right text_small" data-type="time" data-mode="hour">
+                                h
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block-notes">
+              <div class="block-content-wrap__wrapper">
+                <form action="#" method="POST">
+                  <div class="line mb-1">
+                 
+                    <div class="input-wrapp">
+                      <textarea autocomplete="off" name="form[]" placeholder="Write a notes" class="textarea text__family_inconsolata text_small text__color_dark-grey"></textarea>
+                    </div>
+                      
+                  
+                </div>
+                <div class="line">
+                  <div class="grid grid-cols-2 line-grid align-items-center">
+                    <span class="text_tiny text__color_dark-grey">
+                      Please, attach the file
+                    </span>
+                    <div  data-rating="set" class="rating ms-auto">
+                     
+                    </div>
+                  </div>
+                </div>
+                <div class="line mb-1">
+                  <div class="grid grid-cols-2 line-grid align-items-center">
+                    <div class="input-wrapp input-files">
+                      <input type="file" id="actual-btn" hidden/>
+  
+                      <!-- our custom upload button -->
+                      <label for="actual-btn" class="actual-btn button-tiny button-non-press  button-group text_regular me-1">Browse</label>
+                      
+                      <!-- name of file chosen -->
+                      <span id="file-chosen" class="file-chosen text_small text__color_dark-grey">No file chosen</span>
+                    </div>
+                    <button class="button-tiny button-group button-non-press  text_regular text__color_dark-grey ms-auto" data-type="btn">
+                      Save
+                    </button>
+                  </div>
+                </div>
+                </form>
+                <div class="line">
+                  <button class="button-tiny button-group button-non-press w-100 text_regular text__color_dark-grey ms-auto" data-type="btn" data-modal-name="images-modal">
+                    Images
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="side-left-col">
+            <div class="block-wrapper block-position-size">
+              <div class="block-container-wrap">
+                <div class="block-header-wrap overflow-hidden">
+                 
+                  <div class="block-header-title text_small text__color_grey">
+                    Position size
+                  </div>
+                  <!-- <div class="block-header-title">other title</div> -->
+                </div>
+                <div class="block-content-wrap">
+                  <div class="block-content-wrap__wrapper">
+                    <div class="line">
+                   
+                      <div class="grid grid-cols-2 line-grid align-items-end">
+                        <div>
+                         
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="false">SL %</p>
+                                </div>
+                              </div>
+                  
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">Disable</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">Balance $</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                       
+                        <div class="data-info-container data-info-container_medium">
+                          <div class="input-container-wrap input-container-wrap_tiny left" data-input="input-field">
+                            <div class="input-wrapp input-wrapp_left">
+                              <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-unit="R">
+                            </div>
+                            <div class="input-text-center">
+                              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                <p class="text_large text__color_dark-grey">10.0</p>
+                                <p class="text_small text__color_dark-grey">%</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="input-container-wrap input-container-wrap_tiny right" data-input="input-field">
+                            <div class="input-wrapp input-wrapp_right hidden">
+                              <input class="input-field input-field_right text_large text__color_dark-grey" type="text" data-unit="%">
+                            </div>
+                            <div class="input-text-center right-small input-disabled">
+                              <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                <p class="text_large text__color_grey">551</p>
+                                <p class="text_small text__color_grey">$</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block-wrapper block-limit-order">
+              <div class="block-container-wrap">
+                <div class="block-header-wrap overflow-hidden">
+                 
+                  <div class="block-header-title text_small text__color_grey">
+                    Limit order
+                  </div>
+                  <!-- <div class="block-header-title">other title</div> -->
+                </div>
+                <div class="block-content-wrap">
+                  <div class="block-content-wrap__wrapper">
+                    <div class="line">
+                      <div class="grid grid-cols-2 line-grid align-items-end">
+                        <div>
+                         
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="false">Manipulation</p>
+                                </div>
+                              </div>
+                  
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">Disable</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">Balance $</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex gap-2 align-items-center">
+                          <div class="data-info-container data-info-container_small">
+                            <div class="input-container-wrap input-container-wrap_normal" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">1764.56</p>
+                                  <p class="text_small text__color_dark-grey"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="button-new button-new_tiny" data-type="btn">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <div class="grid grid-cols-2 line-grid align-items-end">
+                        <div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_tiny-4 left" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_left">
+                                <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-unit="date">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">1</p>
+                                  <p class="text_small text__color_dark-grey" data-mode="minute">
+                                    m
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-input button-time button-time_input-big right text_small" data-type="time" data-mode="hour">
+                              h
+                            </button>
+                            <div class="input-container-wrap input-container-wrap_small-4 right" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_right">
+                                <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">15</p>
+                                  <p class="text_small text__color_dark-grey">d</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex gap-2 align-items-center ms-auto">
+                          <div class="data-info-container data-info-container_tiny">
+                            <div class="input-container-wrap input-container-wrap_normal" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text" data-unit="times">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">3</p>
+                                  <p class="text_small text__color_dark-grey">times</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <div class="switcher-wrap align-items-center justify-content-between line-grid grid-row-switcher-2">
+                        <div class="d-flex size-large  align-items-center switcher-wrap_gap-medium">
+                          <div class="form-switch">
+                            <input class="form-check-input custom-outline m-auto" type="checkbox" role="switch" checked="">
+                          </div>
+                          <div class="data-wrap">
+                            <p class="text text_regular text__color_dark-grey">
+                              Forced Market Order
+                            </p>
+                          </div>
+                        </div>
+                        <div class="handler-box">
+                          <div class="data-info-container data-info-container_tiny">
+                            <div class="input-container-wrap input-container-wrap_tiny-3 left" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-unit="date">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic">
+                                  <p class="text_large text__color_dark-grey">1</p>
+                                  <p class="text_small text__color_dark-grey">%</p>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-input button-time-small right text_small">%</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block-wrapper block-breakeven">
+              <div class="block-container-wrap">
+                <div class="block-header-wrap overflow-hidden">
+                 
+                  <div class="block-header-title text_small text__color_grey">
+                    Breakeven
+                  </div>
+                  <!-- <div class="block-header-title">other title</div> -->
+                </div>
+                <div class="block-content-wrap">
+                  <div class="block-content-wrap__wrapper">
+                    <div class="line">
+                      <div class="grid grid-cols-2 line-grid align-items-end selectorWrap">
+                        <div>
+                         
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="false" data-selector-value="breakeven-rr">R/R</p>
+                                </div>
+                              </div>
+                  
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large" data-selector-value="breakeven-disable">Disable</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large" data-selector-value="breakeven-percent">Percent</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large" data-selector-value="breakeven-atr">ATR</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large" data-selector-value="breakeven-ticks">Ticks</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="selectorInputContainer">
+                          <div class="d-flex gap-2 align-items-center">
+                            <div class="data-info-container data-info-container_medium">
+                              <div class="input-container-wrap input-container-wrap_tiny left" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_left">
+                                  <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-unit="R">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">1.5</p>
+                                    <p class="text_small text__color_dark-grey">R</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="input-container-wrap input-container-wrap_tiny right" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_right">
+                                  <input class="input-field input-field_right text_large text__color_dark-grey" type="text" data-type="operator" data-unit="%">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">+0.5</p>
+                                    <p class="text_small text__color_dark-grey">%</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <template data-template-name="breakeven-rr">
+                          <div class="d-flex gap-2 align-items-center">
+                            <div class="data-info-container data-info-container_medium">
+                              <div class="input-container-wrap input-container-wrap_tiny left" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_left">
+                                  <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-type="number" data-unit="R">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">1.5</p>
+                                    <p class="text_small text__color_dark-grey">R</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="input-container-wrap input-container-wrap_tiny right" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_right">
+                                  <input class="input-field input-field_right text_large text__color_dark-grey" type="text" data-type="number" data-unit="%">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">+0.5</p>
+                                    <p class="text_small text__color_dark-grey">%</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                        <template data-template-name="breakeven-disable">
+                          <div class="d-flex gap-2 align-items-center">
+                            <div class="data-info-container data-info-container_medium">
+                              <div class="input-container-wrap input-container-wrap_tiny left" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_left">
+                                  <input class="input-field input-field_left text_large text__color_dark-grey hidden" type="text">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_ligth-grey">-</p>
+                                    <p class="text_small text__color_ligth-grey"></p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="input-container-wrap input-container-wrap_tiny right" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_right">
+                                  <input class="input-field input-field_right text_large text__color_dark-grey hidden" type="text">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_ligth-grey">-</p>
+                                    <p class="text_small text__color_ligth-grey"></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                        <template data-template-name="breakeven-percent">
+                          <div class="d-flex gap-2 align-items-center">
+                            <div class="data-info-container data-info-container_medium">
+                              <div class="input-container-wrap input-container-wrap_tiny left" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_left">
+                                  <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-type="number" data-unit="%">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">1.5</p>
+                                    <p class="text_small text__color_dark-grey">%</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="input-container-wrap input-container-wrap_tiny right" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_right">
+                                  <input class="input-field input-field_right text_large text__color_dark-grey" type="text" data-type="number" data-unit="%">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">+0.0</p>
+                                    <p class="text_small text__color_dark-grey">%</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                        <template data-template-name="breakeven-atr">
+                          <div class="d-flex gap-2 align-items-center">
+                            <div class="data-info-container data-info-container_medium">
+                              <div class="input-container-wrap input-container-wrap_tiny left" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_left">
+                                  <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-type="number" data-unit="date">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">15</p>
+                                    <p class="text_small text__color_dark-grey">m</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="input-container-wrap input-container-wrap_tiny right" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_right">
+                                  <input class="input-field input-field_right text_large text__color_dark-grey" type="text" data-type="number" data-unit="%">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">100</p>
+                                    <p class="text_small text__color_dark-grey">%</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                        <template data-template-name="breakeven-ticks">
+                          <div class="d-flex gap-2 align-items-center">
+                            <div class="data-info-container data-info-container_medium">
+                              <div class="input-container-wrap input-container-wrap_tiny left" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_left">
+                                  <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-type="number" data-unit="ticks">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">100</p>
+                                    <p class="text_small text__color_dark-grey">ticks</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="input-container-wrap input-container-wrap_tiny right" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_right">
+                                  <input class="input-field input-field_right text_large text__color_dark-grey" type="text" data-type="number" data-unit="%">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">5.1</p>
+                                    <p class="text_small text__color_dark-grey">%</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <div class="grid grid-cols-2 line-grid align-items-end">
+                        <div>
+                          <button class="button-non-press button-non-press_large text_large" data-type="btn">
+                            Breakeven now
+                          </button>
+                        </div>
+                        <div class="d-flex gap-2 align-items-center ms-auto">
+                          <div class="button-new-wrap button-new-wrap_normal btn-shadow btn-active" data-type="btn">
+                            <button class="button-group button-group_normal-1 text_large">
+                              Margin
+                            </button>
+                            <button class="button-group button-group_normal-2 text_large btn-active">
+                              Fee
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <div class="switcher-wrap align-items-center justify-content-between line-grid grid-row-switcher-2">
+                        <div class="d-flex size-large  align-items-center switcher-wrap_gap-medium">
+                          <div class="form-switch">
+                            <input class="form-check-input custom-outline m-auto" type="checkbox" role="switch" checked="">
+                          </div>
+                          <div class="data-wrap">
+                            <p class="text text_regular text__color_dark-grey">
+                              Bar`s breakeven
+                            </p>
+                          </div>
+                        </div>
+                        <div class="handler-box">
+                          <div class="data-info-container data-info-container_medium">
+                            <div class="input-container-wrap input-container-wrap_tiny-3 left" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_left">
+                                <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-unit="date">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">15</p>
+                                  <p class="text_small text__color_dark-grey" data-mode="hour">
+                                    h
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-input button-time right text_small" data-type="time" data-mode="hour">
+                              h
+                            </button>
+                            <div class="input-container-wrap input-container-wrap_small-3 right" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_right">
+                                <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">10</p>
+                                  <p class="text_small text__color_dark-grey">b</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block-wrapper block-stop-loss">
+              <div class="block-container-wrap">
+                <div class="block-header-wrap overflow-hidden">
+                 
+                  <div class="block-header-title text_small text__color_grey">
+                    Stop Loss
+                  </div>
+                  <!-- <div class="block-header-title">other title</div> -->
+                </div>
+                <div class="block-content-wrap">
+                  <div class="block-content-wrap__wrapper">
+                    <div class="line">
+                      <div class="grid grid-cols-2 line-grid align-items-end">
+                        <div>
+                         
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="false">Bars</p>
+                                </div>
+                              </div>
+                  
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">Disable</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">Balance $</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex gap-2 align-items-center">
+                          <div class="data-info-container data-info-container_medium">
+                            <div class="input-container-wrap input-container-wrap_tiny-3 left" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_left">
+                                <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-unit="date">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">15</p>
+                                  <p class="text_small text__color_dark-grey" data-mode="hour">
+                                    h
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-input button-time right text_small" data-type="time" data-mode="hour">
+                              h
+                            </button>
+                            <div class="input-container-wrap input-container-wrap_small-3 right" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_right">
+                                <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">10</p>
+                                  <p class="text_small text__color_dark-grey">b</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <div class="switcher-wrap align-items-center justify-content-between line-grid grid-row-switcher-2">
+                        <div class="d-flex size-large  align-items-center switcher-wrap_gap-medium">
+                          <div class="form-switch">
+                            <input class="form-check-input custom-outline m-auto" type="checkbox" role="switch" checked="">
+                          </div>
+                          <div class="data-wrap">
+                            <p class="text text_regular text__color_dark-grey">
+                              Add to SL
+                            </p>
+                          </div>
+                        </div>
+                        <div class="handler-box">
+                          <div class="data-info-container data-info-container_tiny">
+                            <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">+0.5</p>
+                                  <p class="text_small text__color_dark-grey">%</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <div class="switcher-wrap align-items-center justify-content-between line-grid grid-row-switcher-2">
+                        <div class="d-flex size-large  align-items-center switcher-wrap_gap-medium">
+                          <div class="form-switch">
+                            <input class="form-check-input custom-outline m-auto" type="checkbox" role="switch" checked="">
+                          </div>
+                          <div class="data-wrap">
+                            <p class="text text_regular text__color_dark-grey">
+                              Max Distance %
+                            </p>
+                          </div>
+                        </div>
+                        <div class="handler-box">
+                          <div class="data-info-container data-info-container_tiny">
+                            <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">2.0</p>
+                                  <p class="text_small text__color_dark-grey">%</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <div class="switcher-wrap align-items-center justify-content-between line-grid grid-row-switcher-2">
+                        <div class="d-flex size-large  align-items-center switcher-wrap_gap-medium">
+                          <div class="form-switch">
+                            <input class="form-check-input custom-outline m-auto" type="checkbox" role="switch" checked="">
+                          </div>
+                          <div class="data-wrap">
+                            <p class="text text_regular text__color_dark-grey">
+                              Max Loss
+                            </p>
+                          </div>
+                        </div>
+                        <div class="handler-box">
+                          <div class="data-info-container data-info-container_tiny">
+                            <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">500</p>
+                                  <p class="text_small text__color_dark-grey">$</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <div class="switcher-wrap align-items-center justify-content-between line-grid grid-row-switcher-2">
+                        <div class="d-flex size-large  align-items-center switcher-wrap_gap-medium">
+                          <div class="form-switch">
+                            <input class="form-check-input custom-outline m-auto" type="checkbox" role="switch" checked="">
+                          </div>
+                          <div class="data-wrap">
+                            <p class="text text_regular text__color_dark-grey">
+                              Max Distance ATR
+                            </p>
+                          </div>
+                        </div>
+                        <div class="handler-box">
+                          <div class="data-info-container data-info-container_medium">
+                            <div class="input-container-wrap input-container-wrap_tiny-3 left" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_left">
+                                <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-unit="date">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">1</p>
+                                  <p class="text_small text__color_dark-grey" data-mode="hour">
+                                    h
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-input button-time right text_small" data-type="time" data-mode="hour">
+                              h
+                            </button>
+                            <div class="input-container-wrap input-container-wrap_small-3 right" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_right">
+                                <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">100</p>
+                                  <p class="text_small text__color_dark-grey">%</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block-wrapper block-funding-rate">
+              <div class="block-container-wrap">
+                <div class="block-header-wrap overflow-hidden">
+                 
+                  <div class="block-header-title text_small text__color_grey">
+                    Funding Rate
+                  </div>
+                  <!-- <div class="block-header-title">other title</div> -->
+                </div>
+                <div class="block-content-wrap">
+                  <div class="block-content-wrap__wrapper">
+                    <div class="line">
+                      <div class="grid grid-cols-2 line-grid align-items-center ms-n2">
+                        <div class="d-flex align-items-center gap-3">
+                         
+                          <div class="funding-rate-block">
+                            <div class="text text_regular text__color_dark-grey text-center mb-1">
+                              Funding Rate
+                            </div>
+                            <div class="text text_small text__color_grey text-center">
+                              02:05:50
+                            </div>
+                          </div>
+                          <div class="button-new-wrap button-new-wrap_small btn-shadow">
+                            <button class="button-group button-group_small-1 relative" data-type="btn">
+                              <span class="text_large time-btn-text">4</span>
+                              <span class="text_small btn-text time-btn-text">h</span>
+                            </button>
+                            <button class="button-group button-group_small-2 btn-active relative" data-type="btn">
+                              <span class="text_large time-btn-text">8</span>
+                              <span class="text_small btn-text time-btn-text">h</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="d-flex gap-2 align-items-center">
+                          <div class="data-info-container data-info-container_medium">
+                            <div class="input-container-wrap input-container-wrap_tiny left" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_left hidden">
+                                <input class="input-field input-field_left text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center input-border-left input-disabled">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_grey">0.06</p>
+                                  <p class="text_small text__color_grey"></p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="input-container-wrap input-container-wrap_tiny right" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_right hidden">
+                                <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center input-border-right input-disabled">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_red">2.5</p>
+                                  <p class="text_small text__color_red">$</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block-wrapper block-margin">
+              <div class="block-container-wrap">
+                <div class="block-header-wrap overflow-hidden">
+                 
+                  <div class="block-header-title text_small text__color_grey">
+                    Margin & Maintenance
+                  </div>
+                  <!-- <div class="block-header-title">other title</div> -->
+                </div>
+                <div class="block-content-wrap">
+                  <div class="block-content-wrap__wrapper">
+                    <div class="line">
+                      <div class="grid grid-cols-2 line-grid align-items-center">
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="text text_regular text__color_dark-grey block-label text-center">
+                            Margin
+                          </div>
+                          <div class="data-info-container data-info-container_tiny">
+                            <div class="input-container-wrap input-container-wrap_normal" data-input="input-field">
+                              <div class="input-wrapp hidden">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center input-border input-disabled">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_grey">2</p>
+                                  <p class="text_small text__color_grey">$</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="text text_regular text__color_dark-grey block-label text-center">
+                            Maintenance
+                          </div>
+                          <div class="data-info-container data-info-container_tiny">
+                            <div class="input-container-wrap input-container-wrap_normal" data-input="input-field">
+                              <div class="input-wrapp hidden">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center input-border input-disabled">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_grey">0</p>
+                                  <p class="text_small text__color_grey">$</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+        <div class="content-stretch-panel__right right-side">
+          <div class="block-wrapper block-take-profit mw-100">
+            <div class="block-container-wrap mw-100">
+              <div class="block-header-wrap overflow-hidden">
+               
+                <div class="block-header-title text_small text__color_grey">
+                  Take Profit
+                </div>
+                <!-- <div class="block-header-title">other title</div> -->
+              </div>
+              <div class="block-content-wrap">
+                <div class="block-content-wrap__wrapper justify-content-center">
+                  <div class="block-take-profit-table profit-table">
+                    <div class="profit-table-header">
+                        <!-- titles -->
+                        <p class="text_small text__color_dark-grey text-center">#</p>
+                        <p class="text_small text__color_dark-grey text-center">Take Profit type</p>
+                        <p class="text_small text__color_dark-grey text-center">Value</p>
+                        <div class="titles-wrap-1 d-flex justify-content-around">
+                          <p class="text_small text__color_dark-grey text-center">R/R</p>
+                          <p class="text_small text__color_dark-grey text-center">Price</p>
+                        </div>
+                        <p class="text_small text__color_dark-grey text-center">Booking</p>
+                        <p class="text_small text__color_dark-grey text-center">Trailing type</p>
+                        <p class="text_small text__color_dark-grey text-center">Value</p>
+                        <p class="text_small text__color_dark-grey text-center">PNL</p>
+                    </div>
+                    <div class="profit-table-body grid switcher-wrap_gap-medium">
+                      <div class="profit-table-body__line switcher-wrap switcher-wrap_gap-medium">
+                        <div class="table-switch">
+                          <input class="table-check-input" type="checkbox" role="switch" checked="">
+                          <button class="data-z-index-top table-switcher size-small text_large text__color_dark-grey" data-state="true">
+                            1
+                          </button>
+                        </div>
+                        <div class="handler-box handler-box_gap-small">
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="true" style="transition: transform 3.03333s ease-in-out 0s;">
+                                    Price
+                                  </p>
+                                </div>
+                              </div>
+              
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 11111111117577777
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 2</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 3765876583653
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_big" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">1764.56</p>
+                                  <p class="text_small text__color_dark-grey"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="data-info-container data-info-container_big">
+                              <div class="input-container-wrap input-container-wrap_small left" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_left hidden">
+                                  <input class="input-field input-field_left text_large text__color_dark-grey" type="text">
+                                </div>
+                                <div class="input-text-center input-border-left input-disabled">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_grey">25</p>
+                                    <p class="text_small text__color_grey">x</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="input-container-wrap input-container-wrap_small right" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_right hidden">
+                                  <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                                </div>
+                                <div class="input-text-center input-border-right input-disabled">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_grey">25.1</p>
+                                    <p class="text_small text__color_grey">k</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="data-info-container w-100 gap-2 ms-auto justify-content-end">
+                           
+                            <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">10</p>
+                                  <p class="text_small text__color_dark-grey">%</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="true" style="transition: transform 3.03333s ease-in-out 0s;">
+                                    Trailing R
+                                  </p>
+                                </div>
+                              </div>
+              
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 11111111117577777
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 2</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 3765876583653
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex gap-1 align-items-center">
+                            <div class="data-info-container data-info-container_tiny">
+                              <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                                <div class="input-wrapp">
+                                  <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">0.5</p>
+                                    <p class="text_small text__color_dark-grey">R</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-new button-new_tiny" data-type="btn">P</button>
+                          </div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_big" data-input="input-field">
+                              <div class="input-wrapp hidden">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center input-border input-disabled">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_grey">25000</p>
+                                  <p class="text_small text__color_grey">$</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profit-table-body__line switcher-wrap switcher-wrap_gap-medium">
+                        <div class="table-switch">
+                          <input class="table-check-input" type="checkbox" role="switch" checked="">
+                          <button class="data-z-index-top table-switcher size-small text_large text__color_dark-grey" data-state="true">
+                            2
+                          </button>
+                        </div>
+                        <div class="handler-box handler-box_gap-small">
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="true" style="transition: transform 3.03333s ease-in-out 0s;">
+                                    Bars
+                                  </p>
+                                </div>
+                              </div>
+              
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 11111111117577777
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 2</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 3765876583653
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_tiny-4 left" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_left">
+                                <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-unit="date">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">1</p>
+                                  <p class="text_small text__color_dark-grey" data-mode="minute">
+                                    m
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-input button-time button-time_input-big right text_small" data-type="time" data-mode="hour">
+                              h
+                            </button>
+                            <div class="input-container-wrap input-container-wrap_small-4 right" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_right">
+                                <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">15</p>
+                                  <p class="text_small text__color_dark-grey">d</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="data-info-container data-info-container_big">
+                              <div class="input-container-wrap input-container-wrap_small left" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_left hidden">
+                                  <input class="input-field input-field_left text_large text__color_dark-grey" type="text">
+                                </div>
+                                <div class="input-text-center input-border-left input-disabled">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_grey">25</p>
+                                    <p class="text_small text__color_grey">x</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="input-container-wrap input-container-wrap_small right" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_right hidden">
+                                  <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                                </div>
+                                <div class="input-text-center input-border-right input-disabled">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_grey">25.1</p>
+                                    <p class="text_small text__color_grey">k</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="data-info-container w-100 gap-2 ms-auto justify-content-end">
+                           
+                            <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">10</p>
+                                  <p class="text_small text__color_dark-grey">%</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="true" style="transition: transform 3.03333s ease-in-out 0s;">
+                                   Disable
+                                  </p>
+                                </div>
+                              </div>
+              
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 11111111117577777
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 2</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 3765876583653
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex gap-1 align-items-center">
+                            <div class="data-info-container data-info-container_tiny">
+                              <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                                <div class="input-wrapp">
+                                  <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">0.5</p>
+                                    <p class="text_small text__color_dark-grey">R</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-new button-new_tiny" data-type="btn">P</button>
+                          </div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_big" data-input="input-field">
+                              <div class="input-wrapp hidden">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center input-border input-disabled">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_grey">25000</p>
+                                  <p class="text_small text__color_grey">$</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profit-table-body__line switcher-wrap switcher-wrap_gap-medium">
+                        <div class="table-switch">
+                          <input class="table-check-input" type="checkbox" role="switch" checked="">
+                          <button class="data-z-index-top table-switcher size-small text_large text__color_dark-grey" data-state="true">
+                            3
+                          </button>
+                        </div>
+                        <div class="handler-box handler-box_gap-small">
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="true" style="transition: transform 3.03333s ease-in-out 0s;">
+                                    High
+                                  </p>
+                                </div>
+                              </div>
+              
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 11111111117577777
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 2</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 3765876583653
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_tiny-4 left" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_left">
+                                <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-unit="date">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">1</p>
+                                  <p class="text_small text__color_dark-grey" data-mode="minute">
+                                    m
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-input button-time button-time_input-big right text_small" data-type="time" data-mode="hour">
+                              h
+                            </button>
+                            <div class="input-container-wrap input-container-wrap_small-4 right" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_right">
+                                <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">15</p>
+                                  <p class="text_small text__color_dark-grey">d</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="data-info-container data-info-container_big">
+                              <div class="input-container-wrap input-container-wrap_small left" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_left hidden">
+                                  <input class="input-field input-field_left text_large text__color_dark-grey" type="text">
+                                </div>
+                                <div class="input-text-center input-border-left input-disabled">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_grey">25</p>
+                                    <p class="text_small text__color_grey">x</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="input-container-wrap input-container-wrap_small right" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_right hidden">
+                                  <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                                </div>
+                                <div class="input-text-center input-border-right input-disabled">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_grey">25.1</p>
+                                    <p class="text_small text__color_grey">k</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="data-info-container w-100 gap-2 ms-auto justify-content-end">
+                           
+                            <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">10</p>
+                                  <p class="text_small text__color_dark-grey">%</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="true" style="transition: transform 3.03333s ease-in-out 0s;">
+                                    Disable
+                                  </p>
+                                </div>
+                              </div>
+              
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 11111111117577777
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 2</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 3765876583653
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex gap-1 align-items-center">
+                            <div class="data-info-container data-info-container_tiny">
+                              <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                                <div class="input-wrapp">
+                                  <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">0.5</p>
+                                    <p class="text_small text__color_dark-grey">R</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-new button-new_tiny" data-type="btn">P</button>
+                          </div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_big" data-input="input-field">
+                              <div class="input-wrapp hidden">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center input-border input-disabled">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_grey">working</p>
+                                  <p class="text_small text__color_grey"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profit-table-body__line switcher-wrap switcher-wrap_gap-medium">
+                        <div class="table-switch">
+                          <input class="table-check-input" type="checkbox" role="switch" checked="">
+                          <button class="data-z-index-top table-switcher size-small text_large text__color_dark-grey" data-state="true">
+                            4
+                          </button>
+                        </div>
+                        <div class="handler-box handler-box_gap-small">
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="true" style="transition: transform 3.03333s ease-in-out 0s;">
+                                    R/R
+                                  </p>
+                                </div>
+                              </div>
+              
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 11111111117577777
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 2</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 3765876583653
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_big" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">3.0</p>
+                                  <p class="text_small text__color_dark-grey">R</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="data-info-container data-info-container_big">
+                              <div class="input-container-wrap input-container-wrap_small left" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_left hidden">
+                                  <input class="input-field input-field_left text_large text__color_dark-grey" type="text">
+                                </div>
+                                <div class="input-text-center input-border-left input-disabled">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_grey">25</p>
+                                    <p class="text_small text__color_grey">x</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="input-container-wrap input-container-wrap_small right" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_right hidden">
+                                  <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                                </div>
+                                <div class="input-text-center input-border-right input-disabled">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_grey">25.1</p>
+                                    <p class="text_small text__color_grey">k</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="data-info-container w-100 gap-2 ms-auto justify-content-end">
+                           
+                            <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">10</p>
+                                  <p class="text_small text__color_dark-grey">%</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="true" style="transition: transform 3.03333s ease-in-out 0s;">
+                                    Trailing %
+                                  </p>
+                                </div>
+                              </div>
+              
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 11111111117577777
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 2</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 3765876583653
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex gap-1 align-items-center">
+                            <div class="data-info-container data-info-container_tiny">
+                              <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                                <div class="input-wrapp">
+                                  <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">1.5</p>
+                                    <p class="text_small text__color_dark-grey">%</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-new button-new_tiny" data-type="btn">P</button>
+                          </div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_big" data-input="input-field">
+                              <div class="input-wrapp hidden">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center input-border input-disabled">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_grey">working</p>
+                                  <p class="text_small text__color_grey"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profit-table-body__line switcher-wrap switcher-wrap_gap-medium">
+                        <div class="table-switch">
+                          <input class="table-check-input" type="checkbox" role="switch" checked="">
+                          <button class="data-z-index-top table-switcher size-small text_large text__color_dark-grey" data-state="true">
+                            5
+                          </button>
+                        </div>
+                        <div class="handler-box handler-box_gap-small">
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="true" style="transition: transform 3.03333s ease-in-out 0s;">
+                                    Time
+                                  </p>
+                                </div>
+                              </div>
+              
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 11111111117577777
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 2</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 3765876583653
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_big" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">245</p>
+                                  <p class="text_small text__color_dark-grey">m</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="data-info-container data-info-container_big">
+                              <div class="input-container-wrap input-container-wrap_small left" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_left hidden">
+                                  <input class="input-field input-field_left text_large text__color_dark-grey" type="text">
+                                </div>
+                                <div class="input-text-center input-border-left input-disabled">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_grey">1.4</p>
+                                    <p class="text_small text__color_grey">r</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="input-container-wrap input-container-wrap_small right" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_right hidden">
+                                  <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                                </div>
+                                <div class="input-text-center input-border-right input-disabled">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_grey">25.1</p>
+                                    <p class="text_small text__color_grey">k</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="data-info-container w-100 gap-2 ms-auto justify-content-end">
+                           
+                            <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">10</p>
+                                  <p class="text_small text__color_dark-grey">%</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="true" style="transition: transform 3.03333s ease-in-out 0s;">
+                                    Trailing %
+                                  </p>
+                                </div>
+                              </div>
+              
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 11111111117577777
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 2</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 3765876583653
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex gap-1 align-items-center">
+                            <div class="data-info-container data-info-container_tiny">
+                              <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                                <div class="input-wrapp">
+                                  <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">1.0</p>
+                                    <p class="text_small text__color_dark-grey">%</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-new button-new_tiny btn-active" data-type="btn">P</button>
+                          </div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_big" data-input="input-field">
+                              <div class="input-wrapp hidden">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center input-border input-disabled">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_grey">working</p>
+                                  <p class="text_small text__color_grey"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profit-table-body__line switcher-wrap switcher-wrap_gap-medium">
+                        <div class="table-switch">
+                          <input class="table-check-input" type="checkbox" role="switch" checked="">
+                          <button class="data-z-index-top table-switcher size-small text_large text__color_dark-grey" data-state="true">
+                            6
+                          </button>
+                        </div>
+                        <div class="handler-box handler-box_gap-small">
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="true" style="transition: transform 3.03333s ease-in-out 0s;">
+                                    Balance %
+                                  </p>
+                                </div>
+                              </div>
+              
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 11111111117577777
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 2</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 3765876583653
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_big" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">1.5</p>
+                                  <p class="text_small text__color_dark-grey">%</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="data-info-container data-info-container_big">
+                              <div class="input-container-wrap input-container-wrap_small left" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_left hidden">
+                                  <input class="input-field input-field_left text_large text__color_dark-grey" type="text">
+                                </div>
+                                <div class="input-text-center input-border-left input-disabled">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_grey">1.4</p>
+                                    <p class="text_small text__color_grey">r</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="input-container-wrap input-container-wrap_small right" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_right hidden">
+                                  <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                                </div>
+                                <div class="input-text-center input-border-right input-disabled">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_grey">25.1</p>
+                                    <p class="text_small text__color_grey">k</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="data-info-container w-100 gap-2 ms-auto justify-content-end">
+                           
+                            <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">10</p>
+                                  <p class="text_small text__color_dark-grey">%</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="true" style="transition: transform 3.03333s ease-in-out 0s;">
+                                    Trailing R
+                                  </p>
+                                </div>
+                              </div>
+              
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 11111111117577777
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 2</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 3765876583653
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex gap-1 align-items-center">
+                            <div class="data-info-container data-info-container_tiny">
+                              <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                                <div class="input-wrapp">
+                                  <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">1.5</p>
+                                    <p class="text_small text__color_dark-grey">R</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-new button-new_tiny btn-active" data-type="btn">P</button>
+                          </div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_big" data-input="input-field">
+                              <div class="input-wrapp hidden">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center input-border input-disabled">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_grey">working</p>
+                                  <p class="text_small text__color_grey"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profit-table-body__line switcher-wrap switcher-wrap_gap-medium">
+                        <div class="table-switch">
+                          <input class="table-check-input" type="checkbox" role="switch" checked="">
+                          <button class="data-z-index-top table-switcher size-small text_large text__color_dark-grey" data-state="true">
+                            7
+                          </button>
+                        </div>
+                        <div class="handler-box handler-box_gap-small">
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="true" style="transition: transform 3.03333s ease-in-out 0s;">
+                                    ATR
+                                  </p>
+                                </div>
+                              </div>
+              
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 11111111117577777
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 2</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 3765876583653
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_tiny-4 left" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_left">
+                                <input class="input-field input-field_left text_large text__color_dark-grey" type="text" data-unit="date">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">1</p>
+                                  <p class="text_small text__color_dark-grey" data-mode="minute">
+                                    m
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-input button-time button-time_input-big right text_small" data-type="time" data-mode="hour">
+                              h
+                            </button>
+                            <div class="input-container-wrap input-container-wrap_small-4 right" data-input="input-field">
+                              <div class="input-wrapp input-wrapp_right">
+                                <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey"></p>
+                                  <p class="text_small text__color_dark-grey">d</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="data-info-container data-info-container_big">
+                              <div class="input-container-wrap input-container-wrap_small left" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_left hidden">
+                                  <input class="input-field input-field_left text_large text__color_dark-grey" type="text">
+                                </div>
+                                <div class="input-text-center input-border-left input-disabled">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_grey">1.4</p>
+                                    <p class="text_small text__color_grey">r</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="input-container-wrap input-container-wrap_small right" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_right hidden">
+                                  <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                                </div>
+                                <div class="input-text-center input-border-right input-disabled">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_grey">25.1</p>
+                                    <p class="text_small text__color_grey">k</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="data-info-container w-100 gap-2 ms-auto justify-content-end">
+                           
+                            <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey">10</p>
+                                  <p class="text_small text__color_dark-grey">%</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="true" style="transition: transform 3.03333s ease-in-out 0s;">
+                                    Trailing R
+                                  </p>
+                                </div>
+                              </div>
+              
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 11111111117577777
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 2</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 3765876583653
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex gap-1 align-items-center">
+                            <div class="data-info-container data-info-container_tiny">
+                              <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                                <div class="input-wrapp">
+                                  <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">0.5</p>
+                                    <p class="text_small text__color_dark-grey">R</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-new button-new_tiny btn-active" data-type="btn">P</button>
+                          </div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_big" data-input="input-field">
+                              <div class="input-wrapp hidden">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center input-border input-disabled">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_grey">cancelled</p>
+                                  <p class="text_small text__color_grey"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profit-table-body__line switcher-wrap switcher-wrap_gap-medium">
+                        <div class="table-switch">
+                          <input class="table-check-input" type="checkbox" role="switch" checked="">
+                          <button class="data-z-index-top table-switcher size-small text_large text__color_dark-grey" data-state="true">
+                            8
+                          </button>
+                        </div>
+                        <div class="handler-box handler-box_gap-small">
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="true" style="transition: transform 3.03333s ease-in-out 0s;">
+                                    Disable
+                                  </p>
+                                </div>
+                              </div>
+              
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 11111111117577777
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 2</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 3765876583653
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_big" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey"></p>
+                                  <p class="text_small text__color_dark-grey"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="data-info-container data-info-container_big">
+                              <div class="input-container-wrap input-container-wrap_small left" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_left hidden">
+                                  <input class="input-field input-field_left text_large text__color_dark-grey" type="text">
+                                </div>
+                                <div class="input-text-center input-border-left input-disabled">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_grey"></p>
+                                    <p class="text_small text__color_grey"></p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="input-container-wrap input-container-wrap_small right" data-input="input-field">
+                                <div class="input-wrapp input-wrapp_right hidden">
+                                  <input class="input-field input-field_right text_large text__color_dark-grey" type="text">
+                                </div>
+                                <div class="input-text-center input-border-right input-disabled">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_grey"></p>
+                                    <p class="text_small text__color_grey"></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="data-info-container w-100 gap-2 ms-auto justify-content-end">
+                           
+                            <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                              <div class="input-wrapp">
+                                <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                              </div>
+                              <div class="input-text-center">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_dark-grey"></p>
+                                  <p class="text_small text__color_dark-grey"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="selector-wrapper">
+                            <div data-type="dynamic" data-state="ture" class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p class="selector__inner-text text_large" data-move="true" style="transition: transform 3.03333s ease-in-out 0s;">
+                                    Disable
+                                  </p>
+                                </div>
+                              </div>
+              
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 11111111117577777
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">test 2</p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p class="selector__dropdown-text text_large">
+                                      test 3765876583653
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex gap-1 align-items-center">
+                            <div class="data-info-container data-info-container_tiny">
+                              <div class="input-container-wrap input-container-wrap_tiny" data-input="input-field">
+                                <div class="input-wrapp">
+                                  <input class="input-field text_large text__color_dark-grey" type="text" data-unit="%">
+                                </div>
+                                <div class="input-text-center">
+                                  <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                    <p class="text_large text__color_dark-grey">0.5</p>
+                                    <p class="text_small text__color_dark-grey">R</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button-new button-new_tiny btn-active" data-type="btn">P</button>
+                          </div>
+                          <div class="data-info-container data-info-container_big">
+                            <div class="input-container-wrap input-container-wrap_big" data-input="input-field">
+                              <div class="input-wrapp hidden">
+                                <input class="input-field text_large text__color_dark-grey" type="text">
+                              </div>
+                              <div class="input-text-center input-border input-disabled">
+                                <div class="data-wrap" data-type="dynamic" data-state="ture">
+                                  <p class="text_large text__color_grey">cancelled</p>
+                                  <p class="text_small text__color_grey"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stretch-panel__footer">
+        <button class="button-stretch-panel button-normalize text_large-3" data-type="btn" data-modal-name="start">
+          Start
+        </button>
+        <button class="button-stretch-panel button-normalize text_large-3" data-type="btn" data-modal-name="pause">
+          Pause
+        </button>
+        <button class="button-stretch-panel button-normalize text_large-3" data-type="btn">
+          Update
+        </button>
+        <button class="button-stretch-panel button-normalize text_large-3" data-type="btn">
+          Duplicate
+        </button>
+        <button class="button-stretch-panel button-normalize text_large-3" data-type="btn" data-modal-name="close">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-container d-none" data-modal="start">
+    <div class="modal-overlay closeModalTrigger"></div>
+
+    <div class="modal-wrapper modal-attention">
+      <div class="modal-window-wrap">
+        <div class="modal-window-header">
+          <h4 class="modal-window-title text_small text__color_grey">
+            Attention!
+          </h4>
+          <img
+            class="modal-window-close-icon closeModalTrigger"
+            src="./style_guide_2/img/close.svg"
+            alt="close-cross" />
+        </div>
+        <div class="modal-attention__content">
+          <p class="attention-content text_small text__color_dark-grey">
+            Do you want to start?
+          </p>
+        </div>
+        <div class="modal-window-button">
+          <button
+            class="button-modal button-modal-left text_small text__color_dark-grey">
+            Yes
+          </button>
+          <button
+            class="button-modal button-modal-right text_small text__color_dark-grey closeModalTrigger">
+            No
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-container d-none" data-modal="pause">
+    <div class="modal-overlay closeModalTrigger"></div>
+
+    <div class="modal-wrapper modal-attention">
+      <div class="modal-window-wrap">
+        <div class="modal-window-header">
+          <h4 class="modal-window-title text_small text__color_grey">
+            Attention!
+          </h4>
+          <img
+            class="modal-window-close-icon closeModalTrigger"
+            src="./style_guide_2/img/close.svg"
+            alt="close-cross" />
+        </div>
+        <div class="modal-attention__content">
+          <p class="attention-content text_small text__color_dark-grey">
+            Do you want to pause?
+          </p>
+        </div>
+        <div class="modal-window-button">
+          <button
+            class="button-modal button-modal-left text_small text__color_dark-grey">
+            Yes
+          </button>
+          <button
+            class="button-modal button-modal-right text_small text__color_dark-grey closeModalTrigger">
+            No
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-container d-none" data-modal="close">
+    <div class="modal-overlay closeModalTrigger"></div>
+
+    <div class="modal-wrapper modal-attention">
+      <div class="modal-window-wrap">
+        <div class="modal-window-header">
+          <h4 class="modal-window-title text_small text__color_grey">
+            Attention!
+          </h4>
+          <img
+            class="modal-window-close-icon closeModalTrigger"
+            src="./style_guide_2/img/close.svg"
+            alt="close-cross" />
+        </div>
+        <div class="modal-attention__content">
+          <p class="attention-content text_small text__color_dark-grey">
+            Do you want to close?
+          </p>
+        </div>
+        <div class="modal-window-button">
+          <button
+            class="button-modal button-modal-left text_small text__color_dark-grey closeLimitPanel">
+            Yes
+          </button>
+          <button
+            class="button-modal button-modal-right text_small text__color_dark-grey closeModalTrigger">
+            No
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-container d-none" data-modal="close-limit">
+    <div class="modal-overlay closeModalTrigger"></div>
+
+    <div class="modal-wrapper modal-attention">
+      <div class="modal-window-wrap">
+        <div class="modal-window-header">
+          <h4 class="modal-window-title text_small text__color_grey">
+            Close Limit
+          </h4>
+          <img
+            class="modal-window-close-icon closeModalTrigger"
+            src="./style_guide_2/img/close.svg"
+            alt="close-cross" />
+        </div>
+        <div class="modal-attention__content">
+          <p class="attention-content text_small text__color_dark-grey">
+            Do you want to close the position and delete the position from the
+            database?
+          </p>
+        </div>
+        <div class="modal-window-button">
+          <button
+            class="button-modal button-modal-left text_small text__color_dark-grey closeLimitPanel">
+            Yes
+          </button>
+          <button
+            class="button-modal button-modal-right text_small text__color_dark-grey closeModalTrigger">
+            No
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-container d-none" data-modal="preset-save">
+    <div class="modal-overlay closeModalTrigger"></div>
+
+    <div class="modal-wrapper modal-attention">
+      <div class="modal-window-wrap">
+        <div class="modal-window-header">
+          <h4 class="modal-window-title text_small text__color_grey">
+            Close Limit
+          </h4>
+          <img
+            class="modal-window-close-icon closeModalTrigger"
+            src="./style_guide_2/img/close.svg"
+            alt="close-cross" />
+        </div>
+        <div class="modal-attention__content">
+          <div
+            class="input-container-wrap input-container-wrap_large-2"
+            data-input="input-field">
+            <div class="input-wrapp">
+              <input
+                class="input-field text_large text__color_dark-grey"
+                type="text" />
+            </div>
+            <div class="input-text-center">
+              <div class="data-wrap" data-type="dynamic" data-state="true">
+                <p class="text_large text__color_grey">Create new preset</p>
+                <p class="text_regular text__color_grey"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-window-button">
+          <button
+            class="button-modal button-modal-left text_small text__color_dark-grey">
+            Yes
+          </button>
+          <button
+            class="button-modal button-modal-right text_small text__color_dark-grey closeModalTrigger">
+            No
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-container d-none" data-modal="images-modal">
+    <div class="modal-overlay closeModalTrigger"></div>
+
+    <div class="modal-wrapper modal-gallery">
+      <div class="modal-window-wrap">
+        <div class="modal-window-header">
+          <h4 class="modal-window-title text_small text__color_grey">
+            Images Gallery
+          </h4>
+          <img
+            class="modal-window-close-icon closeModalTrigger"
+            src="./style_guide_2/img/close.svg"
+            alt="close-cross" />
+        </div>
+        <div class="modal-gallery__content">
+          <div class="modal-gallery__gallery-block gallery-block">
+            <a href="https://picsum.photos/seed/picsum/200/300" class="gallery-block__item" data-fancybox="gallery" data-caption="Single image">
+              <div class="image-item">
+                <img src="https://picsum.photos/seed/picsum/200/300" alt="image-2">
+               
+              </div>
+              
+            </a>
+            <a href="https://picsum.photos/seed/picsum/200/300" class="gallery-block__item" data-fancybox="gallery" data-caption="Single image">
+              <div class="image-item">
+                <img src="https://picsum.photos/seed/picsum/200/300" alt="image-2">
+               
+              </div>
+              
+            </a>
+            <a href="https://picsum.photos/seed/picsum/200/300" class="gallery-block__item" data-fancybox="gallery" data-caption="Single image">
+              <div class="image-item">
+                <img src="https://picsum.photos/seed/picsum/200/300" alt="image-2">
+               
+              </div>
+              
+            </a>
+            <a href="https://picsum.photos/seed/picsum/500/500" class="gallery-block__item" data-fancybox="gallery" data-caption="Single image">
+              <div class="image-item">
+                <img src="https://picsum.photos/seed/picsum/500/500" alt="image-2">
+               
+              </div>
+              
+            </a>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-container d-none" data-modal="profit-range">
+    <div class="modal-overlay closeModalTrigger"></div>
+
+    <div class="profit-range"></div>
+  </div>
+</section>

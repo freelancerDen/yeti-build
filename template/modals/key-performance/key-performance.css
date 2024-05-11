@@ -1,0 +1,22 @@
+.modal-key-performance {
+  width: 340px;
+  height: auto;
+}
+.modal-key-performance .modal-window-content {
+  margin: 0;
+  padding: 14px 30px 44px;
+  gap: 10px 18px;
+}
+.modal-key-performance__label {
+  grid-column: 1/-1;
+  text-align: left;
+}
+.modal-key-performance__delimiter {
+  height: 5px;
+}
+.modal-key-performance__subgrid {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px 18px;
+}/*# sourceMappingURL=key-performance.css.map */

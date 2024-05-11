@@ -1,0 +1,51 @@
+.modal-container {
+  position: fixed;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  z-index: 1100;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.modal-draggable {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modal-gallery {
+  &__content {
+    padding: 1.25rem 1.25rem 0 1.25rem;
+    margin-bottom: 1.25rem;
+    overflow: auto;
+    .gallery-block {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      .image-item {
+        position: relative;
+        height: 150px;
+        border: 1px solid grey;
+        border-radius: 15px;
+        background: rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
