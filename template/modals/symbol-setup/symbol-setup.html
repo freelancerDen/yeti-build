@@ -1,14 +1,14 @@
 <div
   class="modal-wrapper modal-symbol-setup modal-draggable d-none"
   data-modal="symbol-setup">
-  <div class="modal-window-wrap">
+  <div class="modal-window-wrap" data-disable-fields-container="symbol-setup">
     <div class="modal-window-header modal-drag-drop">
       <h4 class="modal-window-title text_regular text__color_dark-grey">
         Symbol setup
       </h4>
       <img
         class="modal-window-close-icon closeModalTrigger"
-        src="./style_guide_2/img/close.svg"
+        src="../../../style_guide_2/img/close.svg"
         alt="close-cross" />
     </div>
 
@@ -56,17 +56,18 @@
             data-input="input-field">
             <div class="input-wrapp">
               <input
-                class="input-field text_large text__color_dark-grey"
+                class="input-field text_large text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
                 data-unit="X"
                 data-min="1"
-                data-max="200" />
+                data-max="200"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center input-border">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
-                <p class="text_large text__color_dark-grey">25</p>
-                <p class="text_small text__color_dark-grey">x</p>
+                <p class="text_large text__color_ligth-grey">25</p>
+                <p class="text_small text__color_ligth-grey">x</p>
               </div>
             </div>
           </div>
@@ -83,15 +84,16 @@
             data-input="input-field">
             <div class="input-wrapp">
               <input
-                class="input-field text_large text__color_dark-grey"
+                class="input-field text_large text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
-                <p class="text_large text__color_dark-grey">49990</p>
-                <p class="text_small text__color_dark-grey">$</p>
+                <p class="text_large text__color_ligth-grey">49990</p>
+                <p class="text_small text__color_ligth-grey">$</p>
               </div>
             </div>
           </div>
@@ -107,15 +109,16 @@
               data-input="input-field">
               <div class="input-wrapp">
                 <input
-                  class="input-field text_large text__color_dark-grey"
+                  class="input-field text_large text__color_dark-grey hidden"
                   type="text"
                   data-type="number"
-                  data-unit="%" />
+                  data-unit="%"
+                  data-disabled-by="symbol-setup" />
               </div>
               <div class="input-text-center">
                 <div class="data-wrap" data-type="dynamic" data-state="ture">
-                  <p class="text_large text__color_dark-grey">0.02</p>
-                  <p class="text_small text__color_dark-grey">%</p>
+                  <p class="text_large text__color_ligth-grey">0.02</p>
+                  <p class="text_small text__color_ligth-grey">%</p>
                 </div>
               </div>
             </div>
@@ -129,15 +132,16 @@
               data-input="input-field">
               <div class="input-wrapp">
                 <input
-                  class="input-field text_large text__color_dark-grey"
+                  class="input-field text_large text__color_dark-grey hidden"
                   type="text"
                   data-type="number"
-                  data-unit="%" />
+                  data-unit="%"
+                  data-disabled-by="symbol-setup" />
               </div>
               <div class="input-text-center">
                 <div class="data-wrap" data-type="dynamic" data-state="ture">
-                  <p class="text_large text__color_dark-grey">0.04</p>
-                  <p class="text_small text__color_dark-grey">%</p>
+                  <p class="text_large text__color_ligth-grey">0.04</p>
+                  <p class="text_small text__color_ligth-grey">%</p>
                 </div>
               </div>
             </div>
@@ -173,12 +177,13 @@
         <!-- column from -->
         <div class="data-info-container table-cell grid-col-from-1">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -190,12 +195,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-from-2">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -207,12 +213,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-from-3">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -224,12 +231,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-from-4">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -241,12 +249,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-from-5">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -258,12 +267,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-from-6">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -275,12 +285,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-from-7">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -293,12 +304,13 @@
         <!-- column to -->
         <div class="data-info-container table-cell grid-col-to-1">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -310,12 +322,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-to-2">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -327,12 +340,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-to-3">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -344,12 +358,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-to-4">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -361,12 +376,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-to-5">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -378,12 +394,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-to-6">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -395,12 +412,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-to-7">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -413,12 +431,13 @@
         <!-- margin -->
         <div class="data-info-container table-cell grid-col-margin-1">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="%" />
+                data-unit="%"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -430,12 +449,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-margin-2">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="%" />
+                data-unit="%"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -447,12 +467,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-margin-3">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="%" />
+                data-unit="%"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -464,12 +485,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-margin-4">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="%" />
+                data-unit="%"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -481,12 +503,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-margin-5">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="%" />
+                data-unit="%"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -498,12 +521,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-margin-6">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="%" />
+                data-unit="%"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -515,12 +539,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-margin-7">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="%" />
+                data-unit="%"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -536,12 +561,13 @@
           <div
             class="input-container-wrap table-cell table-cell_top"
             data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -553,12 +579,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-Maintenance-2">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -570,12 +597,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-Maintenance-3">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -587,12 +615,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-Maintenance-4">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -604,12 +633,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-Maintenance-5">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -621,12 +651,13 @@
         </div>
         <div class="data-info-container table-cell grid-col-Maintenance-6">
           <div class="input-container-wrap table-cell" data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -641,12 +672,13 @@
           <div
             class="input-container-wrap table-cell table-cell_bottom"
             data-input="input-field">
-            <div class="input-wrapp hidden">
+            <div class="input-wrapp">
               <input
-                class="input-field text_regular text__color_dark-grey"
+                class="input-field text_regular text__color_dark-grey hidden"
                 type="text"
                 data-type="number"
-                data-unit="$" />
+                data-unit="$"
+                data-disabled-by="symbol-setup" />
             </div>
             <div class="input-text-center">
               <div class="data-wrap" data-type="dynamic" data-state="ture">
@@ -687,11 +719,14 @@
 
     <div class="modal-window-button">
       <button
-        class="button-modal button-modal-left text_small text__color_dark-grey">
+        class="button-modal button-modal-left text_small text__color_dark-grey toggle"
+        data-type="btn"
+        data-disable-fields="symbol-setup"
+        data-state="false">
         Edit
       </button>
       <button
-        class="button-modal button-modal-right text_small text__color_dark-grey">
+        class="button-modal button-modal-right text_small text__color_dark-grey closeModalTrigger">
         Save
       </button>
     </div>

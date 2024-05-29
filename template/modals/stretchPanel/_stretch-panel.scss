@@ -2,13 +2,13 @@
   padding: 0 1rem 0 1.9375rem;
   .stretch-panel {
     &__header {
-      border: .3125rem solid $white;
+      border: 0.3125rem solid $white;
       border-radius: 1.25rem;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-  
+
       .indicator-wrap {
-        margin-right: .8125rem;
+        margin-right: 0.8125rem;
       }
       &-actions__block {
         a {
@@ -18,7 +18,7 @@
           img {
             transition: all 0.3s;
           }
-          &:hover{
+          &:hover {
             img {
               transform: scale(1.1);
             }
@@ -28,30 +28,29 @@
     }
     &__body {
       border-radius: 1.25rem;
-      box-shadow: 0rem .3125rem .9375rem 0rem rgba(0, 0, 0, 0.1);
+      box-shadow: 0rem 0.3125rem 0.9375rem 0rem rgba(0, 0, 0, 0.1);
       background-color: $white;
     }
     &__footer {
-      margin: .375rem;
+      margin: 0.375rem;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       .button-stretch-panel {
         border-right: none !important;
-        
-        &:first-child{
+
+        &:first-child {
           border-radius: 0px 0px 0px 14px;
         }
-        &:last-child{
+        &:last-child {
           border-radius: 0px 0px 14px 0px;
           border-right: 1px solid rgb(244, 244, 244) !important;
         }
-
       }
     }
     &__content {
-      background-color: #F2F4F7;
+      background-color: #f2f4f7;
       min-height: 25rem;
-      margin: .375rem;
+      margin: 0.375rem;
       padding: 2.5rem 2.125rem;
     }
     &__wrapper {
@@ -95,17 +94,19 @@
   align-items: center;
   justify-content: center;
   border: 1px solid rgb(244, 244, 244) !important;
- 
+
   background-color: rgb(255, 255, 255) !important;
   min-height: 2.125rem;
-  padding: .375rem 1rem !important;
-  &:active{
+  padding: 0.375rem 1rem !important;
+
+  &:active,
+  &.active {
     box-shadow: inset 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
     background-color: rgb(205, 223, 231) !important;
   }
 }
 
-.button-normalize{
+.button-normalize {
   border: none;
   outline: none;
   appearance: none;
@@ -133,4 +134,10 @@
 }
 .ms-n2 {
   margin-left: -8px;
+}
+
+.stretch-panel-container {
+  display: grid;
+  gap: 24px;
+  padding: 64px;
 }

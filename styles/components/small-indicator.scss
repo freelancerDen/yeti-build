@@ -1,0 +1,15 @@
+.small-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  &--green {
+    background: #00ffa3;
+  }
+  &--red {
+    background: #d43449;
+  }
+  &--grey {
+    background: #c0c9d8;
+  }
+}

@@ -12,7 +12,7 @@ const ipPattern = /(^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))$/;
  * then finds the element with the class `data-wrap` inside that container. It sets the `data-state`
  * attribute of
  */
-export const disableInput = (input) => {
+const disableInput = (input) => {
   const container = input.closest('[data-input="input-field"]');
   const dataWrap = container.querySelector('.data-wrap');
 
@@ -33,7 +33,7 @@ export const disableInput = (input) => {
  * @param input - The `input` parameter in the `enableInput` function is a reference to an HTML input
  * element that you want to enable for user interaction.
  */
-export const enableInput = (input) => {
+const enableInput = (input) => {
   const container = input.closest('[data-input="input-field"]');
   const dataWrap = container.querySelector('.data-wrap');
 
@@ -273,7 +273,7 @@ function setValue(input) {
  * data related to the event. In this case, the `handleChangeInput` function is likely being called in
  * response to an input
  */
-export function handleChangeInput(event) {
+function handleChangeInput(event) {
   const { currentTarget: input } = event;
 
   checkValidation(input);
@@ -289,7 +289,7 @@ export function handleChangeInput(event) {
  * @returns If the `inputWrap` variable is not found (i.e., if `input.closest('.input-wrapp')` returns
  * `null`), then `undefined` will be returned.
  */
-export function handleFocusInput(event) {
+function handleFocusInput(event) {
   const { currentTarget: input } = event;
 
   const inputWrap = input.closest('.input-wrapp');
@@ -308,7 +308,7 @@ export function handleFocusInput(event) {
  * @returns If the `inputWrap` variable is not found (i.e., if `input.closest('.input-wrapp')` returns
  * `null`), then `undefined` will be returned.
  */
-export function handleFocusOutInput(event) {
+function handleFocusOutInput(event) {
   const { currentTarget: input } = event;
 
   const inputWrap = input.closest('.input-wrapp');
@@ -321,15 +321,74 @@ export function handleFocusOutInput(event) {
 }
 
 /**
- * The `initInputs` function initializes event listeners for input fields to handle focus, focusout,
- * and input events.
+ * The function `handleMouseoverInput` adjusts the position of a text element within a container based
+ * on their widths during a mouseover event.
+ * @param event - The `event` parameter is an object that contains information about the event that
+ * occurred, such as the type of event, the target element that triggered the event, and any additional
+ * data related to the event. In this case, the `handleMouseoverInput` function is likely intended to
+ * handle a mouse
  */
-export const initInputs = () => {
+function handleMouseoverInput(event) {
+  const { currentTarget: input } = event;
+
+  const container = input.closest('[data-input="input-field"]');
+  const text = container.querySelector('.data-wrap');
+
+  if (text.offsetWidth > container.offsetWidth) {
+    text.style.transition = `transform ${text.offsetWidth / 60}s ease-in-out`;
+    text.style.transform = `translateX(calc(-100% + ${
+      container.offsetWidth / 2
+    }px))`;
+  }
+}
+
+/**
+ * The function `handleMouseleaveInput` adjusts the position of text within a container based on their
+ * widths when the mouse leaves an input element.
+ * @param event - The `event` parameter is an object that contains information about the event that
+ * occurred, such as the type of event (e.g., mouseleave), the target element that triggered the event
+ * (e.g., the input field), and other event-related data. In this case, the function `handleMouse
+ */
+function handleMouseleaveInput(event) {
+  const { currentTarget: input } = event;
+
+  const container = input.closest('[data-input="input-field"]');
+  const text = container.querySelector('.data-wrap');
+
+  if (text.offsetWidth > container.offsetWidth) {
+    text.style.transform = `translateX(0px)`;
+  }
+}
+
+/**
+ * The `setEventListeners` function adds event listeners for focus, blur, input, mouseover, and
+ * mouseleave to the specified input element.
+ * @param input - The `input` parameter in the `setEventListeners` function represents an HTML input
+ * element to which event listeners will be added.
+ */
+function setEventListeners(input) {
+  input.addEventListener('focus', handleFocusInput);
+  input.addEventListener('blur', handleFocusOutInput);
+  input.addEventListener('input', handleChangeInput);
+  input.addEventListener('mouseover', handleMouseoverInput);
+  input.addEventListener('mouseleave', handleMouseleaveInput);
+}
+
+/**
+ * The `initInputs` function selects all text input elements on the page and sets event listeners for
+ * each of them.
+ */
+const init = () => {
   const inputs = document.querySelectorAll(`input[type="text"]`);
 
   inputs.forEach((input) => {
-    input.addEventListener('focus', handleFocusInput);
-    input.addEventListener('blur', handleFocusOutInput);
-    input.addEventListener('input', handleChangeInput);
+    setEventListeners(input);
   });
+};
+
+export default {
+  setEventListeners,
+  init,
+  disable: disableInput,
+  enable: enableInput,
 };

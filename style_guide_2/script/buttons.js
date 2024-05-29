@@ -1,4 +1,5 @@
 import btnTimeMode from './btn-time-mode.js';
+import customInput from './input.js';
 
 const button = {
   btn: '[data-type="btn"]',
@@ -47,24 +48,32 @@ const switchActiveButtonInGroup = (button) => {
   }
 };
 
-//function for TurnOn button
-const buttonTurnOn = (button) => {
-  const indicator = button.querySelector('.indicator');
-  const buttonTextElement = button.querySelector('p');
+/**
+ * The function `changeActiveButtonInGroup` changes the active button within a group of buttons based
+ * on the button that was pressed.
+ * @param pressedButton - The `pressedButton` parameter is the button element that was clicked or
+ * activated by the user.
+ */
+function changeActiveButtonInGroup(pressedButton) {
+  const groupName = pressedButton.dataset.buttonGroupName;
 
-  if (!indicator) return;
+  const container = pressedButton.closest(`[data-button-group="${groupName}"]`);
 
-  // Toggle the indicator color from green to grey
-  indicator.classList.toggle('green');
-  indicator.classList.toggle('grey');
+  if (container) {
+    const buttons = container.querySelectorAll(
+      `[data-button-group-name="${groupName}"]`,
+    );
 
-  // Toggle the button text from "Turn On" to "Turn Off" and vice versa
-  if (buttonTextElement.textContent === 'Turn On') {
-    buttonTextElement.textContent = 'Turn Off';
-  } else {
-    buttonTextElement.textContent = 'Turn On';
+    buttons.forEach((btn) => {
+      btn.classList.remove('btn-active');
+      btn.dataset.state = 'false';
+      disableFieldsOnChangeState(btn);
+    });
+
+    pressedButton.classList.add('btn-active');
+    pressedButton.dataset.state = 'true';
   }
-};
+}
 
 /**
  * The function `handleNavIndicatorBtnClick` toggles the class `active-indicator` on the clicked
@@ -105,6 +114,54 @@ export function handleButtonModeClick(event) {
   btnTimeMode.btnHandler(event);
 }
 
+/**
+ * The function `disableFieldsOnChangeState` disables or enables input fields and buttons based on the
+ * state of a target element.
+ * @param target - The `target` parameter in the `disableFieldsOnChangeState` function is the element
+ * that triggered the change event. This function is designed to disable or enable input fields and
+ * buttons based on the state of the target element.
+ * @returns If the `target` element has a `data-disableFields` attribute, the function will return
+ * early if it is not present. Otherwise, the function will disable or enable input fields and buttons
+ * based on the value of the `data-state` attribute of the `target` element.
+ */
+function disableFieldsOnChangeState(target) {
+  const fieldNameToDisable = target.dataset.disableFields;
+
+  if (!fieldNameToDisable) return;
+
+  const container = target.closest(
+    `[data-disable-fields-container="${fieldNameToDisable}"]`,
+  );
+
+  const inputFields = container.querySelectorAll(
+    `input[data-disabled-by="${fieldNameToDisable}"]`,
+  );
+
+  if (inputFields.length > 0) {
+    inputFields.forEach((input) => {
+      if (target.dataset.state === 'true') {
+        customInput.enable(input);
+      } else {
+        customInput.disable(input);
+      }
+    });
+  }
+
+  const buttons = container.querySelectorAll(
+    `button[data-disabled-by="${fieldNameToDisable}"]`,
+  );
+
+  if (buttons.length > 0) {
+    buttons.forEach((btn) => {
+      if (target.dataset.state === 'true') {
+        btn.removeAttribute('disabled');
+      } else {
+        btn.setAttribute('disabled', 'true');
+      }
+    });
+  }
+}
+
 export function handleButtonListClick(event) {
   const { currentTarget } = event;
 
@@ -112,11 +169,30 @@ export function handleButtonListClick(event) {
     // For all buttons
     if (currentTarget.classList.contains(button.className)) {
       activeBtn(currentTarget);
-      buttonTurnOn(currentTarget);
     }
+
+    if (currentTarget.classList.contains('toggle')) {
+      currentTarget.classList.toggle('toggle-active');
+      if (currentTarget.dataset.state === 'true') {
+        currentTarget.dataset.state = 'false';
+      } else {
+        currentTarget.dataset.state = 'true';
+      }
+    }
+
     // For group of buttons
     if (currentTarget.classList.contains('button-group')) {
       switchActiveButtonInGroup(currentTarget);
+    }
+
+    // New logic for button
+    if (currentTarget.dataset.buttonGroupName) {
+      changeActiveButtonInGroup(currentTarget);
+    }
+
+    // Disable fields on change state
+    if (currentTarget.dataset.disableFields) {
+      disableFieldsOnChangeState(currentTarget);
     }
   }
 }

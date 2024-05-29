@@ -1,12 +1,6 @@
 // Importing setAnimation from rolltext.js
 import setAnimation from './rolltext.js';
-import {
-  disableInput,
-  enableInput,
-  handleFocusInput,
-  handleFocusOutInput,
-  handleChangeInput,
-} from './input.js';
+import customInput from './input.js';
 import { handleButtonModeClick, handleButtonListClick } from './buttons.js';
 import initSwitcher from './switcher.js';
 
@@ -51,9 +45,7 @@ function renderFieldsTemplate(element, containerSelector) {
 
   if (inputs.length > 0) {
     inputs.forEach((input) => {
-      input.addEventListener('focus', handleFocusInput);
-      input.addEventListener('blur', handleFocusOutInput);
-      input.addEventListener('input', handleChangeInput);
+      customInput.setEventListeners(input);
     });
   }
 
@@ -121,11 +113,11 @@ const setSelectorData = (newElement, oldElement) => {
 
   if (oldElement.innerText === 'Disable') {
     inputs.forEach((el) => {
-      disableInput(el);
+      customInput.disable(el);
     });
   } else {
     inputs.forEach((el) => {
-      enableInput(el);
+      customInput.enable(el);
     });
   }
 };
@@ -146,14 +138,13 @@ const handleClick = (e) => {
   // Function to get the selector head text when clicking outside a dropdown
   const clickOutOfDW = () => {
     try {
-      console.log(e.target
-        .closest('.selector')
-        .querySelector('.selector__inner-text'))
+      console.log(
+        e.target.closest('.selector').querySelector('.selector__inner-text'),
+      );
       return e.target
         .closest('.selector')
         .querySelector('.selector__inner-text');
     } catch (error) {
-      console.log(error)
       return null;
     }
   };

@@ -13,6 +13,7 @@
   inset: 0;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: -1;
+  backdrop-filter: blur(4px);
 }
 
 .modal-draggable {
@@ -22,30 +23,55 @@
 }
 
 .modal-gallery {
+  height: auto;
+  max-height: 80vh;
+
   &__content {
     padding: 1.25rem 1.25rem 0 1.25rem;
     margin-bottom: 1.25rem;
     overflow: auto;
-    .gallery-block {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      .image-item {
-        position: relative;
-        height: 150px;
-        border: 1px solid grey;
-        border-radius: 15px;
-        background: rgba(0, 0, 0, 0.05);
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
+  }
+}
+
+.gallery-block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  &__item {
+    position: relative;
+    height: 150px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+
+  &__link {
+    position: absolute;
+    inset: 0;
+    display: block;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
+  }
+
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    background-color: #f2f4f7;
+    border-radius: 50%;
+    border: none;
+    background-image: url('../../style_guide_2/img/close.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px;
   }
 }

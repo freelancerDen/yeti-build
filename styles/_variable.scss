@@ -1,0 +1,29 @@
+// Colors variables
+// import fonts
+// font-family: 'Inter', sans-serif;
+// font-family: 'Jost', sans-serif;
+// font-family: 'Outfit', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700&family=Jost:wght@300;400;600&family=Outfit:wght@400;700&display=swap");
+// font-family: 'Roboto Mono', monospace;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:200,300,regular,500,600,700,800,900&display=swap');
+//colors variables
+
+//page wrapper media queries
+$super-light-blue-bg: #EAF2F5; // Background color for all counters and active button style
+$soft-grey: #4E5A6C; // Active menu style color
+$soft-blue: #00A3FF; // Background color for switcher when active
+$hard-grey: #344054; // Font color
+$grey: RGBA(52, 64, 84, 0.5); // Semi-transparent grey color
+$lightGray: RGBA(52, 64, 84, 0.25); // Lighter semi-transparent grey color
+$green: #1eab31; // Green color
+$red: #a10000; // Red color
+$brown: #6B4015; // Brown color
+$red-info: #BC4343; // Red for informational alerts
+$dark-blue: #313C4F; // Dark blue color
+$background-inactive: #F5F6F8; // Background color for inactive elements
+$size-regular: 16px; // Regular font size
+$size-medium: 10px; // Medium font size
+$height-regural: 26px; // Regular height
+$light-white: #f2f4f7; //page background
+$white: #fff;

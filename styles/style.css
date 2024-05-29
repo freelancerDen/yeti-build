@@ -91,8 +91,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -410,7 +409,6 @@ textarea {
   grid-column: 2/5;
   grid-row: 3/4;
   grid-template-columns: 19px 78px 78px 67px 85px;
-  grid-template-rows: repeat(7, 16px);
 }
 .grid-table .grid-table-num-1 {
   grid-column: 1/1;
@@ -753,6 +751,13 @@ svg {
   cursor: default;
   position: relative;
 }
+.selector-wrapper .selector.disabled {
+  color: RGBA(52, 64, 84, 0.25);
+  pointer-events: none;
+}
+.selector-wrapper .selector.disabled .selector__header::after {
+  opacity: 40%;
+}
 .selector-wrapper .selector_full {
   width: 100% !important;
 }
@@ -821,6 +826,10 @@ svg {
 .selector-wrapper .selector__inner-text {
   text-transform: capitalize;
   display: inline-block;
+}
+.selector-wrapper .selector__dropdown-text {
+  min-width: 100%;
+  line-height: 1.5;
 }
 .selector-wrapper .selector .text-wrapp {
   max-width: 105px;
@@ -1027,6 +1036,13 @@ svg {
 .input-container-wrap .input-wrapp_right {
   border-radius: 0 6px 6px 0;
 }
+.input-container-wrap.hide-value .data-wrap p {
+  display: none;
+}
+.input-container-wrap.hide-value .data-wrap::before {
+  color: RGBA(52, 64, 84, 0.25);
+  content: "-";
+}
 
 .button-new,
 .button-non-press {
@@ -1039,7 +1055,8 @@ svg {
 }
 .button-new:disabled,
 .button-non-press:disabled {
-  color: rgba(52, 64, 84, 0.25);
+  color: RGBA(52, 64, 84, 0.25);
+  pointer-events: none;
 }
 .button-new_large-2,
 .button-non-press_large-2 {
@@ -1110,6 +1127,10 @@ svg {
   justify-content: baseline;
   justify-content: baseline;
   flex: 1 0 0;
+}
+.button-group:disabled {
+  color: RGBA(52, 64, 84, 0.25);
+  pointer-events: none;
 }
 .button-group_normal-1 {
   border-radius: 6px 0 0 6px;
@@ -1206,7 +1227,8 @@ svg {
 }
 
 .data-wrap {
-  display: flex;
+  display: inline-flex;
+  white-space: nowrap;
   align-items: baseline;
 }
 
@@ -1312,11 +1334,11 @@ svg {
 .input-text-center {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
+  text-align: center;
+}
+.input-text-center--with-button {
+  padding-left: 16px;
 }
 
 .table-switch {
@@ -1374,17 +1396,24 @@ svg {
 }
 
 .button-input {
-  height: 26px;
   border: 1px solid white;
   border-radius: 6px;
   background-color: #f7f7f8;
   color: #344054;
   text-align: center;
 }
+.button-input:disabled {
+  color: RGBA(52, 64, 84, 0.25);
+  pointer-events: none;
+}
+.button-input:active {
+  color: #344054;
+  background-color: #cddfe7;
+  background: linear-gradient(180deg, rgba(52, 64, 84, 0.25) 0%, rgb(205, 223, 231) 27%);
+}
 
 .button-time-small {
   width: 16px;
-  height: 28px;
   padding: 0;
   border-left: 0.5px;
   z-index: 6;
@@ -1392,7 +1421,7 @@ svg {
 
 .button-time {
   width: 16px;
-  height: 28px;
+  height: 100%;
   padding: 0;
   border-left: 0.5px;
   position: absolute;
@@ -1533,7 +1562,6 @@ svg {
 
 .button-tiny {
   min-width: 50px;
-  width: -moz-max-content;
   width: max-content;
   height: 20px;
   padding: 0;
@@ -1608,7 +1636,6 @@ svg {
 
 .conection-block-wrap {
   height: 23px;
-  width: -moz-max-content;
   width: max-content;
   max-width: 500px;
   display: inline-flex;
@@ -1775,6 +1802,11 @@ svg {
   width: 100%;
   height: 100%;
 }
+.button-modal.toggle-active {
+  color: #344054;
+  background-color: #cddfe7;
+  background: linear-gradient(180deg, rgba(52, 64, 84, 0.25) 0%, rgb(205, 223, 231) 27%);
+}
 
 .button-modal:active {
   background: #cddfe7;
@@ -1790,9 +1822,7 @@ svg {
   width: auto;
   height: auto;
   min-width: 324px;
-  max-width: -moz-max-content;
   max-width: max-content;
-  max-height: -moz-max-content;
   max-height: max-content;
   border-radius: 10px;
   background: #f2f4f7;
@@ -1813,6 +1843,18 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.block-container-wrap .block-header-wrap .button-new-wrap_full .button-group_block-button_1 {
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 10px 0 0 0;
+}
+.block-container-wrap .block-header-wrap .button-new-wrap_full .button-group_block-button_2 {
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0 10px 0 0;
 }
 .block-container-wrap .block-content-wrap {
   padding: 20px;
@@ -2030,7 +2072,7 @@ svg {
   background-color: #00A3FF;
 }
 .nav__container_btn-schedule-menu {
-  background-image: url("../style_guide_2/img/schedule.svg");
+  background-image: url("../../style_guide_2/img/schedule.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2070,7 +2112,6 @@ svg {
 }
 
 .navbar__btn-wrapp {
-  width: -moz-max-content;
   width: max-content;
   height: 100%;
   background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
@@ -2267,6 +2308,7 @@ svg {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: -1;
+  backdrop-filter: blur(4px);
 }
 
 .modal-draggable {
@@ -2275,32 +2317,53 @@ svg {
   left: 0;
 }
 
+.modal-gallery {
+  height: auto;
+  max-height: 80vh;
+}
 .modal-gallery__content {
   padding: 1.25rem 1.25rem 0 1.25rem;
   margin-bottom: 1.25rem;
   overflow: auto;
 }
-.modal-gallery__content .gallery-block {
+
+.gallery-block {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
-.modal-gallery__content .gallery-block .image-item {
+.gallery-block__item {
   position: relative;
   height: 150px;
   border: 1px solid grey;
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.modal-gallery__content .gallery-block .image-item img {
+.gallery-block__link {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.gallery-block__link img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+}
+.gallery-block__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  background-color: #f2f4f7;
+  border-radius: 50%;
+  border: none;
+  background-image: url("../../style_guide_2/img/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 8px;
 }
 
 .modal-risk-wrap {
@@ -2437,7 +2500,7 @@ svg {
 }
 .table-container .table-cell {
   width: 100%;
-  height: 14px;
+  height: 18px;
   border-radius: 0px;
 }
 .table-container .table-cell_top {
@@ -2445,6 +2508,13 @@ svg {
 }
 .table-container .table-cell_bottom {
   border-radius: 0 0 6px 0;
+}
+.table-container .table-cell input {
+  position: absolute;
+  inset: 0;
+}
+.table-container .table-cell .data-wrap {
+  vertical-align: text-top;
 }
 
 .modal-terminal {
@@ -2594,7 +2664,7 @@ svg {
   padding: 0.875rem;
   margin-bottom: 0.25rem;
   position: relative;
-  background: url("./style_guide_2/img/profitRange/bg-top.png") 100% 100%/100% 100% no-repeat;
+  background: url("../../../style_guide_2/img/profitRange/bg-top.png") 100% 100%/100% 100% no-repeat;
 }
 .profit-range-header .logo {
   margin-bottom: 1.5rem;
@@ -2612,7 +2682,6 @@ svg {
   margin: 0 auto;
 }
 .profit-range-header__content .line {
-  max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 0 auto;
 }
@@ -2625,7 +2694,7 @@ svg {
 .profit-range-content {
   min-height: 15.3125rem;
   padding: 2rem 1rem;
-  background: url("./style_guide_2/img/profitRange/bg-top.png") 100% 100%/100% 100% no-repeat;
+  background: url("../../../style_guide_2/img/profitRange/bg-top.png") 100% 100%/100% 100% no-repeat;
 }
 .profit-range-content .line {
   display: flex;
@@ -2742,7 +2811,7 @@ svg {
   border-right: 1px solid rgb(244, 244, 244) !important;
 }
 .section__stretch-panel .stretch-panel__content {
-  background-color: #F2F4F7;
+  background-color: #f2f4f7;
   min-height: 25rem;
   margin: 0.375rem;
   padding: 2.5rem 2.125rem;
@@ -2786,7 +2855,7 @@ svg {
   min-height: 2.125rem;
   padding: 0.375rem 1rem !important;
 }
-.button-stretch-panel:active {
+.button-stretch-panel:active, .button-stretch-panel.active {
   box-shadow: inset 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
   background-color: rgb(205, 223, 231) !important;
 }
@@ -2794,9 +2863,7 @@ svg {
 .button-normalize {
   border: none;
   outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background-color: transparent;
   padding: 0;
   margin: 0;
@@ -2819,6 +2886,12 @@ svg {
 
 .ms-n2 {
   margin-left: -8px;
+}
+
+.stretch-panel-container {
+  display: grid;
+  gap: 24px;
+  padding: 64px;
 }
 
 .modal-logo {
@@ -2976,4 +3049,6 @@ svg {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.02) inset;
   background-color: rgba(234, 242, 245, 0.5);
   border-radius: 4px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

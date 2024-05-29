@@ -93,7 +93,7 @@
             <div class="block-wrapper block-account">
               <div class="block-container-wrap">
                 <div class="block-header-wrap overflow-hidden">
-                  <div class="button-new-wrap button-new-wrap_full btn-shadow">
+                  <div class="button-new-wrap button-new-wrap_full">
                     <button
                       class="button-group button-group_block-button_1 text_regular"
                       data-type="btn">
@@ -550,15 +550,15 @@
                           </p>
                         </div>
 
-                        <div class="handler-box handler-box_gap-small ms-auto">
+                        <div class="handler-box ms-auto">
                           <div
                             class="data-info-container data-info-container_tiny">
                             <div
-                              class="input-container-wrap input-container-wrap_tiny-3 left"
+                              class="input-container-wrap input-container-wrap_tiny"
                               data-input="input-field">
                               <div class="input-wrapp">
                                 <input
-                                  class="input-field input-field_left text_large text__color_dark-grey"
+                                  class="input-field text_large text__color_dark-grey"
                                   type="text"
                                   data-type="number"
                                   data-unit="$" />
@@ -571,20 +571,12 @@
                                   <p class="text_large text__color_dark-grey">
                                     100
                                   </p>
-                                  <p
-                                    class="text_small text__color_dark-grey"
-                                    data-mode="hour">
+                                  <p class="text_small text__color_dark-grey">
                                     $
                                   </p>
                                 </div>
                               </div>
                             </div>
-                            <button
-                              class="button-input button-time-small right text_small"
-                              data-type="time"
-                              data-mode="hour">
-                              $
-                            </button>
                           </div>
                         </div>
                       </div>
@@ -606,15 +598,15 @@
                           </p>
                         </div>
 
-                        <div class="handler-box handler-box_gap-small ms-auto">
+                        <div class="handler-box ms-auto">
                           <div
                             class="data-info-container data-info-container_tiny">
                             <div
-                              class="input-container-wrap input-container-wrap_tiny-3 left"
+                              class="input-container-wrap input-container-wrap_tiny"
                               data-input="input-field">
                               <div class="input-wrapp">
                                 <input
-                                  class="input-field input-field_left text_large text__color_dark-grey"
+                                  class="input-field text_large text__color_dark-grey"
                                   type="text"
                                   data-type="number"
                                   data-unit="%" />
@@ -625,22 +617,14 @@
                                   data-type="dynamic"
                                   data-state="ture">
                                   <p class="text_large text__color_dark-grey">
-                                    5
+                                    1.5
                                   </p>
-                                  <p
-                                    class="text_small text__color_dark-grey"
-                                    data-mode="hour">
+                                  <p class="text_small text__color_dark-grey">
                                     %
                                   </p>
                                 </div>
                               </div>
                             </div>
-                            <button
-                              class="button-input button-time-small right text_small"
-                              data-type="time"
-                              data-mode="hour">
-                              %
-                            </button>
                           </div>
                         </div>
                       </div>
@@ -658,67 +642,70 @@
 
                         <div class="data-wrap">
                           <p class="text text_regular text__color_dark-grey">
-                            Range
+                            Turn off time
                           </p>
                         </div>
 
-                        <div class="handler-box handler-box_gap-small ms-auto">
-                          <div
-                            class="data-info-container data-info-container_tiny">
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="handler-box">
                             <div
-                              class="input-container-wrap input-container-wrap_tiny-3 left"
-                              data-input="input-field">
-                              <div class="input-wrapp">
-                                <input
-                                  class="input-field input-field_left text_large text__color_dark-grey"
-                                  type="text"
-                                  data-type="number"
-                                  data-unit="date" />
+                              class="data-info-container data-info-container_tiny">
+                              <div
+                                class="input-container-wrap input-container-wrap_tiny-3 left"
+                                data-input="input-field">
+                                <div class="input-wrapp">
+                                  <input
+                                    class="input-field input-field_left text_large text__color_dark-grey"
+                                    type="text"
+                                    data-type="number"
+                                    data-unit="date" />
+                                </div>
+                                <div class="input-text-center">
+                                  <div
+                                    class="data-wrap"
+                                    data-type="dynamic"
+                                    data-state="ture">
+                                    <p class="text_large text__color_dark-grey">
+                                      30
+                                    </p>
+                                    <p
+                                      class="text_small text__color_dark-grey"
+                                      data-mode="hour">
+                                      d
+                                    </p>
+                                  </div>
+                                </div>
                               </div>
-                              <div class="input-text-center">
+                              <button
+                                class="button-input button-time-small right text_small"
+                                data-type="time"
+                                data-mode="day">
+                                d
+                              </button>
+                            </div>
+                          </div>
+
+                          <div
+                            class="data-info-container data-info-container_normal-2">
+                            <div
+                              class="input-container-wrap input-container-wrap_normal-2"
+                              data-input="input-field">
+                              <div class="input-wrapp hidden">
+                                <input
+                                  class="input-field text_large text__color_dark-grey"
+                                  type="text" />
+                              </div>
+                              <div
+                                class="input-text-center input-border input-disabled">
                                 <div
                                   class="data-wrap"
                                   data-type="dynamic"
                                   data-state="ture">
-                                  <p class="text_large text__color_dark-grey">
-                                    30
+                                  <p class="text_large text__color_grey">
+                                    29d 23:59
                                   </p>
-                                  <p
-                                    class="text_small text__color_dark-grey"
-                                    data-mode="hour">
-                                    d
-                                  </p>
+                                  <p class="text_small text__color_grey"></p>
                                 </div>
-                              </div>
-                            </div>
-                            <button
-                              class="button-input button-time-small right text_small"
-                              data-type="time"
-                              data-mode="day">
-                              d
-                            </button>
-                          </div>
-
-                          <div
-                            class="input-container-wrap input-container-wrap_small"
-                            data-input="input-field">
-                            <div class="input-wrapp">
-                              <input
-                                class="input-field text_large text__color_dark-grey hidden"
-                                type="text"
-                                data-type="number" />
-                            </div>
-                            <div class="input-text-center">
-                              <div
-                                class="data-wrap"
-                                data-type="dynamic"
-                                data-state="false">
-                                <p
-                                  class="text_large text__color_dark-grey text__color_ligth-grey">
-                                  29d 23:59
-                                </p>
-                                <p
-                                  class="text_large text__color_dark-grey text__color_ligth-grey"></p>
                               </div>
                             </div>
                           </div>
@@ -987,7 +974,9 @@
                               <div class="input-wrapp input-wrapp_right hidden">
                                 <input
                                   class="input-field input-field_right text_large text__color_dark-grey"
-                                  type="text" />
+                                  type="text"
+                                  data-type="number"
+                                  data-unit="$" />
                               </div>
                               <div
                                 class="input-text-center input-border-right input-disabled">
@@ -4175,7 +4164,7 @@
                                 <input
                                   class="input-field input-field_left text_large text__color_dark-grey"
                                   type="text"
-                                  data-type="number"
+                                  data-type="dynamic-number"
                                   data-unit="date" />
                               </div>
                               <div class="input-text-center">
@@ -5474,7 +5463,7 @@
                               </div>
                             </div>
                             <button
-                              class="button-non-press button-non-press-normal text_large"
+                              class="button-new button-new_save-small text_large"
                               data-type="btn">
                               Every
                             </button>
@@ -5501,8 +5490,9 @@
                             </p>
                           </div>
                         </div>
-                        <div class="handler-box">
-                          <div class="d-flex gap-2 align-items-center">
+
+                        <div class="d-flex gap-2 align-items-center">
+                          <div class="handler-box">
                             <div
                               class="input-container-wrap input-container-wrap_tiny"
                               data-input="input-field">
@@ -5527,25 +5517,27 @@
                                 </div>
                               </div>
                             </div>
+                          </div>
+
+                          <div
+                            class="data-info-container data-info-container_tiny">
                             <div
                               class="input-container-wrap input-container-wrap_tiny"
                               data-input="input-field">
-                              <div class="input-wrapp">
+                              <div class="input-wrapp hidden">
                                 <input
-                                  class="input-field text_large text__color_dark-grey hidden"
+                                  class="input-field text_large text__color_dark-grey"
                                   type="text"
-                                  data-type="number"
-                                  data-unit="ticks" />
+                                  data-type="number" />
                               </div>
-                              <div class="input-text-center">
+                              <div
+                                class="input-text-center input-border input-disabled">
                                 <div
                                   class="data-wrap"
                                   data-type="dynamic"
                                   data-state="ture">
-                                  <p class="text_large text__color_ligth-grey">
-                                    21
-                                  </p>
-                                  <p class="text_small text__color_ligth-grey">
+                                  <p class="text_large text__color_grey">21</p>
+                                  <p class="text_small text__color_grey">
                                     ticks
                                   </p>
                                 </div>
@@ -7361,12 +7353,14 @@
                                 class="button-new-wrap button-new-wrap_small btn-shadow">
                                 <button
                                   class="button-group button-group_normal-1 text_large btn-active"
-                                  data-type="btn">
+                                  data-type="btn"
+                                  disabled>
                                   L
                                 </button>
                                 <button
                                   class="button-group button-group_normal-2 text_large"
-                                  data-type="btn">
+                                  data-type="btn"
+                                  disabled>
                                   S
                                 </button>
                               </div>
@@ -7516,7 +7510,7 @@
                                     data-type="number"
                                     data-unit="ticks" />
                                 </div>
-                                <div class="input-text-center">
+                                <div class="input-text-center input-text-center--with-button">
                                   <div
                                     class="data-wrap"
                                     data-type="dynamic"
@@ -7548,12 +7542,16 @@
             <div class="block-wrapper mw-100">
               <div class="block-container-wrap mw-100">
                 <div class="block-content-wrap">
-                  <div class="block-content-wrap__wrapper">
+                  <div
+                    class="block-content-wrap__wrapper"
+                    data-button-group="optimization">
                     <div
                       class="d-flex justify-content-between align-items-center">
                       <button
-                        class="button-non-press button-non-press_large text_large"
-                        data-type="btn">
+                        class="button-new button-new_large text_large"
+                        data-type="btn"
+                        data-button-group-name="optimization"
+                        data-state="false">
                         Current PnL
                       </button>
 
@@ -7565,88 +7563,104 @@
                     </div>
 
                     <div
-                      class="d-flex justify-content-between align-items-center gap-4">
+                      class="d-flex align-items-center gap-4"
+                      data-disable-fields-container="optimization">
                       <button
-                        class="button-new button-new_large text_large"
-                        data-type="btn">
+                        class="button-new button-new_large text_large buttonGroupItem"
+                        data-type="btn"
+                        data-button-group-name="optimization"
+                        data-disable-fields="optimization"
+                        data-state="false">
                         Optimization
                       </button>
 
-                      <div class="d-flex align-items-center gap-1">
-                        <p class="text text_large text__color_ligth-grey">
-                          From
-                        </p>
+                      <div
+                        class="d-flex justify-content-between align-items-center gap-4 flex-grow-1">
+                        <div class="d-flex align-items-center gap-1">
+                          <p class="text text_large text__color_dark-grey">
+                            From
+                          </p>
 
-                        <div
-                          class="data-info-container data-info-container_medium">
                           <div
-                            class="input-container-wrap input-container-wrap_normal"
-                            data-input="input-field">
-                            <div class="input-wrapp">
-                              <input
-                                class="input-field text_large text__color_dark-grey hidden"
-                                type="text"
-                                data-type="date" />
-                            </div>
-                            <div class="input-text-center">
-                              <div
-                                class="data-wrap"
-                                data-type="dynamic"
-                                data-state="ture">
-                                <p class="text_large text__color_ligth-grey">
-                                  01.10.2023
-                                </p>
-                                <p
-                                  class="text_small text__color_ligth-grey"></p>
+                            class="data-info-container data-info-container_medium">
+                            <div
+                              class="input-container-wrap input-container-wrap_normal"
+                              data-input="input-field">
+                              <div class="input-wrapp">
+                                <input
+                                  class="input-field text_large text__color_dark-grey hidden"
+                                  type="text"
+                                  data-type="date"
+                                  data-disabled-by="optimization" />
+                              </div>
+                              <div class="input-text-center">
+                                <div
+                                  class="data-wrap"
+                                  data-type="dynamic"
+                                  data-state="ture">
+                                  <p class="text_large text__color_ligth-grey">
+                                    01.10.2023
+                                  </p>
+                                  <p
+                                    class="text_small text__color_ligth-grey"></p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
 
-                      <div class="d-flex align-items-center gap-1 me-auto">
-                        <p class="text text_large text__color_ligth-grey">To</p>
+                        <div class="d-flex align-items-center gap-1 me-auto">
+                          <p class="text text_large text__color_dark-grey">
+                            To
+                          </p>
 
-                        <div
-                          class="data-info-container data-info-container_medium">
                           <div
-                            class="input-container-wrap input-container-wrap_normal"
-                            data-input="input-field">
-                            <div class="input-wrapp">
-                              <input
-                                class="input-field text_large text__color_dark-grey hidden"
-                                type="text"
-                                data-type="date" />
-                            </div>
-                            <div class="input-text-center">
-                              <div
-                                class="data-wrap"
-                                data-type="dynamic"
-                                data-state="ture">
-                                <p class="text_large text__color_ligth-grey">
-                                  31.10.2023
-                                </p>
-                                <p
-                                  class="text_small text__color_ligth-grey"></p>
+                            class="data-info-container data-info-container_medium">
+                            <div
+                              class="input-container-wrap input-container-wrap_normal"
+                              data-input="input-field">
+                              <div class="input-wrapp">
+                                <input
+                                  class="input-field text_large text__color_dark-grey hidden"
+                                  type="text"
+                                  data-type="date"
+                                  data-disabled-by="optimization" />
+                              </div>
+                              <div class="input-text-center">
+                                <div
+                                  class="data-wrap"
+                                  data-type="dynamic"
+                                  data-state="ture">
+                                  <p class="text_large text__color_ligth-grey">
+                                    31.10.2023
+                                  </p>
+                                  <p
+                                    class="text_small text__color_ligth-grey"></p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
 
-                      <button
-                        class="button-non-press button-non-press_big-2 text_large"
-                        data-type="btn"
-                        disabled>
-                        Calculation
-                      </button>
+                        <button
+                          class="button-non-press button-non-press_big-2 text_large"
+                          data-type="btn"
+                          disabled
+                          data-disabled-by="optimization">
+                          Calculation
+                        </button>
+                      </div>
                     </div>
 
                     <div
-                      class="d-flex justify-content-between align-items-center gap-4">
+                      class="d-flex justify-content-between align-items-center gap-4"
+                      data-disable-fields-container="r-r-optimization">
                       <button
-                        class="button-new button-new_large text_large text-nowrap"
-                        data-type="btn">
+                        class="button-new button-new_large text_large text-nowrap btn-active"
+                        data-type="btn"
+                        data-button-group-name="optimization"
+                        data-disable-fields="r-r-optimization"
+                        data-state="true">
                         R/R Optimization
                       </button>
 
@@ -7664,7 +7678,8 @@
                               <input
                                 class="input-field text_large text__color_dark-grey"
                                 type="text"
-                                data-type="date" />
+                                data-type="date"
+                                data-disabled-by="r-r-optimization" />
                             </div>
                             <div class="input-text-center">
                               <div
@@ -7693,7 +7708,8 @@
                               <input
                                 class="input-field text_large text__color_dark-grey"
                                 type="text"
-                                data-type="date" />
+                                data-type="date"
+                                data-disabled-by="r-r-optimization" />
                             </div>
                             <div class="input-text-center">
                               <div
@@ -7721,7 +7737,8 @@
                               <input
                                 class="input-field input-field_left text_large text__color_dark-grey"
                                 type="text"
-                                data-type="number" />
+                                data-type="number"
+                                data-disabled-by="r-r-optimization" />
                             </div>
                             <div class="input-text-center">
                               <div
@@ -7742,7 +7759,8 @@
                               <input
                                 class="input-field input-field_right text_large text__color_dark-grey"
                                 type="text"
-                                data-type="number" />
+                                data-type="number"
+                                data-disabled-by="r-r-optimization" />
                             </div>
                             <div class="input-text-center">
                               <div
@@ -7761,7 +7779,8 @@
 
                       <button
                         class="button-non-press button-non-press_big-2 text_large"
-                        data-type="btn">
+                        data-type="btn"
+                        data-disabled-by="r-r-optimization">
                         Calculation
                       </button>
                     </div>
@@ -7974,14 +7993,16 @@
         <button
           class="button-stretch-panel button-normalize text_large-3"
           data-type="btn"
-          data-modal-name="start">
+          data-modal-name="start"
+          data-active-control="start">
           Start
         </button>
 
         <button
           class="button-stretch-panel button-normalize text_large-3"
           data-type="btn"
-          data-modal-name="pause">
+          data-modal-name="pause"
+          data-active-control="pause">
           Pause
         </button>
 
@@ -8018,7 +8039,7 @@
           </h4>
           <img
             class="modal-window-close-icon closeModalTrigger"
-            src="./style_guide_2/img/close.svg"
+            src="../../../style_guide_2/img/close.svg"
             alt="close-cross" />
         </div>
         <div class="modal-attention__content">
@@ -8028,7 +8049,8 @@
         </div>
         <div class="modal-window-button">
           <button
-            class="button-modal button-modal-left text_small text__color_dark-grey">
+            class="button-modal button-modal-left text_small text__color_dark-grey closeModalTrigger"
+            data-active-control-trigger="start">
             Yes
           </button>
           <button
@@ -8051,7 +8073,7 @@
           </h4>
           <img
             class="modal-window-close-icon closeModalTrigger"
-            src="./style_guide_2/img/close.svg"
+            src="../../../style_guide_2/img/close.svg"
             alt="close-cross" />
         </div>
         <div class="modal-attention__content">
@@ -8061,7 +8083,8 @@
         </div>
         <div class="modal-window-button">
           <button
-            class="button-modal button-modal-left text_small text__color_dark-grey">
+            class="button-modal button-modal-left text_small text__color_dark-grey closeModalTrigger"
+            data-active-control-trigger="pause">
             Yes
           </button>
           <button
@@ -8084,7 +8107,7 @@
           </h4>
           <img
             class="modal-window-close-icon closeModalTrigger"
-            src="./style_guide_2/img/close.svg"
+            src="../../../style_guide_2/img/close.svg"
             alt="close-cross" />
         </div>
         <div class="modal-attention__content">
@@ -8113,11 +8136,11 @@
       <div class="modal-window-wrap">
         <div class="modal-window-header">
           <h4 class="modal-window-title text_small text__color_grey">
-            Close Limit
+            Close Runner
           </h4>
           <img
             class="modal-window-close-icon closeModalTrigger"
-            src="./style_guide_2/img/close.svg"
+            src="../../../style_guide_2/img/close.svg"
             alt="close-cross" />
         </div>
         <div class="modal-attention__content">
@@ -8147,11 +8170,11 @@
       <div class="modal-window-wrap">
         <div class="modal-window-header">
           <h4 class="modal-window-title text_small text__color_grey">
-            Close Limit
+            Preset master
           </h4>
           <img
             class="modal-window-close-icon closeModalTrigger"
-            src="./style_guide_2/img/close.svg"
+            src="../../../style_guide_2/img/close.svg"
             alt="close-cross" />
         </div>
         <div class="modal-attention__content">
@@ -8196,55 +8219,89 @@
           </h4>
           <img
             class="modal-window-close-icon closeModalTrigger"
-            src="./style_guide_2/img/close.svg"
+            src="../../../style_guide_2/img/close.svg"
             alt="close-cross" />
         </div>
         <div class="modal-gallery__content">
-          <div class="modal-gallery__gallery-block gallery-block">
-            <a
-              href="https://picsum.photos/seed/picsum/200/300"
-              class="gallery-block__item"
-              data-fancybox="gallery"
-              data-caption="Single image">
-              <div class="image-item">
-                <img
-                  src="https://picsum.photos/seed/picsum/200/300"
-                  alt="image-2" />
-              </div>
-            </a>
-            <a
-              href="https://picsum.photos/seed/picsum/200/300"
-              class="gallery-block__item"
-              data-fancybox="gallery"
-              data-caption="Single image">
-              <div class="image-item">
-                <img
-                  src="https://picsum.photos/seed/picsum/200/300"
-                  alt="image-2" />
-              </div>
-            </a>
-            <a
-              href="https://picsum.photos/seed/picsum/200/300"
-              class="gallery-block__item"
-              data-fancybox="gallery"
-              data-caption="Single image">
-              <div class="image-item">
-                <img
-                  src="https://picsum.photos/seed/picsum/200/300"
-                  alt="image-2" />
-              </div>
-            </a>
-            <a
-              href="https://picsum.photos/seed/picsum/500/500"
-              class="gallery-block__item"
-              data-fancybox="gallery"
-              data-caption="Single image">
-              <div class="image-item">
-                <img
-                  src="https://picsum.photos/seed/picsum/500/500"
-                  alt="image-2" />
-              </div>
-            </a>
+          <div class="gallery-block">
+            <div class="gallery-block__item galleryItem">
+              <a
+                href="https://picsum.photos/id/20/200/300"
+                class="gallery-block__link"
+                data-fancybox="gallery"
+                data-caption="Single image">
+                <img src="https://picsum.photos/id/20/200/300" alt="image-2" />
+              </a>
+
+              <button
+                class="gallery-block__close removeGalleryItem"
+                aria-label="Remove item"></button>
+            </div>
+            <div class="gallery-block__item galleryItem">
+              <a
+                href="https://picsum.photos/id/40/200/300"
+                class="gallery-block__link"
+                data-fancybox="gallery"
+                data-caption="Single image">
+                <img src="https://picsum.photos/id/40/200/300" alt="image-2" />
+              </a>
+
+              <button
+                class="gallery-block__close removeGalleryItem"
+                aria-label="Remove item"></button>
+            </div>
+            <div class="gallery-block__item galleryItem">
+              <a
+                href="https://picsum.photos/id/60/200/300"
+                class="gallery-block__link"
+                data-fancybox="gallery"
+                data-caption="Single image">
+                <img src="https://picsum.photos/id/60/200/300" alt="image-2" />
+              </a>
+
+              <button
+                class="gallery-block__close removeGalleryItem"
+                aria-label="Remove item"></button>
+            </div>
+            <div class="gallery-block__item galleryItem">
+              <a
+                href="https://picsum.photos/id/80/200/300"
+                class="gallery-block__link"
+                data-fancybox="gallery"
+                data-caption="Single image">
+                <img src="https://picsum.photos/id/80/200/300" alt="image-2" />
+              </a>
+
+              <button
+                class="gallery-block__close removeGalleryItem"
+                aria-label="Remove item"></button>
+            </div>
+            <div class="gallery-block__item galleryItem">
+              <a
+                href="https://picsum.photos/id/100/200/300"
+                class="gallery-block__link"
+                data-fancybox="gallery"
+                data-caption="Single image">
+                <img src="https://picsum.photos/id/100/200/300" alt="image-2" />
+              </a>
+
+              <button
+                class="gallery-block__close removeGalleryItem"
+                aria-label="Remove item"></button>
+            </div>
+            <div class="gallery-block__item galleryItem">
+              <a
+                href="https://picsum.photos/id/120/200/300"
+                class="gallery-block__link"
+                data-fancybox="gallery"
+                data-caption="Single image">
+                <img src="https://picsum.photos/id/120/200/300" alt="image-2" />
+              </a>
+
+              <button
+                class="gallery-block__close removeGalleryItem"
+                aria-label="Remove item"></button>
+            </div>
           </div>
         </div>
       </div>
@@ -8255,18 +8312,19 @@
     <div class="modal-overlay closeModalTrigger"></div>
 
     <div class="modal-wrapper modal-attention">
-      <div class="modal-window-wrap">
+      <div class="modal-window-wrap addFieldsInstance">
         <div class="modal-window-header">
           <h4 class="modal-window-title text_small text__color_grey">
             Super Trend settings
           </h4>
           <img
             class="modal-window-close-icon closeModalTrigger"
-            src="./style_guide_2/img/close.svg"
+            src="../../../style_guide_2/img/close.svg"
             alt="close-cross" />
         </div>
-        <div class="modal-attention__grid">
-          <div class="d-flex align-items-center justify-content-between">
+        <div class="modal-attention__grid fieldContainer">
+          <div
+            class="d-flex align-items-center justify-content-between fieldWrapper">
             <p class="text text_regular text__color_dark-grey">Super Trend</p>
 
             <div class="d-flex gap-2">
@@ -8310,7 +8368,7 @@
                       type="text"
                       data-type="number" />
                   </div>
-                  <div class="input-text-center">
+                  <div class="input-text-center input-text-center--with-button">
                     <div
                       class="data-wrap"
                       data-type="dynamic"
@@ -8323,13 +8381,14 @@
               </div>
 
               <button
-                class="button-new button-new-small button-non-press text_large btn-shadow removePresetButton">
+                class="button-new button-new-small button-non-press text_large btn-shadow removeFieldButton">
                 X
               </button>
             </div>
           </div>
 
-          <div class="d-flex align-items-center justify-content-between">
+          <div
+            class="d-flex align-items-center justify-content-between fieldWrapper">
             <p class="text text_regular text__color_dark-grey">Super Trend</p>
 
             <div class="d-flex gap-2">
@@ -8373,7 +8432,7 @@
                       type="text"
                       data-type="number" />
                   </div>
-                  <div class="input-text-center">
+                  <div class="input-text-center input-text-center--with-button">
                     <div
                       class="data-wrap"
                       data-type="dynamic"
@@ -8386,15 +8445,82 @@
               </div>
 
               <button
-                class="button-new button-new-small button-non-press text_large btn-shadow removePresetButton">
+                class="button-new button-new-small button-non-press text_large btn-shadow removeFieldButton">
                 X
               </button>
             </div>
           </div>
         </div>
+
+        <template class="fieldTemplate">
+          <div
+            class="d-flex align-items-center justify-content-between fieldWrapper">
+            <p class="text text_regular text__color_dark-grey">Super Trend</p>
+
+            <div class="d-flex gap-2">
+              <div class="data-info-container data-info-container_medium">
+                <div
+                  class="input-container-wrap input-container-wrap_tiny-3 left"
+                  data-input="input-field">
+                  <div class="input-wrapp input-wrapp_left">
+                    <input
+                      class="input-field input-field_left text_large text__color_dark-grey"
+                      type="text"
+                      data-type="number"
+                      data-unit="date" />
+                  </div>
+                  <div class="input-text-center">
+                    <div
+                      class="data-wrap"
+                      data-type="dynamic"
+                      data-state="ture">
+                      <p class="text_large text__color_dark-grey">1</p>
+                      <p
+                        class="text_small text__color_dark-grey"
+                        data-mode="hour">
+                        h
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="button-input button-time right text_small"
+                  data-type="time"
+                  data-mode="hour">
+                  h
+                </button>
+                <div
+                  class="input-container-wrap input-container-wrap_small-3 right"
+                  data-input="input-field">
+                  <div class="input-wrapp input-wrapp_right">
+                    <input
+                      class="input-field input-field_right text_large text__color_dark-grey"
+                      type="text"
+                      data-type="number" />
+                  </div>
+                  <div class="input-text-center input-text-center--with-button">
+                    <div
+                      class="data-wrap"
+                      data-type="dynamic"
+                      data-state="ture">
+                      <p class="text_large text__color_dark-grey">3</p>
+                      <p class="text_small text__color_dark-grey"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="button-new button-new-small button-non-press text_large btn-shadow removeFieldButton">
+                X
+              </button>
+            </div>
+          </div>
+        </template>
+
         <div class="modal-window-button">
           <button
-            class="button-modal button-modal-left text_small text__color_dark-grey">
+            class="button-modal button-modal-left text_small text__color_dark-grey addFieldButton">
             Add
           </button>
           <button
@@ -8410,18 +8536,19 @@
     <div class="modal-overlay closeModalTrigger"></div>
 
     <div class="modal-wrapper modal-attention">
-      <div class="modal-window-wrap">
+      <div class="modal-window-wrap addFieldsInstance">
         <div class="modal-window-header">
           <h4 class="modal-window-title text_small text__color_grey">
             EMA settings
           </h4>
           <img
             class="modal-window-close-icon closeModalTrigger"
-            src="./style_guide_2/img/close.svg"
+            src="../../../style_guide_2/img/close.svg"
             alt="close-cross" />
         </div>
-        <div class="modal-attention__grid">
-          <div class="d-flex align-items-center justify-content-between">
+        <div class="modal-attention__grid fieldContainer">
+          <div
+            class="d-flex align-items-center justify-content-between fieldWrapper">
             <p class="text text_regular text__color_dark-grey">EMA</p>
 
             <div class="d-flex gap-2">
@@ -8465,7 +8592,7 @@
                       type="text"
                       data-type="number" />
                   </div>
-                  <div class="input-text-center">
+                  <div class="input-text-center input-text-center--with-button">
                     <div
                       class="data-wrap"
                       data-type="dynamic"
@@ -8478,13 +8605,14 @@
               </div>
 
               <button
-                class="button-new button-new-small button-non-press text_large btn-shadow removePresetButton">
+                class="button-new button-new-small button-non-press text_large btn-shadow removeFieldButton">
                 X
               </button>
             </div>
           </div>
 
-          <div class="d-flex align-items-center justify-content-between">
+          <div
+            class="d-flex align-items-center justify-content-between fieldWrapper">
             <p class="text text_regular text__color_dark-grey">EMA</p>
 
             <div class="d-flex gap-2">
@@ -8528,7 +8656,7 @@
                       type="text"
                       data-type="number" />
                   </div>
-                  <div class="input-text-center">
+                  <div class="input-text-center input-text-center--with-button">
                     <div
                       class="data-wrap"
                       data-type="dynamic"
@@ -8541,15 +8669,82 @@
               </div>
 
               <button
-                class="button-new button-new-small button-non-press text_large btn-shadow removePresetButton">
+                class="button-new button-new-small button-non-press text_large btn-shadow removeFieldButton">
                 X
               </button>
             </div>
           </div>
         </div>
+
+        <template class="fieldTemplate">
+          <div
+            class="d-flex align-items-center justify-content-between fieldWrapper">
+            <p class="text text_regular text__color_dark-grey">EMA</p>
+
+            <div class="d-flex gap-2">
+              <div class="data-info-container data-info-container_medium">
+                <div
+                  class="input-container-wrap input-container-wrap_tiny-3 left"
+                  data-input="input-field">
+                  <div class="input-wrapp input-wrapp_left">
+                    <input
+                      class="input-field input-field_left text_large text__color_dark-grey"
+                      type="text"
+                      data-type="number"
+                      data-unit="date" />
+                  </div>
+                  <div class="input-text-center">
+                    <div
+                      class="data-wrap"
+                      data-type="dynamic"
+                      data-state="ture">
+                      <p class="text_large text__color_dark-grey">1</p>
+                      <p
+                        class="text_small text__color_dark-grey"
+                        data-mode="hour">
+                        h
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="button-input button-time right text_small"
+                  data-type="time"
+                  data-mode="hour">
+                  h
+                </button>
+                <div
+                  class="input-container-wrap input-container-wrap_small-3 right"
+                  data-input="input-field">
+                  <div class="input-wrapp input-wrapp_right">
+                    <input
+                      class="input-field input-field_right text_large text__color_dark-grey"
+                      type="text"
+                      data-type="number" />
+                  </div>
+                  <div class="input-text-center input-text-center--with-button">
+                    <div
+                      class="data-wrap"
+                      data-type="dynamic"
+                      data-state="ture">
+                      <p class="text_large text__color_dark-grey">200</p>
+                      <p class="text_small text__color_dark-grey"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="button-new button-new-small button-non-press text_large btn-shadow removeFieldButton">
+                X
+              </button>
+            </div>
+          </div>
+        </template>
+
         <div class="modal-window-button">
           <button
-            class="button-modal button-modal-left text_small text__color_dark-grey">
+            class="button-modal button-modal-left text_small text__color_dark-grey addFieldButton">
             Add
           </button>
           <button
@@ -8567,18 +8762,19 @@
     <div class="modal-overlay closeModalTrigger"></div>
 
     <div class="modal-wrapper modal-attention">
-      <div class="modal-window-wrap">
+      <div class="modal-window-wrap addFieldsInstance">
         <div class="modal-window-header">
           <h4 class="modal-window-title text_small text__color_grey">
-            EMA settings
+            Trend Breakout System settings
           </h4>
           <img
             class="modal-window-close-icon closeModalTrigger"
-            src="./style_guide_2/img/close.svg"
+            src="../../../style_guide_2/img/close.svg"
             alt="close-cross" />
         </div>
-        <div class="modal-attention__grid">
-          <div class="d-flex align-items-center justify-content-between">
+        <div class="modal-attention__grid fieldContainer">
+          <div
+            class="d-flex align-items-center justify-content-between fieldWrapper">
             <p class="text text_regular text__color_dark-grey">
               Trend Breakout System
             </p>
@@ -8618,13 +8814,14 @@
               </div>
 
               <button
-                class="button-new button-new-small button-non-press text_large btn-shadow removePresetButton">
+                class="button-new button-new-small button-non-press text_large btn-shadow removeFieldButton">
                 X
               </button>
             </div>
           </div>
 
-          <div class="d-flex align-items-center justify-content-between">
+          <div
+            class="d-flex align-items-center justify-content-between fieldWrapper">
             <p class="text text_regular text__color_dark-grey">
               Trend Breakout System
             </p>
@@ -8664,15 +8861,65 @@
               </div>
 
               <button
-                class="button-new button-new-small button-non-press text_large btn-shadow removePresetButton">
+                class="button-new button-new-small button-non-press text_large btn-shadow removeFieldButton">
                 X
               </button>
             </div>
           </div>
         </div>
+
+        <template class="fieldTemplate">
+          <div
+            class="d-flex align-items-center justify-content-between fieldWrapper">
+            <p class="text text_regular text__color_dark-grey">
+              Trend Breakout System
+            </p>
+
+            <div class="d-flex gap-2">
+              <div class="data-info-container data-info-container_tiny">
+                <div
+                  class="input-container-wrap input-container-wrap_tiny-3 left"
+                  data-input="input-field">
+                  <div class="input-wrapp">
+                    <input
+                      class="input-field input-field_left text_large text__color_dark-grey"
+                      type="text"
+                      data-type="number"
+                      data-unit="date" />
+                  </div>
+                  <div class="input-text-center">
+                    <div
+                      class="data-wrap"
+                      data-type="dynamic"
+                      data-state="ture">
+                      <p class="text_large text__color_dark-grey">5</p>
+                      <p
+                        class="text_small text__color_dark-grey"
+                        data-mode="minute">
+                        m
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="button-input button-time-small right text_small"
+                  data-type="time"
+                  data-mode="minute">
+                  m
+                </button>
+              </div>
+
+              <button
+                class="button-new button-new-small button-non-press text_large btn-shadow removeFieldButton">
+                X
+              </button>
+            </div>
+          </div>
+        </template>
+
         <div class="modal-window-button">
           <button
-            class="button-modal button-modal-left text_small text__color_dark-grey">
+            class="button-modal button-modal-left text_small text__color_dark-grey addFieldButton">
             Add
           </button>
           <button
@@ -8688,18 +8935,19 @@
     <div class="modal-overlay closeModalTrigger"></div>
 
     <div class="modal-wrapper modal-attention">
-      <div class="modal-window-wrap">
+      <div class="modal-window-wrap addFieldsInstance">
         <div class="modal-window-header">
           <h4 class="modal-window-title text_small text__color_grey">
             VWAP settings
           </h4>
           <img
             class="modal-window-close-icon closeModalTrigger"
-            src="./style_guide_2/img/close.svg"
+            src="../../../style_guide_2/img/close.svg"
             alt="close-cross" />
         </div>
-        <div class="modal-attention__grid">
-          <div class="d-flex align-items-center justify-content-between">
+        <div class="modal-attention__grid fieldContainer">
+          <div
+            class="d-flex align-items-center justify-content-between fieldWrapper">
             <p class="text text_regular text__color_dark-grey">VWAP</p>
 
             <div class="d-flex gap-2">
@@ -8743,7 +8991,7 @@
                       type="text"
                       data-type="number" />
                   </div>
-                  <div class="input-text-center">
+                  <div class="input-text-center input-text-center--with-button">
                     <div
                       class="data-wrap"
                       data-type="dynamic"
@@ -8756,13 +9004,14 @@
               </div>
 
               <button
-                class="button-new button-new-small button-non-press text_large btn-shadow removePresetButton">
+                class="button-new button-new-small button-non-press text_large btn-shadow removeFieldButton">
                 X
               </button>
             </div>
           </div>
 
-          <div class="d-flex align-items-center justify-content-between">
+          <div
+            class="d-flex align-items-center justify-content-between fieldWrapper">
             <p class="text text_regular text__color_dark-grey">VWAP</p>
 
             <div class="d-flex gap-2">
@@ -8806,7 +9055,7 @@
                       type="text"
                       data-type="number" />
                   </div>
-                  <div class="input-text-center">
+                  <div class="input-text-center input-text-center--with-button">
                     <div
                       class="data-wrap"
                       data-type="dynamic"
@@ -8819,15 +9068,82 @@
               </div>
 
               <button
-                class="button-new button-new-small button-non-press text_large btn-shadow removePresetButton">
+                class="button-new button-new-small button-non-press text_large btn-shadow removeFieldButton">
                 X
               </button>
             </div>
           </div>
         </div>
+
+        <template class="fieldTemplate">
+          <div
+            class="d-flex align-items-center justify-content-between fieldWrapper">
+            <p class="text text_regular text__color_dark-grey">VWAP</p>
+
+            <div class="d-flex gap-2">
+              <div class="data-info-container data-info-container_medium">
+                <div
+                  class="input-container-wrap input-container-wrap_tiny-3 left"
+                  data-input="input-field">
+                  <div class="input-wrapp input-wrapp_left">
+                    <input
+                      class="input-field input-field_left text_large text__color_dark-grey"
+                      type="text"
+                      data-type="number"
+                      data-unit="date" />
+                  </div>
+                  <div class="input-text-center">
+                    <div
+                      class="data-wrap"
+                      data-type="dynamic"
+                      data-state="ture">
+                      <p class="text_large text__color_dark-grey">1</p>
+                      <p
+                        class="text_small text__color_dark-grey"
+                        data-mode="hour">
+                        h
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="button-input button-time right text_small"
+                  data-type="time"
+                  data-mode="hour">
+                  h
+                </button>
+                <div
+                  class="input-container-wrap input-container-wrap_small-3 right"
+                  data-input="input-field">
+                  <div class="input-wrapp input-wrapp_right">
+                    <input
+                      class="input-field input-field_right text_large text__color_dark-grey"
+                      type="text"
+                      data-type="number" />
+                  </div>
+                  <div class="input-text-center input-text-center--with-button">
+                    <div
+                      class="data-wrap"
+                      data-type="dynamic"
+                      data-state="ture">
+                      <p class="text_large text__color_dark-grey">1</p>
+                      <p class="text_small text__color_dark-grey"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="button-new button-new-small button-non-press text_large btn-shadow removeFieldButton">
+                X
+              </button>
+            </div>
+          </div>
+        </template>
+
         <div class="modal-window-button">
           <button
-            class="button-modal button-modal-left text_small text__color_dark-grey">
+            class="button-modal button-modal-left text_small text__color_dark-grey addFieldButton">
             Add
           </button>
           <button
@@ -8850,7 +9166,7 @@
           </h4>
           <img
             class="modal-window-close-icon closeModalTrigger"
-            src="./style_guide_2/img/close.svg"
+            src="../../../style_guide_2/img/close.svg"
             alt="close-cross" />
         </div>
         <div class="modal-attention__grid">
@@ -9013,7 +9329,7 @@
           </h4>
           <img
             class="modal-window-close-icon closeModalTrigger"
-            src="./style_guide_2/img/close.svg"
+            src="../../../style_guide_2/img/close.svg"
             alt="close-cross" />
         </div>
         <div class="modal-attention__grid">

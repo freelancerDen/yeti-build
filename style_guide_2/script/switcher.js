@@ -1,10 +1,10 @@
-import { enableInput, disableInput } from './input.js';
+import customInput from './input.js';
 
 //switcher type variables
 
 const tableBtn = document.querySelectorAll('.table-switch > button');
 const inputInactive = 'text__color_ligth-grey';
-const selectorInactive = 'inactive';
+const selectorInactive = 'disabled';
 
 //disable input in switcher box
 const inputDisabled = (item) => {
@@ -22,8 +22,7 @@ const field = (...data) => {
 };
 
 //change selector style
-const selector = (...data) => {
-  const [item, state] = data;
+const selector = (item, state) => {
   item.classList.toggle(selectorInactive, !state);
 };
 
@@ -33,8 +32,7 @@ const changeNestedState = (array, state) => {
     if (item.dataset.type === 'dynamic') {
       item.setAttribute('data-state', state);
       if (item.classList.contains('selector')) {
-        let el = item.querySelector('.selector__header');
-        selector(el, state);
+        selector(item, state);
       }
       if (item.classList.contains('data-wrap')) {
         field(item, state);
@@ -43,26 +41,30 @@ const changeNestedState = (array, state) => {
   });
 };
 
-//regural switcher
+//regular switcher
 const checkSwitcherState = (item) => {
-  let handlerElements = item
+  const inputs = item
     .closest('.switcher-wrap')
-    .querySelectorAll('.handler-box input'); // atention to this var
-  // let inputEl = item.closest(".switcher-wrap").querySelectorAll("[data-input='input-field'] > div > input"); // atention to this var
+    .querySelectorAll('.handler-box input');
   const buttons = item
     .closest('.switcher-wrap')
     .querySelectorAll('.handler-box button');
+  const selectors = item
+    .closest('.switcher-wrap')
+    .querySelectorAll('.handler-box .selector');
 
   if (item.checked) {
-    handlerElements.forEach((el) => {
-      enableInput(el);
+    inputs.forEach((el) => {
+      customInput.enable(el);
     });
     buttons.forEach((btn) => btn.removeAttribute('disabled'));
+    selectors.forEach((el) => el.classList.remove('disabled'));
   } else {
-    handlerElements.forEach((el) => {
-      disableInput(el);
+    inputs.forEach((el) => {
+      customInput.disable(el);
     });
     buttons.forEach((btn) => btn.setAttribute('disabled', 'true'));
+    selectors.forEach((el) => el.classList.add('disabled'));
   }
 };
 

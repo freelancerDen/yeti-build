@@ -44,13 +44,13 @@
               <a href="#" class="text_large-2">Statistic</a>
             </li>
             <li>
-              <a href="/yeti-build/index.html" class="text_large-2">Limitter</a>
+              <a href="/" class="text_large-2">Limitter</a>
             </li>
             <li>
               <a href="#" class="text_large-2">Ladder</a>
             </li>
             <li>
-              <a href="/yeti-build/runner.html" class="text_large-2">Runner</a>
+              <a href="/runner.html" class="text_large-2">Runner</a>
             </li>
             <li>
               <a class="text_large-2 active-link" href="#">History</a>
@@ -63,11 +63,6 @@
         <!-- this wrapper work file "status.js" take arguments and return the status -->
         <div class="status_wrapper"></div>
         <div class="nav__container_btn-wrapp">
-          <button
-            class="button-non-press button-non-press_save-small text_regular btn-shadow btn-demo"
-            data-type="btn">
-            Demo
-          </button>
           <button
             class="button-non-press button-non-press_save-small text_regular btn-shadow btn-terminal"
             data-type="btn"
@@ -87,17 +82,17 @@
             Symbol
           </button>
           <button
-            class="button-new button-new-small text_regular btn-shadow"
-            data-type="btn">
+            class="button-new button-new-small text_regular btn-shadow btn-active hideValueButton"
+            data-hide-state="true">
             $
           </button>
           <button
-            class="button-new button-new_normal text_regular relative"
-            data-type="btn"
-            data-modal-name="attention">
+            class="button-new button-new_normal text_regular btn-active relative turnOnButton"
+            data-modal-name="attention"
+            data-turn-state="on">
             <span class="handler-area"></span>
             <span class="indicator green"></span>
-            <p>Turn On</p>
+            <p>Turn Off</p>
           </button>
           <div
             class="nav__container_btn-schedule-menu"
@@ -113,7 +108,8 @@
       <div class="navbar">
         <div class="status-indicator-wrap">
           <button
-            class="button-non-press button-non-press_gradient button-non-press_big-3 text_large btn-add-limit addInstance" data-panel-name="runner-panel" >
+            class="button-non-press button-non-press_gradient button-non-press_big-3 text_large btn-add-limit addInstance"
+            data-panel-name="runner-panel">
             Add Runner
           </button>
 

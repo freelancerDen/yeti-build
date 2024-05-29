@@ -1,5 +1,11 @@
-<svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="1" y1="1" x2="23" y2="1" stroke="#4E5A6C" stroke-width="2" stroke-linecap="round"/>
-<line x1="1" y1="19" x2="23" y2="19" stroke="#4E5A6C" stroke-width="2" stroke-linecap="round"/>
-<line x1="1" y1="10" x2="23" y2="10" stroke="#4E5A6C" stroke-width="2" stroke-linecap="round"/>
+<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M22 20C22.5523 20 23 19.5523 23 19C23 18.4477 22.5523 18 22 18L22 20ZM4 18C3.44772 18 3 18.4477 3 19C3 19.5523 3.44772 20 4 20L4 18ZM22 18L4 18L4 20L22 20L22 18Z"
+        fill="#344054" />
+    <path
+        d="M22 14C22.5523 14 23 13.5523 23 13C23 12.4477 22.5523 12 22 12L22 14ZM4 12C3.44772 12 3 12.4477 3 13C3 13.5523 3.44772 14 4 14L4 12ZM22 12L4 12L4 14L22 14L22 12Z"
+        fill="#344054" />
+    <path
+        d="M22 8C22.5523 8 23 7.55228 23 7C23 6.44772 22.5523 6 22 6L22 8ZM4 6C3.44772 6 3 6.44771 3 7C3 7.55228 3.44772 8 4 8L4 6ZM22 6L4 6L4 8L22 8L22 6Z"
+        fill="#344054" />
 </svg>

@@ -1,47 +1,55 @@
-<div class="modal-container d-none" data-modal="logo-panel">
-  <div class="modal-overlay closeModalTrigger"></div>
+<div
+  class="modal-wrapper modal-logo modal-draggable d-none"
+  data-modal="logo-panel">
+  <div class="modal-window-wrap">
+    <div class="modal-window-header modal-drag-drop">
+      <h4 class="modal-window-title text_small text__color_grey">
+        KPI Control
+      </h4>
+      <img
+        class="modal-window-close-icon closeModalTrigger"
+        src="../../../style_guide_2/img/close.svg"
+        alt="close-cross" />
+    </div>
 
-  <div class="modal-wrapper modal-logo">
-    <div class="modal-window-wrap">
-      <div class="modal-window-content modal-logo__content">
-        <div class="button-new-wrap button-new-wrap_normal btn-shadow">
-          <button
-            class="button-group button-group_normal-1 text_regular"
-            data-type="btn">
-            Real
-          </button>
-          <button
-            class="button-group button-group_normal-2 text_regular btn-active"
-            data-type="btn">
-            Demo
-          </button>
-        </div>
-
-        <div class="modal-logo__row">
-          <div class="modal-logo__title">Day</div>
-
-          <div class="modal-logo__value positive" data-kpi-value="104"></div>
-        </div>
-
-        <div class="modal-logo__row">
-          <div class="modal-logo__title">Week</div>
-
-          <div class="modal-logo__value negative" data-kpi-value="-5"></div>
-        </div>
-
-        <div class="modal-logo__row">
-          <div class="modal-logo__title">Month</div>
-
-          <div class="modal-logo__value" data-kpi-value="10"></div>
-        </div>
-
+    <div class="modal-window-content modal-logo__content">
+      <div class="button-new-wrap button-new-wrap_normal btn-shadow">
         <button
-          class="button-non-press text text_small closeModalTrigger"
-          data-type="btn"
-          data-modal-name="key-performance">
-          KPI Control
+          class="button-group button-group_normal-1 text_regular"
+          data-type="btn">
+          Real
+        </button>
+        <button
+          class="button-group button-group_normal-2 text_regular btn-active"
+          data-type="btn">
+          Demo
         </button>
       </div>
+
+      <div class="modal-logo__row">
+        <div class="modal-logo__title">Day</div>
+
+        <div class="modal-logo__value positive" data-kpi-value="104"></div>
+      </div>
+
+      <div class="modal-logo__row">
+        <div class="modal-logo__title">Week</div>
+
+        <div class="modal-logo__value negative" data-kpi-value="-5"></div>
+      </div>
+
+      <div class="modal-logo__row">
+        <div class="modal-logo__title">Month</div>
+
+        <div class="modal-logo__value" data-kpi-value="10"></div>
+      </div>
+
+      <button
+        class="button-non-press text text_small"
+        data-type="btn"
+        data-modal-name="key-performance">
+        KPI Control
+      </button>
     </div>
   </div>
 </div>

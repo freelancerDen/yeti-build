@@ -1,0 +1,28 @@
+@import './normalize';
+@import './variable';
+@import './grid-layout';
+
+@import '../style_guide_2/main.scss';
+@import './global-styles';
+@import '../template/header/header';
+
+@import './components/info-messages-panel';
+@import './components/schedule-table';
+@import './components/small-indicator';
+
+@import '../template/modals/modals';
+@import '../template/modals/risk-manager/risk-manager';
+@import '../template/modals/attention/attention';
+@import '../template/modals/symbol-setup/symbol-setup';
+@import '../template/modals/terminal/terminal';
+@import '../template/modals/schedule/schedule';
+@import '../template/modals/reset/reset';
+@import '../template/modals/tag-master/tag-master';
+@import '../template/modals/demo/demo';
+@import '../template/modals/preset-master/preset-master';
+@import '../template/modals/profitRange/profit-range';
+@import '../template/modals/stretchPanel/stretch-panel';
+@import '../template/modals/logo/logo.scss';
+@import '../template/modals/key-performance/key-performance';
+@import '../template/modals/settings/settings';
+@import '../template/modals/runner-panel/runner-panel';

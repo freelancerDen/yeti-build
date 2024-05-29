@@ -2,13 +2,12 @@ import initSwitcher from './switcher.js';
 import stretchPanel from './initScriptsForStretchPanel.js';
 import selector from './selector.js';
 import { handleButtonModeClick, handleButtonListClick } from './buttons.js';
-import {
-  handleFocusInput,
-  handleFocusOutInput,
-  handleChangeInput,
-} from './input.js';
+import customInput from './input.js';
 import { handleClickModalButton } from './modals.js';
 import profitRange from './profitRange.js';
+import { hideMonetaryValue } from './hide-monetary-value.js';
+import gallery from './gallery.js';
+import addField from './add-field.js';
 
 const button = document.querySelector('.addInstance');
 
@@ -39,9 +38,7 @@ function handleButtonClick(event) {
 
   if (inputs.length > 0) {
     inputs.forEach((input) => {
-      input.addEventListener('focus', handleFocusInput);
-      input.addEventListener('blur', handleFocusOutInput);
-      input.addEventListener('input', handleChangeInput);
+      customInput.setEventListeners(input);
     });
   }
 
@@ -52,25 +49,27 @@ function handleButtonClick(event) {
   }
 
   if (buttons.length > 0) {
-    buttons.forEach((el) => {
-      el.addEventListener('click', handleButtonListClick);
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', handleButtonListClick);
     });
   }
 
   if (buttonsModal.length > 0) {
-    buttonsModal.forEach((element) => {
-      element.addEventListener('click', handleClickModalButton);
+    buttonsModal.forEach((btn) => {
+      btn.addEventListener('click', handleClickModalButton);
     });
   }
 
   profitRange.updateHTML(profitRangeContainer);
-  stretchPanel.runScripts(clone);
   stretchPanel.runScripts(clone);
 
   container.appendChild(clone);
 
   initSwitcher.initRegSwitcherHandler();
   selector.init();
+  hideMonetaryValue();
+  gallery.updateInit();
+  addField.init();
 }
 
 /**

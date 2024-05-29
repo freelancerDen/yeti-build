@@ -1,8 +1,4 @@
-import {
-  handleFocusInput,
-  handleFocusOutInput,
-  handleChangeInput,
-} from './input.js';
+import customInput from './input.js';
 
 const rowTemplate = document.querySelector('#presetMasterRowTemplate');
 const container = document.querySelector('.presetMasterContainer');
@@ -68,9 +64,7 @@ function renderField({ id, name }) {
   nameField.textContent = name;
 
   removeButton.addEventListener('click', handleRemovePresetClick);
-  input.addEventListener('focus', handleFocusInput);
-  input.addEventListener('blur', handleFocusOutInput);
-  input.addEventListener('input', handleChangeInput);
+  customInput.setEventListeners(input);
 
   container.appendChild(clone);
 }

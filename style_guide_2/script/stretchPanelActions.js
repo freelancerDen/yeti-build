@@ -28,4 +28,28 @@ export const stretchPanelActions = (panel) => {
       });
     });
   }
+
+  // add active class for start/stop buttons
+  const activeStateTrigger = panel.querySelectorAll(
+    '[data-active-control-trigger]',
+  );
+  const allActiveStateTargets = panel.querySelectorAll('[data-active-control]');
+
+  if (activeStateTrigger.length > 0) {
+    activeStateTrigger.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const targetName = btn.dataset.activeControlTrigger;
+
+        if (allActiveStateTargets.length > 0) {
+          allActiveStateTargets.forEach((btn) => {
+            if (btn.dataset.activeControl === targetName) {
+              btn.classList.add('active');
+            } else {
+              btn.classList.remove('active');
+            }
+          });
+        }
+      });
+    });
+  }
 };
