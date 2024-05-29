@@ -2072,7 +2072,7 @@ svg {
   background-color: #00A3FF;
 }
 .nav__container_btn-schedule-menu {
-  background-image: url("./img/schedule.svg");
+  background-image: url("./../img/schedule.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2360,7 +2360,7 @@ svg {
   background-color: #f2f4f7;
   border-radius: 50%;
   border: none;
-  background-image: url("./img/close.svg");
+  background-image: url("./../img/close.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 8px;
