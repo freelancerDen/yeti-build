@@ -3,6 +3,7 @@ import setAnimation from './rolltext.js';
 import customInput from './input.js';
 import { handleButtonModeClick, handleButtonListClick } from './buttons.js';
 import initSwitcher from './switcher.js';
+import { hideMonetaryValue } from './hide-monetary-value.js';
 
 /**
  * The function `renderFieldsTemplate` clones a template based on a specified selector value and
@@ -65,6 +66,7 @@ function renderFieldsTemplate(element, containerSelector) {
 
   inputContainer.appendChild(clone);
 
+  hideMonetaryValue();
   initSwitcher.initRegSwitcherHandler();
 }
 
