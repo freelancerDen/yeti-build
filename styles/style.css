@@ -1546,6 +1546,13 @@ svg {
   right: 2px;
   bottom: 1px;
 }
+.info-line-wrapper .info-line-box.hide-value p {
+  display: none;
+}
+.info-line-wrapper .info-line-box.hide-value::before {
+  color: RGBA(52, 64, 84, 0.25);
+  content: "-";
+}
 
 .button-images {
   width: 40px;

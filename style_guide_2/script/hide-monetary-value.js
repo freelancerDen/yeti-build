@@ -15,6 +15,7 @@ function changeState(button) {
 export function hideMonetaryValue() {
   const hideState = hideValueButton.dataset.hideState;
   const allInputs = document.querySelectorAll('input[data-unit="$"]');
+  const allDataFields = document.querySelectorAll('[data-value="data-field"]');
 
   allInputs.forEach((input) => {
     const wrapper = input.closest('[data-input="input-field"]');
@@ -23,6 +24,16 @@ export function hideMonetaryValue() {
       wrapper.classList.remove('hide-value');
     } else {
       wrapper.classList.add('hide-value');
+    }
+  });
+
+  allDataFields.forEach((field) => {
+    if (field.dataset.unit === '$') {
+      if (hideState === 'true') {
+        field.classList.remove('hide-value');
+      } else {
+        field.classList.add('hide-value');
+      }
     }
   });
 }

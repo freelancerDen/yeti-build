@@ -1018,6 +1018,17 @@ svg {
       right: 2px;
       bottom: 1px;
     }
+
+    &.hide-value {
+      p {
+        display: none;
+      }
+
+      &::before {
+        color: $lightGray;
+        content: '-';
+      }
+    }
   }
 }
 
