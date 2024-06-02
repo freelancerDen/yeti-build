@@ -1085,7 +1085,8 @@ svg {
 .status-indicator {
   border-radius: 50%;
   border: 1px solid white;
-  box-shadow: inset 0px 4px 4px 0px RGBA(52, 64, 84, 0.25);
+  box-shadow: inset 0px 4px 6px 0px RGBA(52, 64, 84, 0.25);
+
   &_small {
     width: 17.75px;
     height: 17.75px;

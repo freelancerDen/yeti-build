@@ -1605,7 +1605,7 @@ svg {
 .status-indicator {
   border-radius: 50%;
   border: 1px solid white;
-  box-shadow: inset 0px 4px 4px 0px RGBA(52, 64, 84, 0.25);
+  box-shadow: inset 0px 4px 6px 0px RGBA(52, 64, 84, 0.25);
 }
 .status-indicator_small {
   width: 17.75px;
@@ -2774,9 +2774,6 @@ svg {
   transform: translateY(-50%);
 }
 
-.section__stretch-panel {
-  padding: 0 1rem 0 1.9375rem;
-}
 .section__stretch-panel .stretch-panel__header {
   border-radius: 1.25rem;
   display: grid;
@@ -2798,12 +2795,12 @@ svg {
   transform: scale(1.1);
 }
 .section__stretch-panel .stretch-panel__body {
-  border-radius: 1.25rem;
+  border-radius: 20px;
   box-shadow: 0rem 0.3125rem 0.9375rem 0rem rgba(0, 0, 0, 0.1);
   background-color: #fff;
 }
 .section__stretch-panel .stretch-panel__footer {
-  margin: 0.375rem;
+  margin: 0 0.375rem 0.375rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
@@ -2820,7 +2817,7 @@ svg {
 .section__stretch-panel .stretch-panel__content {
   background-color: #f2f4f7;
   min-height: 25rem;
-  margin: 0 0.375rem 0.375rem;
+  margin: 0 0.375rem;
   padding: 2.5rem 2.125rem;
 }
 .section__stretch-panel .stretch-panel__wrapper {

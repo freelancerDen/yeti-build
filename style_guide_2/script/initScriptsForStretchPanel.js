@@ -14,7 +14,7 @@ import { formRating } from './formRating.js';
 
 const runScripts = (panel) => {
   initInfoLine(panel, 1000, -10, 100);
-  displayStatusIndicator(panel); // Example displayStatus(Working);
+  displayStatusIndicator(panel, Activated); // Example displayStatusIndicator(panel, Activated);
   stretchPanelActions(panel);
   displayStatus(panel, Success, 'Gooooood!');
   improveInputFiles(panel);
