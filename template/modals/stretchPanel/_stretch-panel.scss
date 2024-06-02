@@ -2,10 +2,10 @@
   padding: 0 1rem 0 1.9375rem;
   .stretch-panel {
     &__header {
-      border: 0.3125rem solid $white;
       border-radius: 1.25rem;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      padding: 0.3125rem;
 
       .indicator-wrap {
         margin-right: 0.8125rem;
