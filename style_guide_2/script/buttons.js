@@ -16,15 +16,8 @@ const navIndicatorBtn = document.querySelectorAll('.navbar-indicator-btn');
 
 // function change active classes
 const activeBtn = (button) => {
-  button.classList.toggle('btn-active');
-
-  const stateText = button.dataset.stateText;
-  if (stateText) {
-    const newStateText = button.dataset.stateText;
-    const buttontext = button.textContent;
-
-    button.textContent = newStateText;
-    button.dataset.stateText = buttontext;
+  if (!button.dataset.buttonGroupName) {
+    button.classList.toggle('btn-active');
   }
 };
 
@@ -64,10 +57,21 @@ function changeActiveButtonInGroup(pressedButton) {
       `[data-button-group-name="${groupName}"]`,
     );
 
+    if (pressedButton.dataset.state === 'true') return;
+
     buttons.forEach((btn) => {
       btn.classList.remove('btn-active');
       btn.dataset.state = 'false';
       disableFieldsOnChangeState(btn);
+
+      const stateText = btn.dataset.stateText;
+      if (stateText) {
+        const newStateText = btn.dataset.stateText;
+        const buttontext = btn.textContent;
+
+        btn.textContent = newStateText;
+        btn.dataset.stateText = buttontext;
+      }
     });
 
     pressedButton.classList.add('btn-active');
