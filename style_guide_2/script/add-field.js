@@ -27,7 +27,7 @@ function handleRemoveButtonClick(event) {
 function handleAddButtonClick(event) {
   const { currentTarget } = event;
 
-  const instance = currentTarget.closest('.addFieldsInstance ');
+  const instance = currentTarget.closest('.addFieldsInstance');
   const template = instance.querySelector('.fieldTemplate');
   const clone = template.content.cloneNode(true);
 

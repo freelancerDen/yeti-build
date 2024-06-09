@@ -4,6 +4,7 @@ import customInput from './input.js';
 import { handleButtonModeClick, handleButtonListClick } from './buttons.js';
 import initSwitcher from './switcher.js';
 import { hideMonetaryValue } from './hide-monetary-value.js';
+import addLineField from './add-line-field.js';
 
 /**
  * The function `renderFieldsTemplate` clones a template based on a specified selector value and
@@ -40,7 +41,7 @@ function renderFieldsTemplate(element, containerSelector) {
   }
 
   const clone = template.content.cloneNode(true);
-  const inputs = clone.querySelectorAll('input');
+  const inputs = clone.querySelectorAll('input[type="text"]');
   const modeButtons = clone.querySelectorAll('[data-type="time"]');
   const buttons = clone.querySelectorAll('[data-type="btn"]');
 
@@ -63,7 +64,7 @@ function renderFieldsTemplate(element, containerSelector) {
   }
 
   inputContainer.innerHTML = '';
-
+  addLineField.setEventListeners(clone);
   inputContainer.appendChild(clone);
 
   hideMonetaryValue();
@@ -140,9 +141,6 @@ const handleClick = (e) => {
   // Function to get the selector head text when clicking outside a dropdown
   const clickOutOfDW = () => {
     try {
-      console.log(
-        e.target.closest('.selector').querySelector('.selector__inner-text'),
-      );
       return e.target
         .closest('.selector')
         .querySelector('.selector__inner-text');

@@ -332,6 +332,9 @@ function handleMouseoverInput(event) {
   const { currentTarget: input } = event;
 
   const container = input.closest('[data-input="input-field"]');
+
+  if (!container) return;
+
   const text = container.querySelector('.data-wrap');
 
   if (text.offsetWidth > container.offsetWidth) {

@@ -49,7 +49,6 @@ export const displayStatusIndicator = (panel, status = NotStarted) => {
         dataName,
         dataStatus,
       } = options[status];
-      console.log(options[status]);
       // Update the HTML content of the status container with the provided status information
       container.innerHTML = `
         <div class="indicator-wrap me-3" data-status="${dataStatus}" data-name="${dataName}">
