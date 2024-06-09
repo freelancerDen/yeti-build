@@ -1378,3 +1378,11 @@ svg {
   border-bottom: 1px solid white;
   background: linear-gradient(180deg, #f2f4f7 0%, #ffffff 80%);
 }
+
+.hide-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

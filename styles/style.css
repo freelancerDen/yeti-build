@@ -1876,6 +1876,13 @@ svg {
   background: linear-gradient(180deg, #f2f4f7 0%, #ffffff 80%);
 }
 
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .page-wrapper {
   width: 2240px;
 }

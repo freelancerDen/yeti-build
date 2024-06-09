@@ -111,6 +111,11 @@ function roundUpNumber(num, unit) {
 
       return num.toFixed(1);
 
+    case 'float':
+      console.log(`Number in ${unit}:`, num.toFixed(2));
+
+      return num.toFixed(2);
+
     case 'date':
     case 'ticks':
     case 'times':
