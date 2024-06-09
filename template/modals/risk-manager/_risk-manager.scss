@@ -1,6 +1,10 @@
 .modal-risk-wrap {
   width: 336px;
-  height: 572px;
+  height: auto;
+
+  .modal-window-content {
+    padding-bottom: 14px;
+  }
 }
 
 .timer-container {
