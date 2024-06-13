@@ -191,6 +191,14 @@ function checkValidation(input) {
     case 'dynamic-number':
       isValid = dynamicNumberPattern.test(value);
 
+      if (min && Number(value) < Number(min)) {
+        isValid = false;
+      }
+
+      if (max && Number(value) > Number(max)) {
+        isValid = false;
+      }
+
       break;
 
     case 'time':
