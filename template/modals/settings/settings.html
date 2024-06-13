@@ -1391,9 +1391,9 @@
                 <div
                   class="input-container-wrap input-container-wrap_big"
                   data-input="input-field">
-                  <div class="input-wrapp hidden">
+                  <div class="input-wrapp">
                     <input
-                      class="input-field text_large text__color_dark-grey"
+                      class="input-field text_large text__color_dark-grey hidden resetSettingsInput"
                       type="text"
                       data-type="number"
                       data-unit="$" />
@@ -1419,9 +1419,9 @@
                 <div
                   class="input-container-wrap input-container-wrap_big"
                   data-input="input-field">
-                  <div class="input-wrapp hidden">
+                  <div class="input-wrapp">
                     <input
-                      class="input-field text_large text__color_dark-grey"
+                      class="input-field text_large text__color_dark-grey hidden resetSettingsInput"
                       type="text"
                       data-type="date" />
                   </div>
@@ -1448,9 +1448,9 @@
                 <div
                   class="input-container-wrap input-container-wrap_big"
                   data-input="input-field">
-                  <div class="input-wrapp hidden">
+                  <div class="input-wrapp">
                     <input
-                      class="input-field text_large text__color_dark-grey"
+                      class="input-field text_large text__color_dark-grey hidden resetSettingsInput"
                       type="text"
                       data-type="number"
                       data-unit="$" />
@@ -1470,10 +1470,16 @@
 
             <div class="d-flex justify-content-center">
               <button
-                class="button-non-press button-new_large text_regular"
+                class="button-non-press button-new_large text_regular d-none resetSettingsButton"
                 data-type="btn"
                 data-modal-name="reset">
                 Reset
+              </button>
+
+              <button
+                class="button-non-press button-new_large text_regular editSettingsButton"
+                data-type="btn">
+                Edit
               </button>
             </div>
           </div>
