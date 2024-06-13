@@ -1851,6 +1851,17 @@ svg {
   justify-content: center;
   align-items: center;
 }
+.block-container-wrap .block-header-wrap .block-header-info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #EAF2F5;
+  min-width: 75px;
+  border-left: 1px solid #fff;
+  height: 100%;
+  padding-bottom: 2px;
+  line-height: 1;
+}
 .block-container-wrap .block-header-wrap .button-new-wrap_full .button-group_block-button_1 {
   border-top: none;
   border-left: none;

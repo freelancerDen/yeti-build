@@ -1347,6 +1347,18 @@ svg {
       align-items: center;
     }
 
+    .block-header-info {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      background-color: $super-light-blue-bg;
+      min-width: 75px;
+      border-left: 1px solid $white;
+      height: 100%;
+      padding-bottom: 2px;
+      line-height: 1;
+    }
+
     .button-new-wrap_full {
       .button-group_block-button_1 {
         border-top: none;
