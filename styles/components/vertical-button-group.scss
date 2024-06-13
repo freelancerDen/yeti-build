@@ -1,0 +1,18 @@
+.vertical-button-group {
+  display: grid;
+
+  &__btn {
+    height: auto;
+    padding: 1px 4px;
+    background-color: $background-inactive;
+    border-radius: 0;
+
+    &:first-child {
+      border-radius: 6px 6px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 6px 6px;
+    }
+  }
+}

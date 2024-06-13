@@ -1104,6 +1104,12 @@ svg {
   text-align: center;
   padding: 0;
 }
+.button-new_tiny-2,
+.button-non-press_tiny-2 {
+  width: 26px;
+  text-align: center;
+  padding: 0;
+}
 .button-new_gradient,
 .button-non-press_gradient {
   background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
@@ -2318,6 +2324,22 @@ svg {
   background: #c0c9d8;
 }
 
+.vertical-button-group {
+  display: grid;
+}
+.vertical-button-group__btn {
+  height: auto;
+  padding: 1px 4px;
+  background-color: #F5F6F8;
+  border-radius: 0;
+}
+.vertical-button-group__btn:first-child {
+  border-radius: 6px 6px 0 0;
+}
+.vertical-button-group__btn:last-child {
+  border-radius: 0 0 6px 6px;
+}
+
 .modal-container {
   position: fixed;
   padding: 16px;
@@ -2389,6 +2411,27 @@ svg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 8px;
+}
+
+.modal-chart {
+  width: 1166px;
+  height: auto;
+}
+.modal-chart .modal-window-wrap {
+  max-width: none;
+}
+.modal-chart__grid {
+  display: grid;
+  grid-template-columns: 45px auto;
+  align-content: start;
+  gap: 5px;
+  padding: 5px;
+}
+.modal-chart__chart {
+  border: 1px solid #fff;
+  background-color: #EAF2F5;
+  border-radius: 6px;
+  min-height: 550px;
 }
 
 .modal-risk-wrap {
