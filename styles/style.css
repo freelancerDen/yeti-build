@@ -91,7 +91,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -1575,6 +1576,7 @@ svg {
 
 .button-tiny {
   min-width: 50px;
+  width: -moz-max-content;
   width: max-content;
   height: 20px;
   padding: 0;
@@ -1649,6 +1651,7 @@ svg {
 
 .conection-block-wrap {
   height: 23px;
+  width: -moz-max-content;
   width: max-content;
   max-width: 500px;
   display: inline-flex;
@@ -1835,7 +1838,9 @@ svg {
   width: auto;
   height: auto;
   min-width: 324px;
+  max-width: -moz-max-content;
   max-width: max-content;
+  max-height: -moz-max-content;
   max-height: max-content;
   border-radius: 10px;
   background: #f2f4f7;
@@ -2138,11 +2143,12 @@ svg {
   padding: 0 16px 0 31px;
 }
 .scroll-wrapper .status-indicator-wrap {
-  width: 1818px;
+  width: 1800px;
   display: flex;
 }
 
 .navbar__btn-wrapp {
+  width: -moz-max-content;
   width: max-content;
   height: 100%;
   background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
@@ -2203,7 +2209,7 @@ svg {
   padding-top: 7px;
 }
 .navbar__dropdown-wrapp {
-  width: 100px;
+  width: 118px;
   height: 26px;
   background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   border: 1px solid #ffffff;
@@ -2355,7 +2361,8 @@ svg {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: -1;
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 
 .modal-draggable {
@@ -2395,7 +2402,8 @@ svg {
 .gallery-block__link img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .gallery-block__close {
   position: absolute;
@@ -2753,6 +2761,7 @@ svg {
   margin: 0 auto;
 }
 .profit-range-header__content .line {
+  max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 0 auto;
 }
@@ -2931,7 +2940,9 @@ svg {
 .button-normalize {
   border: none;
   outline: none;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: transparent;
   padding: 0;
   margin: 0;
@@ -3117,6 +3128,4 @@ svg {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.02) inset;
   background-color: rgba(234, 242, 245, 0.5);
   border-radius: 4px;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
