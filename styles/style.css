@@ -1905,6 +1905,38 @@ svg {
   display: none;
 }
 
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.pagination-container .pagination {
+  display: flex;
+  align-items: center;
+}
+.pagination-container .pagination .pagination-button {
+  border: none;
+  background-color: #fff;
+  color: #344054;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 17.7px;
+}
+.pagination-container .pagination .pagination-button:hover {
+  background-color: #e0e0e0;
+}
+.pagination-container .pagination .pagination-button.active {
+  background-color: #5d869d;
+  color: #fff;
+}
+.pagination-container .pagination .pagination-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .page-wrapper {
   width: 2240px;
 }
