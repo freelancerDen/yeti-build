@@ -46,6 +46,8 @@ function handleHideValueButtonClick(event) {
 }
 
 function init() {
+  if (!hideValueButton) return;
+
   hideValueButton.addEventListener('click', handleHideValueButtonClick);
 }
 

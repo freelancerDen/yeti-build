@@ -466,7 +466,7 @@
 
                         <div class="data-wrap">
                           <p class="text text_regular text__color_dark-grey">
-                            Range
+                            Range long
                           </p>
                         </div>
 
@@ -492,7 +492,7 @@
                                   data-state="ture"
                                 >
                                   <p class="text_large text__color_dark-grey">
-                                    1775.2
+                                    150.1
                                   </p>
                                   <p
                                     class="text_small text__color_dark-grey"
@@ -518,7 +518,111 @@
                                   data-state="ture"
                                 >
                                   <p class="text_large text__color_dark-grey">
-                                    2100.1
+                                    140.1
+                                  </p>
+                                  <p
+                                    class="text_small text__color_dark-grey"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="data-info-container data-info-container_tiny">
+                            <div
+                              class="input-container-wrap input-container-wrap_tiny-3 left"
+                              data-input="input-field">
+                              <div class="input-wrapp">
+                                <input
+                                  class="input-field input-field_left text_large text__color_dark-grey"
+                                  type="text"
+                                  data-type="number"
+                                  data-unit="date" />
+                              </div>
+                              <div class="input-text-center">
+                                <div
+                                  class="data-wrap"
+                                  data-type="dynamic"
+                                  data-state="ture">
+                                  <p class="text_large text__color_dark-grey">
+                                    4
+                                  </p>
+                                  <p
+                                    class="text_small text__color_dark-grey"
+                                    data-mode="hour">
+                                    h
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <button
+                              class="button-input button-time-small right text_small"
+                              data-type="time"
+                              data-mode="hour">
+                              h
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="line">
+                      <div class="switcher-wrap switcher-wrap_gap-medium">
+                        <div class="form-switch">
+                          <input
+                            class="form-check-input custom-outline m-auto"
+                            type="checkbox"
+                            role="switch"
+                            checked="" />
+                        </div>
+
+                        <div class="data-wrap">
+                          <p class="text text_regular text__color_dark-grey">
+                            Range short
+                          </p>
+                        </div>
+
+                        <div class="handler-box handler-box_gap-small ms-auto">
+                          <div
+                            class="data-info-container data-info-container_medium">
+                            <div
+                              class="input-container-wrap input-container-wrap_tiny left"
+                              data-input="input-field">
+                              <div class="input-wrapp input-wrapp_left">
+                                <input
+                                  class="input-field input-field_left text_large text__color_dark-grey"
+                                  type="text"
+                                  data-type="number" />
+                              </div>
+                              <div class="input-text-center">
+                                <div
+                                  class="data-wrap"
+                                  data-type="dynamic"
+                                  data-state="ture">
+                                  <p class="text_large text__color_dark-grey">
+                                    175.2
+                                  </p>
+                                  <p
+                                    class="text_small text__color_dark-grey"></p>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="input-container-wrap input-container-wrap_tiny right"
+                              data-input="input-field">
+                              <div class="input-wrapp input-wrapp_right">
+                                <input
+                                  class="input-field input-field_right text_large text__color_dark-grey"
+                                  type="text"
+                                  data-type="number" />
+                              </div>
+                              <div class="input-text-center">
+                                <div
+                                  class="data-wrap"
+                                  data-type="dynamic"
+                                  data-state="ture">
+                                  <p class="text_large text__color_dark-grey">
+                                    121.04
                                   </p>
                                   <p
                                     class="text_small text__color_dark-grey"
@@ -1320,6 +1424,22 @@
                                       data-container-id="strategyContainer"
                                     >
                                       Bollinger Bands
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p
+                                      class="selector__dropdown-text text_large"
+                                      data-selector-value="strategy-volume-impact"
+                                      data-container-id="strategyContainer">
+                                      Volume Impact
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p
+                                      class="selector__dropdown-text text_large"
+                                      data-selector-value="strategy-candle-breakout"
+                                      data-container-id="strategyContainer">
+                                      Candle breakout
                                     </p>
                                   </li>
                                 </ul>
@@ -4867,6 +4987,558 @@
                                 </div>
                               </div>
                             </template>
+
+                            <template
+                              data-template-name="strategy-volume-impact">
+                              <div class="block-wrapper">
+                                <div class="block-container-wrap">
+                                  <div
+                                    class="block-header-wrap overflow-hidden">
+                                    <div
+                                      class="block-header-title text_small text__color_grey">
+                                      Volume Impact strategy setup
+                                    </div>
+                                  </div>
+                                  <div class="block-content-wrap">
+                                    <div class="block-content-wrap__wrapper">
+                                      <div class="line">
+                                        <div
+                                          class="d-flex align-items-center justify-content-between gap-2">
+                                          <p
+                                            class="text text_regular text__color_dark-grey">
+                                            Source
+                                          </p>
+
+                                          <div class="selector-wrapper">
+                                            <div
+                                              data-select="someSelect"
+                                              class="selector selector_regular">
+                                              <div
+                                                class="selector__header selector-arrow">
+                                                <div class="text-wrapp">
+                                                  <p
+                                                    class="selector__inner-text text_large">
+                                                    Buy volume Impact
+                                                  </p>
+                                                </div>
+                                              </div>
+
+                                              <div class="selector__dropdown">
+                                                <ul>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Sell volume Impact
+                                                    </p>
+                                                  </li>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Total volume Impact
+                                                    </p>
+                                                  </li>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Abnormal Volume
+                                                    </p>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="line">
+                                        <div
+                                          class="d-flex align-items-center justify-content-between">
+                                          <p
+                                            class="text text_regular text__color_dark-grey">
+                                            Period
+                                          </p>
+
+                                          <div
+                                            class="input-container-wrap input-container-wrap_tiny"
+                                            data-input="input-field">
+                                            <div class="input-wrapp">
+                                              <input
+                                                class="input-field text_large text__color_dark-grey"
+                                                type="text"
+                                                data-type="number" />
+                                            </div>
+                                            <div class="input-text-center">
+                                              <div
+                                                class="data-wrap"
+                                                data-type="dynamic"
+                                                data-state="ture">
+                                                <p
+                                                  class="text_large text__color_dark-grey">
+                                                  20
+                                                </p>
+                                                <p
+                                                  class="text_small text__color_dark-grey"></p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="line">
+                                        <div
+                                          class="d-flex align-items-center justify-content-between">
+                                          <p
+                                            class="text text_regular text__color_dark-grey">
+                                            Trigger
+                                          </p>
+
+                                          <div
+                                            class="data-info-container data-info-container_medium">
+                                            <div
+                                              class="input-container-wrap input-container-wrap_tiny left"
+                                              data-input="input-field">
+                                              <div
+                                                class="input-wrapp input-wrapp_left">
+                                                <input
+                                                  class="input-field input-field_left text_large text__color_dark-grey"
+                                                  type="text"
+                                                  data-type="number" />
+                                              </div>
+                                              <div class="input-text-center">
+                                                <div
+                                                  class="data-wrap"
+                                                  data-type="dynamic"
+                                                  data-state="ture">
+                                                  <p
+                                                    class="text_large text__color_dark-grey">
+                                                    5.0
+                                                  </p>
+                                                  <p
+                                                    class="text_small text__color_dark-grey"></p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div
+                                              class="input-container-wrap input-container-wrap_tiny right"
+                                              data-input="input-field">
+                                              <div
+                                                class="input-wrapp input-wrapp_right">
+                                                <input
+                                                  class="input-field input-field_right text_large text__color_dark-grey hiden"
+                                                  type="text"
+                                                  data-type="dynamic-number" />
+                                              </div>
+                                              <div class="input-text-center">
+                                                <div
+                                                  class="data-wrap"
+                                                  data-type="dynamic"
+                                                  data-state="ture">
+                                                  <p
+                                                    class="text_large text__color_ligth-grey">
+                                                    1.0
+                                                  </p>
+                                                  <p
+                                                    class="text_small text__color_dark-grey"></p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="line">
+                                        <div
+                                          class="d-flex align-items-center justify-content-between gap-2">
+                                          <p
+                                            class="text text_regular text__color_dark-grey">
+                                            Open Long
+                                          </p>
+
+                                          <div class="selector-wrapper">
+                                            <div
+                                              data-select="someSelect"
+                                              class="selector selector_regular">
+                                              <div
+                                                class="selector__header selector-arrow">
+                                                <div class="text-wrapp">
+                                                  <p
+                                                    class="selector__inner-text text_large">
+                                                    Only Green Bar
+                                                  </p>
+                                                </div>
+                                              </div>
+
+                                              <div class="selector__dropdown">
+                                                <ul>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      None
+                                                    </p>
+                                                  </li>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Only Red Bar
+                                                    </p>
+                                                  </li>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Any Bar
+                                                    </p>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="line">
+                                        <div
+                                          class="d-flex align-items-center justify-content-between gap-2">
+                                          <p
+                                            class="text text_regular text__color_dark-grey">
+                                            Open Short
+                                          </p>
+
+                                          <div class="selector-wrapper">
+                                            <div
+                                              data-select="someSelect"
+                                              class="selector selector_regular">
+                                              <div
+                                                class="selector__header selector-arrow">
+                                                <div class="text-wrapp">
+                                                  <p
+                                                    class="selector__inner-text text_large">
+                                                    Only Red Bar
+                                                  </p>
+                                                </div>
+                                              </div>
+
+                                              <div class="selector__dropdown">
+                                                <ul>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      None
+                                                    </p>
+                                                  </li>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Only Green Bar
+                                                    </p>
+                                                  </li>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Any Bar
+                                                    </p>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="line">
+                                        <div
+                                          class="d-flex align-items-center justify-content-between gap-2">
+                                          <p
+                                            class="text text_regular text__color_dark-grey">
+                                            Strategy
+                                          </p>
+
+                                          <div class="selector-wrapper">
+                                            <div
+                                              data-select="someSelect"
+                                              class="selector selector_regular">
+                                              <div
+                                                class="selector__header selector-arrow">
+                                                <div class="text-wrapp">
+                                                  <p
+                                                    class="selector__inner-text text_large">
+                                                    Simple
+                                                  </p>
+                                                </div>
+                                              </div>
+
+                                              <div class="selector__dropdown">
+                                                <ul>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Speed Reversal
+                                                    </p>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </template>
+
+                            <template
+                              data-template-name="strategy-candle-breakout">
+                              <div class="block-wrapper">
+                                <div class="block-container-wrap">
+                                  <div
+                                    class="block-header-wrap overflow-hidden">
+                                    <div
+                                      class="block-header-title text_small text__color_grey">
+                                      Candle breakout strategy setup
+                                    </div>
+                                  </div>
+                                  <div class="block-content-wrap">
+                                    <div class="block-content-wrap__wrapper">
+                                      <div class="line">
+                                        <div
+                                          class="d-flex align-items-center justify-content-between">
+                                          <p
+                                            class="text text_regular text__color_dark-grey">
+                                            Timeframe
+                                          </p>
+
+                                          <div
+                                            class="data-info-container data-info-container_tiny">
+                                            <div
+                                              class="input-container-wrap input-container-wrap_tiny-3 left"
+                                              data-input="input-field">
+                                              <div class="input-wrapp">
+                                                <input
+                                                  class="input-field input-field_left text_large text__color_dark-grey"
+                                                  type="text"
+                                                  data-type="number"
+                                                  data-unit="date" />
+                                              </div>
+                                              <div class="input-text-center">
+                                                <div
+                                                  class="data-wrap"
+                                                  data-type="dynamic"
+                                                  data-state="ture">
+                                                  <p
+                                                    class="text_large text__color_dark-grey">
+                                                    5
+                                                  </p>
+                                                  <p
+                                                    class="text_small text__color_dark-grey"
+                                                    data-mode="minute">
+                                                    m
+                                                  </p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <button
+                                              class="button-input button-time-small right text_small"
+                                              data-type="time"
+                                              data-mode="minute">
+                                              m
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="line">
+                                        <div
+                                          class="d-flex align-items-center justify-content-between gap-2">
+                                          <p
+                                            class="text text_regular text__color_dark-grey">
+                                            Long
+                                          </p>
+
+                                          <div class="selector-wrapper">
+                                            <div
+                                              data-select="someSelect"
+                                              class="selector selector_regular">
+                                              <div
+                                                class="selector__header selector-arrow">
+                                                <div class="text-wrapp">
+                                                  <p
+                                                    class="selector__inner-text text_large">
+                                                    Only Red Bar
+                                                  </p>
+                                                </div>
+                                              </div>
+
+                                              <div class="selector__dropdown">
+                                                <ul>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      None
+                                                    </p>
+                                                  </li>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Only Green Bar
+                                                    </p>
+                                                  </li>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Any Bar
+                                                    </p>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="line">
+                                        <div
+                                          class="d-flex align-items-center justify-content-between gap-2">
+                                          <p
+                                            class="text text_regular text__color_dark-grey">
+                                            Short
+                                          </p>
+
+                                          <div class="selector-wrapper">
+                                            <div
+                                              data-select="someSelect"
+                                              class="selector selector_regular">
+                                              <div
+                                                class="selector__header selector-arrow">
+                                                <div class="text-wrapp">
+                                                  <p
+                                                    class="selector__inner-text text_large">
+                                                    Only Red Bar
+                                                  </p>
+                                                </div>
+                                              </div>
+
+                                              <div class="selector__dropdown">
+                                                <ul>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      None
+                                                    </p>
+                                                  </li>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Only Green Bar
+                                                    </p>
+                                                  </li>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Any Bar
+                                                    </p>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="line">
+                                        <div
+                                          class="d-flex align-items-center justify-content-between">
+                                          <p
+                                            class="text text_regular text__color_dark-grey">
+                                            Offset % from candle
+                                          </p>
+
+                                          <div
+                                            class="input-container-wrap input-container-wrap_tiny"
+                                            data-input="input-field">
+                                            <div class="input-wrapp">
+                                              <input
+                                                class="input-field text_large text__color_dark-grey"
+                                                type="text"
+                                                data-type="number"
+                                                data-unit="%" />
+                                            </div>
+                                            <div class="input-text-center">
+                                              <div
+                                                class="data-wrap"
+                                                data-type="dynamic"
+                                                data-state="ture">
+                                                <p
+                                                  class="text_large text__color_dark-grey">
+                                                  5.5
+                                                </p>
+                                                <p
+                                                  class="text_small text__color_dark-grey">
+                                                  %
+                                                </p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="line">
+                                        <div
+                                          class="d-flex align-items-center justify-content-between gap-2">
+                                          <p
+                                            class="text text_regular text__color_dark-grey">
+                                            Strategy
+                                          </p>
+
+                                          <div class="selector-wrapper">
+                                            <div
+                                              data-select="someSelect"
+                                              class="selector selector_regular">
+                                              <div
+                                                class="selector__header selector-arrow">
+                                                <div class="text-wrapp">
+                                                  <p
+                                                    class="selector__inner-text text_large">
+                                                    Simple
+                                                  </p>
+                                                </div>
+                                              </div>
+
+                                              <div class="selector__dropdown">
+                                                <ul>
+                                                  <li
+                                                    class="padding-contaier_xsmall">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Speed Reversal
+                                                    </p>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </template>
                           </div>
                         </div>
                       </div>
@@ -7540,6 +8212,42 @@
                           </div>
                         </div>
                       </div>
+                    </div>
+
+                    <div class="line">
+                      <div class="d-flex justify-content-between">
+                        <button
+                          class="button-new button-new_save-small text_regular"
+                          data-type="btn">
+                          Margin
+                        </button>
+
+                        <button
+                          class="button-new button-new_save-small text_regular"
+                          data-type="btn">
+                          Mnt
+                        </button>
+
+                        <button
+                          class="button-new button-new_save-small text_regular btn-active"
+                          data-type="btn">
+                          Fee
+                        </button>
+
+                        <button
+                          class="button-new button-new_save-small text_regular btn-active"
+                          data-type="btn">
+                          Funding
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="line">
+                      <button
+                        class="button-new w-100 text_regular btn-active"
+                        data-type="btn">
+                        Reverse Take Profit
+                      </button>
                     </div>
                   </div>
                 </div>

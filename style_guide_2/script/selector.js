@@ -66,6 +66,7 @@ function renderFieldsTemplate(element, containerSelector) {
   inputContainer.innerHTML = '';
   addLineField.setEventListeners(clone);
   inputContainer.appendChild(clone);
+  init();
 
   hideMonetaryValue();
   initSwitcher.initRegSwitcherHandler();
