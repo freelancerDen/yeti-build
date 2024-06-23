@@ -3003,6 +3003,7 @@ svg {
   display: grid;
   gap: 24px;
   padding: 64px;
+  padding-bottom: 0;
 }
 
 .modal-logo {
