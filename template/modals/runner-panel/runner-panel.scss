@@ -1,7 +1,7 @@
 .runner-panel {
   &__grid {
     display: grid;
-    grid-template-columns: 322px 322px 322px auto;
+    grid-template-columns: 1fr 1fr 1fr auto;
     gap: 15px;
   }
 
@@ -9,6 +9,10 @@
     display: grid;
     align-content: start;
     gap: 10px;
+
+    .block-wrapper {
+      max-width: unset;
+    }
   }
 
   &__box {
