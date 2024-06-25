@@ -10864,92 +10864,309 @@
           />
         </div>
         <div class="modal-attention__grid fieldContainer">
-          <div
-            class="d-flex align-items-center justify-content-between fieldWrapper"
-          >
-            <div class="selector-wrapper">
-              <div data-select="someSelect" class="selector selector_regular">
-                <div class="selector__header selector-arrow">
-                  <div class="text-wrapp">
-                    <p class="selector__inner-text text_large">Percent</p>
-                  </div>
-                </div>
-
-                <div class="selector__dropdown">
-                  <ul>
-                    <li class="padding-contaier_xsmall">
-                      <p class="selector__dropdown-text text_large">Abnormal</p>
-                    </li>
-                    <li class="padding-contaier_xsmall">
-                      <p class="selector__dropdown-text text_large">Impact</p>
-                    </li>
-                    <li class="padding-contaier_xsmall">
-                      <p class="selector__dropdown-text text_large">Percent</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex gap-2">
-              <div class="data-info-container data-info-container_medium">
+          <div class="line">
+            <div
+              class="grid grid-cols-2 line-grid align-items-end selectorWrap gap-3"
+            >
+              <div class="selector-wrapper">
                 <div
-                  class="input-container-wrap input-container-wrap_tiny-3 left"
-                  data-input="input-field"
+                  data-type="dynamic"
+                  data-state="ture"
+                  class="selector selector_regular"
                 >
-                  <div class="input-wrapp input-wrapp_left">
-                    <input
-                      class="input-field input-field_left text_large text__color_dark-grey"
-                      type="text"
-                      data-type="number"
-                      data-unit="date"
-                    />
-                  </div>
-                  <div class="input-text-center">
-                    <div
-                      class="data-wrap"
-                      data-type="dynamic"
-                      data-state="ture"
-                    >
-                      <p class="text_large text__color_dark-grey">1</p>
+                  <div class="selector__header selector-arrow">
+                    <div class="text-wrapp">
                       <p
-                        class="text_small text__color_dark-grey"
-                        data-mode="hour"
+                        class="selector__inner-text text_large"
+                        data-move="false"
+                        data-selector-value="take-profit-percent"
                       >
-                        h
+                        Percent
                       </p>
                     </div>
                   </div>
-                </div>
-                <button
-                  class="button-input button-time right text_small"
-                  data-type="time"
-                  data-mode="hour"
-                >
-                  h
-                </button>
-                <div
-                  class="input-container-wrap input-container-wrap_small-3 right"
-                  data-input="input-field"
-                >
-                  <div class="input-wrapp input-wrapp_right">
-                    <input
-                      class="input-field input-field_right text_large text__color_dark-grey"
-                      type="text"
-                      data-type="number"
-                    />
+
+                  <div class="selector__dropdown">
+                    <ul>
+                      <li class="padding-contaier_xsmall">
+                        <p
+                          class="selector__dropdown-text text_large"
+                          data-selector-value="take-profit-abnormal"
+                        >
+                          Abnormal
+                        </p>
+                      </li>
+                      <li class="padding-contaier_xsmall">
+                        <p
+                          class="selector__dropdown-text text_large"
+                          data-selector-value="take-profit-impact"
+                        >
+                          Impact
+                        </p>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="input-text-center input-text-center--with-button">
+                </div>
+              </div>
+
+              <div class="selectorInputContainer">
+                <div class="d-flex gap-2 align-items-center">
+                  <div class="data-info-container data-info-container_medium">
                     <div
-                      class="data-wrap"
-                      data-type="dynamic"
-                      data-state="ture"
+                      class="input-container-wrap input-container-wrap_tiny-3 left"
+                      data-input="input-field"
                     >
-                      <p class="text_large text__color_dark-grey">3</p>
-                      <p class="text_small text__color_dark-grey"></p>
+                      <div class="input-wrapp">
+                        <input
+                          class="input-field text_large text__color_dark-grey"
+                          type="text"
+                          data-type="number"
+                          data-unit="%"
+                        />
+                      </div>
+                      <div class="input-text-center">
+                        <div
+                          class="data-wrap"
+                          data-type="dynamic"
+                          data-state="ture"
+                        >
+                          <p class="text_large text__color_dark-grey">15</p>
+                          <p
+                            class="text_small text__color_dark-grey"
+                            data-mode="hour"
+                          >
+                            m
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="button-input button-time right text_small"
+                      data-type="time"
+                      data-mode="minute"
+                    >
+                      m
+                    </button>
+                    <div
+                      class="input-container-wrap input-container-wrap_tiny"
+                      data-input="input-field"
+                    >
+                      <div class="input-wrapp">
+                        <input
+                          class="input-field text_large text__color_dark-grey"
+                          type="text"
+                          data-type="number"
+                          data-unit="%"
+                        />
+                      </div>
+                      <div class="input-text-center">
+                        <div
+                          class="data-wrap"
+                          data-type="dynamic"
+                          data-state="ture"
+                        >
+                          <p class="text_large text__color_dark-grey">5</p>
+                          <p class="text_small text__color_dark-grey">%</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <template data-template-name="take-profit-percent">
+                <div class="d-flex gap-2 align-items-center">
+                  <div class="data-info-container data-info-container_medium">
+                    <div
+                      class="input-container-wrap input-container-wrap_tiny-3 left"
+                      data-input="input-field"
+                    >
+                      <div class="input-wrapp">
+                        <input
+                          class="input-field text_large text__color_dark-grey"
+                          type="text"
+                          data-type="number"
+                          data-unit="%"
+                        />
+                      </div>
+                      <div class="input-text-center">
+                        <div
+                          class="data-wrap"
+                          data-type="dynamic"
+                          data-state="ture"
+                        >
+                          <p class="text_large text__color_dark-grey">15</p>
+                          <p
+                            class="text_small text__color_dark-grey"
+                            data-mode="hour"
+                          >
+                            m
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="button-input button-time right text_small"
+                      data-type="time"
+                      data-mode="minute"
+                    >
+                      m
+                    </button>
+                    <div
+                      class="input-container-wrap input-container-wrap_tiny"
+                      data-input="input-field"
+                    >
+                      <div class="input-wrapp">
+                        <input
+                          class="input-field text_large text__color_dark-grey"
+                          type="text"
+                          data-type="number"
+                          data-unit="%"
+                        />
+                      </div>
+                      <div class="input-text-center">
+                        <div
+                          class="data-wrap"
+                          data-type="dynamic"
+                          data-state="ture"
+                        >
+                          <p class="text_large text__color_dark-grey">5</p>
+                          <p class="text_small text__color_dark-grey">%</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </template>
+
+              <template data-template-name="take-profit-abnormal">
+                <div class="d-flex gap-2 align-items-center">
+                  <div class="data-info-container data-info-container_medium">
+                    <div
+                      class="input-container-wrap input-container-wrap_tiny-3 left"
+                      data-input="input-field"
+                    >
+                      <div class="input-wrapp">
+                        <input
+                          class="input-field text_large text__color_dark-grey"
+                          type="text"
+                          data-type="number"
+                          data-unit="%"
+                        />
+                      </div>
+                      <div class="input-text-center">
+                        <div
+                          class="data-wrap"
+                          data-type="dynamic"
+                          data-state="ture"
+                        >
+                          <p class="text_large text__color_dark-grey">15</p>
+                          <p
+                            class="text_small text__color_dark-grey"
+                            data-mode="hour"
+                          >
+                            m
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="button-input button-time right text_small"
+                      data-type="time"
+                      data-mode="minute"
+                    >
+                      m
+                    </button>
+                    <div
+                      class="input-container-wrap input-container-wrap_tiny"
+                      data-input="input-field"
+                    >
+                      <div class="input-wrapp">
+                        <input
+                          class="input-field text_large text__color_dark-grey"
+                          type="text"
+                          data-type="number"
+                        />
+                      </div>
+                      <div class="input-text-center">
+                        <div
+                          class="data-wrap"
+                          data-type="dynamic"
+                          data-state="ture"
+                        >
+                          <p class="text_large text__color_dark-grey">5</p>
+                          <p class="text_small text__color_dark-grey"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </template>
+
+              <template data-template-name="take-profit-impact">
+                <div class="d-flex gap-2 align-items-center">
+                  <div class="data-info-container data-info-container_medium">
+                    <div
+                      class="input-container-wrap input-container-wrap_tiny-3 left"
+                      data-input="input-field"
+                    >
+                      <div class="input-wrapp">
+                        <input
+                          class="input-field text_large text__color_dark-grey"
+                          type="text"
+                          data-type="number"
+                          data-unit="%"
+                        />
+                      </div>
+                      <div class="input-text-center">
+                        <div
+                          class="data-wrap"
+                          data-type="dynamic"
+                          data-state="ture"
+                        >
+                          <p class="text_large text__color_dark-grey">15</p>
+                          <p
+                            class="text_small text__color_dark-grey"
+                            data-mode="hour"
+                          >
+                            m
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="button-input button-time right text_small"
+                      data-type="time"
+                      data-mode="minute"
+                    >
+                      m
+                    </button>
+
+                    <div
+                      class="input-container-wrap input-container-wrap_tiny"
+                      data-input="input-field"
+                    >
+                      <div class="input-wrapp">
+                        <input
+                          class="input-field text_large text__color_dark-grey"
+                          type="text"
+                          data-type="number"
+                        />
+                      </div>
+                      <div class="input-text-center">
+                        <div
+                          class="data-wrap"
+                          data-type="dynamic"
+                          data-state="ture"
+                        >
+                          <p class="text_large text__color_dark-grey">5</p>
+                          <p class="text_small text__color_dark-grey"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </template>
             </div>
           </div>
 
