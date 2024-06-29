@@ -1838,9 +1838,6 @@ svg {
   width: auto;
   height: auto;
   min-width: 324px;
-  max-width: -moz-max-content;
-  max-width: max-content;
-  max-height: -moz-max-content;
   max-height: max-content;
   border-radius: 10px;
   background: #f2f4f7;
@@ -3148,13 +3145,16 @@ svg {
 
 .runner-panel__grid {
   display: grid;
-  grid-template-columns: 322px 322px 322px auto;
+  grid-template-columns: 1fr 1fr 1fr auto;
   gap: 15px;
 }
 .runner-panel__subgrid {
   display: grid;
   align-content: start;
   gap: 10px;
+}
+.runner-panel__subgrid .block-wrapper {
+  max-width: unset;
 }
 .runner-panel__box {
   height: 500px;
