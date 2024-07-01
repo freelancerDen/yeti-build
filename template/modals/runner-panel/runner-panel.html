@@ -192,15 +192,15 @@
                         </div>
 
                         <div
-                          class="button-new-wrap button-new-wrap_normal btn-shadow ms-auto">
+                          class="button-new-wrapper button-new-wrapper--normal btn-shadow ms-auto">
                           <button
-                            class="button-group button-group_normal-1 text_large btn-active"
+                            class="button-new button-group button-group_normal-1 text_large btn-active"
                             data-type="btn">
                             Long
                           </button>
 
                           <button
-                            class="button-group button-group_normal-2 text_large"
+                            class="button-new button-group button-group_normal-2 text_large"
                             data-type="btn">
                             Short
                           </button>
@@ -252,7 +252,7 @@
                           <div
                             class="input-container-wrap input-container-wrap_tiny left"
                             data-input="input-field">
-                            <div class="input-wrapp input-wrapp_left">
+                            <div class="input-wrapp input-wrapp_left hidden">
                               <input
                                 class="input-field input-field_left text_large text__color_dark-grey"
                                 type="text"
@@ -261,17 +261,13 @@
                                 data-min="1"
                                 data-max="200" />
                             </div>
-                            <div class="input-text-center">
+                            <div class="input-text-center input-disabled">
                               <div
                                 class="data-wrap"
                                 data-type="dynamic"
                                 data-state="ture">
-                                <p class="text_large text__color_dark-grey">
-                                  10
-                                </p>
-                                <p class="text_small text__color_dark-grey">
-                                  x
-                                </p>
+                                <p class="text_large text__color_grey">10</p>
+                                <p class="text_small text__color_grey">x</p>
                               </div>
                             </div>
                           </div>
@@ -4879,45 +4875,56 @@
                           </div>
                         </div>
 
-                        <div class="d-flex align-items-center gap-2">
+                        <div
+                          class="d-flex align-items-center gap-2 switcher-wrap">
+                          <div class="form-switch">
+                            <input
+                              class="form-check-input custom-outline m-auto"
+                              type="checkbox"
+                              role="switch"
+                              checked />
+                          </div>
+
                           <p class="text text_regular text__color_dark-grey">
                             Offset
                           </p>
 
-                          <div
-                            class="data-info-container data-info-container_tiny">
+                          <div class="handler-box">
                             <div
-                              class="input-container-wrap input-container-wrap_tiny-3 left"
-                              data-input="input-field">
-                              <div class="input-wrapp">
-                                <input
-                                  class="input-field input-field_left text_large text__color_dark-grey"
-                                  type="text"
-                                  data-type="dynamic-number"
-                                  data-unit="date" />
-                              </div>
-                              <div class="input-text-center">
-                                <div
-                                  class="data-wrap"
-                                  data-type="dynamic"
-                                  data-state="ture">
-                                  <p class="text_large text__color_dark-grey">
-                                    -15
-                                  </p>
-                                  <p
-                                    class="text_small text__color_dark-grey"
-                                    data-mode="hour">
-                                    s
-                                  </p>
+                              class="data-info-container data-info-container_tiny">
+                              <div
+                                class="input-container-wrap input-container-wrap_tiny-3 left"
+                                data-input="input-field">
+                                <div class="input-wrapp">
+                                  <input
+                                    class="input-field input-field_left text_large text__color_dark-grey"
+                                    type="text"
+                                    data-type="dynamic-number"
+                                    data-unit="date" />
+                                </div>
+                                <div class="input-text-center">
+                                  <div
+                                    class="data-wrap"
+                                    data-type="dynamic"
+                                    data-state="ture">
+                                    <p class="text_large text__color_dark-grey">
+                                      -15
+                                    </p>
+                                    <p
+                                      class="text_small text__color_dark-grey"
+                                      data-mode="hour">
+                                      s
+                                    </p>
+                                  </div>
                                 </div>
                               </div>
+                              <button
+                                class="button-input button-time-small right text_small"
+                                data-type="time"
+                                data-mode="second">
+                                s
+                              </button>
                             </div>
-                            <button
-                              class="button-input button-time-small right text_small"
-                              data-type="time"
-                              data-mode="second">
-                              s
-                            </button>
                           </div>
                         </div>
                       </div>
@@ -5894,9 +5901,7 @@
                                   class="input-field text_large text__color_dark-grey"
                                   type="text"
                                   data-type="dynamic-number"
-                                  data-unit="%"
-                                  data-max="10"
-                                  data-min="-10" />
+                                  data-unit="%" />
                               </div>
                               <div class="input-text-center">
                                 <div
@@ -7184,7 +7189,7 @@
                             </div>
 
                             <button
-                              class="button-non-press button-non-press-normal text_regular button-non-press_save-small"
+                              class="button-new button-new_save-small text_regular"
                               data-type="btn">
                               Protect
                             </button>
@@ -8380,82 +8385,22 @@
                         Optimization
                       </button>
 
-                      <div
-                        class="d-flex justify-content-between align-items-center gap-4 flex-grow-1">
-                        <div class="d-flex align-items-center gap-1">
-                          <p class="text text_large text__color_dark-grey">
-                            From
-                          </p>
+                      <button
+                        class="button-non-press button-non-press_large text_large"
+                        data-type="btn"
+                        data-name="dates"
+                        data-disabled-by="optimization"
+                        disabled>
+                        Date & Time
+                      </button>
 
-                          <div
-                            class="data-info-container data-info-container_medium">
-                            <div
-                              class="input-container-wrap input-container-wrap_normal"
-                              data-input="input-field">
-                              <div class="input-wrapp">
-                                <input
-                                  class="input-field text_large text__color_dark-grey hidden"
-                                  type="text"
-                                  data-type="date"
-                                  data-disabled-by="optimization" />
-                              </div>
-                              <div class="input-text-center">
-                                <div
-                                  class="data-wrap"
-                                  data-type="dynamic"
-                                  data-state="ture">
-                                  <p class="text_large text__color_ligth-grey">
-                                    01.10.2023
-                                  </p>
-                                  <p
-                                    class="text_small text__color_ligth-grey"></p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="d-flex align-items-center gap-1 me-auto">
-                          <p class="text text_large text__color_dark-grey">
-                            To
-                          </p>
-
-                          <div
-                            class="data-info-container data-info-container_medium">
-                            <div
-                              class="input-container-wrap input-container-wrap_normal"
-                              data-input="input-field">
-                              <div class="input-wrapp">
-                                <input
-                                  class="input-field text_large text__color_dark-grey hidden"
-                                  type="text"
-                                  data-type="date"
-                                  data-disabled-by="optimization" />
-                              </div>
-                              <div class="input-text-center">
-                                <div
-                                  class="data-wrap"
-                                  data-type="dynamic"
-                                  data-state="ture">
-                                  <p class="text_large text__color_ligth-grey">
-                                    31.10.2023
-                                  </p>
-                                  <p
-                                    class="text_small text__color_ligth-grey"></p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <button
-                          class="button-non-press button-non-press_big-2 text_large"
-                          data-type="btn"
-                          disabled
-                          data-disabled-by="optimization">
-                          Calculation
-                        </button>
-                      </div>
+                      <button
+                        class="button-non-press button-non-press_big-2 text_large ms-auto"
+                        data-type="btn"
+                        disabled
+                        data-disabled-by="optimization">
+                        Calculation
+                      </button>
                     </div>
 
                     <div
@@ -8470,69 +8415,15 @@
                         R/R Optimization
                       </button>
 
-                      <div class="d-flex align-items-center gap-1">
-                        <p class="text text_large text__color_dark-grey">
-                          From
-                        </p>
+                      <button
+                        class="button-non-press button-non-press_large text_large"
+                        data-type="btn"
+                        data-name="dates"
+                        data-disabled-by="r-r-optimization">
+                        Date & Time
+                      </button>
 
-                        <div
-                          class="data-info-container data-info-container_medium">
-                          <div
-                            class="input-container-wrap input-container-wrap_normal"
-                            data-input="input-field">
-                            <div class="input-wrapp">
-                              <input
-                                class="input-field text_large text__color_dark-grey"
-                                type="text"
-                                data-type="date"
-                                data-disabled-by="r-r-optimization" />
-                            </div>
-                            <div class="input-text-center">
-                              <div
-                                class="data-wrap"
-                                data-type="dynamic"
-                                data-state="ture">
-                                <p class="text_large text__color_dark-grey">
-                                  01.10.2023
-                                </p>
-                                <p class="text_small text__color_dark-grey"></p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="d-flex align-items-center gap-1">
-                        <p class="text text_large text__color_dark-grey">To</p>
-
-                        <div
-                          class="data-info-container data-info-container_medium">
-                          <div
-                            class="input-container-wrap input-container-wrap_normal"
-                            data-input="input-field">
-                            <div class="input-wrapp">
-                              <input
-                                class="input-field text_large text__color_dark-grey"
-                                type="text"
-                                data-type="date"
-                                data-disabled-by="r-r-optimization" />
-                            </div>
-                            <div class="input-text-center">
-                              <div
-                                class="data-wrap"
-                                data-type="dynamic"
-                                data-state="ture">
-                                <p class="text_large text__color_dark-grey">
-                                  31.10.2023
-                                </p>
-                                <p class="text_small text__color_dark-grey"></p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="d-flex align-items-center gap-1 me-auto">
+                      <div class="d-flex align-items-center gap-1 ms-auto">
                         <p class="text text_large text__color_dark-grey">R/R</p>
 
                         <div class="data-info-container">

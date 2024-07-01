@@ -136,7 +136,8 @@
 }
 
 .stretch-panel-container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
   padding: 64px;
 }

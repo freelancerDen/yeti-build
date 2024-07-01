@@ -1195,6 +1195,14 @@ svg {
   border-radius: 0 6px 6px 0;
 }
 
+.button-new-wrapper {
+  display: flex;
+  border-radius: 6px;
+}
+.button-new-wrapper--normal {
+  width: 120px;
+}
+
 .button-new-wrap {
   display: flex;
   border-radius: 6px;
@@ -2956,7 +2964,8 @@ svg {
 }
 
 .stretch-panel-container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
   padding: 64px;
 }

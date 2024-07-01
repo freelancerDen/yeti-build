@@ -652,6 +652,14 @@ svg {
     }
   }
 }
+.button-new-wrapper {
+  display: flex;
+  border-radius: 6px;
+
+  &--normal {
+    width: 120px;
+  }
+}
 
 .button-new-wrap {
   display: flex;
