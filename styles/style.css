@@ -2473,6 +2473,11 @@ svg {
   min-height: 550px;
 }
 
+.modal-grid {
+  display: grid;
+  gap: 10px;
+}
+
 .modal-risk-wrap {
   width: 336px;
   height: auto;

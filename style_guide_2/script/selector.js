@@ -5,6 +5,7 @@ import { handleButtonModeClick, handleButtonListClick } from './buttons.js';
 import initSwitcher from './switcher.js';
 import { hideMonetaryValue } from './hide-monetary-value.js';
 import addLineField from './add-line-field.js';
+import modals from './modals.js';
 
 /**
  * The function `renderFieldsTemplate` clones a template based on a specified selector value and
@@ -70,6 +71,7 @@ function renderFieldsTemplate(element, containerSelector) {
 
   hideMonetaryValue();
   initSwitcher.initRegSwitcherHandler();
+  modals.init();
 }
 
 // Function to swap inner text of two elements

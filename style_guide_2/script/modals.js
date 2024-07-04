@@ -74,8 +74,6 @@ function handleTagPreset(element) {
 
 // New logic for modals
 
-const buttonsModal = document.querySelectorAll('[data-modal-name]');
-
 /**
  * The function closeModal hides a modal by adding the 'd-none' class to it.
  * @param modal - The `modal` parameter in the `closeModal` function is a reference to the modal
@@ -252,6 +250,10 @@ export function handleClickModalButton(event) {
  * `handleClickModalButton` function.
  */
 function setEventListeners() {
+  const buttonsModal = document.querySelectorAll('[data-modal-name]');
+
+  if (buttonsModal.length === 0) return;
+
   buttonsModal.forEach((element) => {
     element.addEventListener('click', handleClickModalButton);
   });
@@ -262,9 +264,9 @@ function setEventListeners() {
  * are.
  */
 function init() {
-  if (buttonsModal.length > 0) {
-    setEventListeners();
-  }
+  setEventListeners();
 }
 
 init();
+
+export default { init };
