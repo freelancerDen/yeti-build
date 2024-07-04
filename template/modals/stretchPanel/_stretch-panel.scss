@@ -121,10 +121,6 @@
     grid-template-columns: 26px 140px 140px 140px 60px 140px 90px 140px;
   }
   &-body {
-    .handler-box {
-      display: grid !important;
-      grid-template-columns: 140px 140px 140px 60px 140px 90px 140px;
-    }
     &__line {
       display: grid;
       grid-template-columns: 26px 1fr;

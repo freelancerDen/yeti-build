@@ -91,8 +91,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -1584,7 +1583,6 @@ svg {
 
 .button-tiny {
   min-width: 50px;
-  width: -moz-max-content;
   width: max-content;
   height: 20px;
   padding: 0;
@@ -1659,7 +1657,6 @@ svg {
 
 .conection-block-wrap {
   height: 23px;
-  width: -moz-max-content;
   width: max-content;
   max-width: 500px;
   display: inline-flex;
@@ -2185,7 +2182,6 @@ svg {
 }
 
 .navbar__btn-wrapp {
-  width: -moz-max-content;
   width: max-content;
   height: 100%;
   background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
@@ -2398,8 +2394,7 @@ svg {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: -1;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 
 .modal-draggable {
@@ -2439,8 +2434,7 @@ svg {
 .gallery-block__link img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .gallery-block__close {
   position: absolute;
@@ -2798,7 +2792,6 @@ svg {
   margin: 0 auto;
 }
 .profit-range-header__content .line {
-  max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 0 auto;
 }
@@ -2977,9 +2970,7 @@ svg {
 .button-normalize {
   border: none;
   outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background-color: transparent;
   padding: 0;
   margin: 0;
@@ -2990,10 +2981,6 @@ svg {
   display: grid;
   gap: 10px;
   grid-template-columns: 26px 140px 140px 140px 60px 140px 90px 140px;
-}
-.profit-table-body .handler-box {
-  display: grid !important;
-  grid-template-columns: 140px 140px 140px 60px 140px 90px 140px;
 }
 .profit-table-body__line {
   display: grid;
@@ -3170,4 +3157,6 @@ svg {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.02) inset;
   background-color: rgba(234, 242, 245, 0.5);
   border-radius: 4px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
