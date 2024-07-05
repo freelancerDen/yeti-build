@@ -58,7 +58,6 @@ function setEventListeners(panel) {
   instances.forEach((instance) => {
     const createNewButton = instance.querySelector('.createNewLineFieldButton');
     const removeButtons = instance.querySelectorAll('.removeLineFieldButton');
-    console.log(createNewButton);
 
     createNewButton.addEventListener('click', handleCreateFieldClick);
     removeButtons.forEach((btn) => {
