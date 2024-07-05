@@ -86,6 +86,34 @@
         <div
           class="stretch-panel__header-actions__block d-flex align-items-center">
           <span class="indicator green"></span>
+
+          <button
+            class="button-non-press button-non-press-normal text_regular button-non-press_tiny-2"
+            data-type="btn"
+            data-modal-name="chart"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 18 18"
+              width="18"
+              height="18"
+            >
+              <rect
+                width="17"
+                height="17"
+                x=".5"
+                y=".5"
+                stroke="#344054"
+                rx="2.5"
+              />
+              <path
+                fill="#344054"
+                d="M2.527 13.839a.5.5 0 1 0 .946.322l-.946-.322Zm3.223-3.93-.247-.435.247.435Zm5.5 0 .244.437-.244-.437ZM14 4 9.799 7.96l5.53 1.658L14 4ZM3 14l.473.161.002-.006.009-.023.034-.095a13.088 13.088 0 0 1 .669-1.492c.472-.894 1.104-1.801 1.81-2.2l-.494-.87c-.975.552-1.718 1.69-2.2 2.603a14.078 14.078 0 0 0-.762 1.72l-.01.029-.003.008v.002l-.001.001L3 14Zm2.997-3.656c.724-.41 1.425-.23 2.362.041.878.254 1.992.6 3.135-.04l-.488-.872c-.728.406-1.432.223-2.37-.049-.879-.254-1.992-.596-3.133.05l.494.87Zm5.497.002c.716-.4 1.25-1.075 1.65-1.792l-.873-.487c-.354.635-.775 1.132-1.265 1.406l.488.873Z"
+              />
+            </svg>
+          </button>
+
           <button
             class="button-non-press button-non-press-normal text_regular button-non-press_save-small"
             data-type="btn"
@@ -12633,7 +12661,7 @@
       <div class="modal-window-wrap">
         <div class="modal-window-header">
           <h4 class="modal-window-title text_small text__color_grey">
-            Close Limit
+            Preset master
           </h4>
           <img
             class="modal-window-close-icon closeModalTrigger"
@@ -12781,7 +12809,7 @@
     <div class="modal-overlay closeModalTrigger"></div>
 
     <div class="modal-wrapper modal-attention">
-      <div class="modal-window-wrap addFieldsInstance">
+      <div class="modal-window-wrap">
         <div class="modal-window-header">
           <h4 class="modal-window-title text_small text__color_grey">
             Manipulation sub-level price
@@ -12987,7 +13015,7 @@
     <div class="modal-overlay closeModalTrigger"></div>
 
     <div class="modal-wrapper modal-attention">
-      <div class="modal-window-wrap addFieldsInstance">
+      <div class="modal-window-wrap">
         <div class="modal-window-header">
           <h4 class="modal-window-title text_small text__color_grey">
             Trendline setup
@@ -13174,6 +13202,197 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="modal-wrapper modal-chart modal-draggable d-none"
+    data-modal="chart">
+    <div class="modal-window-wrap">
+      <div class="modal-window-header modal-drag-drop">
+        <h4 class="modal-window-title text_regular text__color_dark-grey">
+          Chart
+        </h4>
+
+        <img
+          class="modal-window-close-icon closeModalTrigger"
+          src="./img/close.svg"
+          alt="close-cross" />
+      </div>
+
+      <div class="modal-chart__grid">
+        <div>
+          <div class="text_small text-center py-1 mb-1">Period</div>
+
+          <div class="vertical-button-group" data-button-group="period">
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="period">
+              1h
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="period">
+              4h
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="period">
+              12h
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="period">
+              1d
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="period">
+              3d
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="period">
+              1w
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="period">
+              1m
+            </button>
+          </div>
+
+          <div class="text_small text-center py-1 mb-1 mt-5">Bars</div>
+
+          <div class="vertical-button-group" data-button-group="bars">
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="bars">
+              1s
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="bars">
+              5s
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="bars">
+              15s
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="bars">
+              1m
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="bars">
+              5m
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="bars">
+              15m
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="bars">
+              30m
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="bars">
+              1h
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="bars">
+              2h
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="bars">
+              4h
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="bars">
+              6h
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="bars">
+              12h
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="bars">
+              1d
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="bars">
+              3d
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="bars">
+              1w
+            </button>
+
+            <button
+              class="vertical-button-group__btn button-new text text-center text_small text__color_dark-grey"
+              data-type="btn"
+              data-button-group-name="bars">
+              1m
+            </button>
+          </div>
+        </div>
+        <div class="modal-chart__chart"></div>
       </div>
     </div>
   </div>

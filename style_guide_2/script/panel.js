@@ -80,4 +80,30 @@ function setEventListeners() {
   button.addEventListener('click', handleButtonClick);
 }
 
+function checkPageName() {
+  const body = document.querySelector('body');
+
+  const { pageName } = body.dataset;
+
+  const addPanelButton = document.querySelector('.addPanelButton');
+
+  switch (pageName) {
+    case 'limitter':
+      addPanelButton.textContent = 'Add Limmiter';
+      addPanelButton.dataset.panelName = 'limitter-panel';
+      break;
+
+    case 'runner':
+      addPanelButton.textContent = 'Add Runner';
+      addPanelButton.dataset.panelName = 'runner-panel';
+      break;
+
+    default:
+      addPanelButton.textContent = 'Add';
+      addPanelButton.dataset.panelName = 'default';
+      break;
+  }
+}
+
 setEventListeners();
+checkPageName();
