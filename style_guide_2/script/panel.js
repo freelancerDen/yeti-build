@@ -8,6 +8,7 @@ import profitRange from './profitRange.js';
 import { hideMonetaryValue } from './hide-monetary-value.js';
 import gallery from './gallery.js';
 import addField from './add-field.js';
+import addLineField from './add-line-field.js';
 
 const button = document.querySelector('.addInstance');
 
@@ -62,6 +63,7 @@ function handleButtonClick(event) {
 
   profitRange.updateHTML(profitRangeContainer);
   stretchPanel.runScripts(clone);
+  addLineField.setEventListeners(clone);
 
   container.appendChild(clone);
 
@@ -70,6 +72,7 @@ function handleButtonClick(event) {
   hideMonetaryValue();
   gallery.updateInit();
   addField.init();
+  $('button[data-name="dates"]').daterangepicker({ timePicker: true });
 }
 
 /**
