@@ -1,4 +1,5 @@
 import btnTimeMode from './btn-time-mode.js';
+import btnUnitMode from './btn-unit-mode.js';
 import customInput from './input.js';
 
 const button = {
@@ -8,7 +9,7 @@ const button = {
   classNameBtnInGroup: 'button-group',
 };
 
-const buttonMode = document.querySelectorAll('[data-type="time"]');
+const buttonMode = document.querySelectorAll('[data-type]');
 const buttonList = document.querySelectorAll('[data-type="btn"]');
 const navIndicatorBtn = document.querySelectorAll('.navbar-indicator-btn');
 
@@ -119,6 +120,18 @@ export function handleButtonModeClick(event) {
 }
 
 /**
+ * The above functions handle button clicks by either activating a single button or switching the
+ * active button within a group of buttons.
+ * @param event - The `event` parameter in the functions `handleButtonModeClick` and
+ * `handleButtonListClick` represents the event that occurred, such as a button click or key press. It
+ * contains information about the event, such as the target element that triggered the event and any
+ * additional data related to the event
+ */
+export function handleButtonModeUnitClick(event) {
+  btnUnitMode.btnHandler(event);
+}
+
+/**
  * The function `disableFieldsOnChangeState` disables or enables input fields and buttons based on the
  * state of a target element.
  * @param target - The `target` parameter in the `disableFieldsOnChangeState` function is the element
@@ -210,7 +223,15 @@ function setEventListeners() {
   });
 
   buttonMode.forEach((btn) => {
-    btn.addEventListener('click', handleButtonModeClick);
+    const type = btn.dataset.type;
+
+    if (type === 'time') {
+      btn.addEventListener('click', handleButtonModeClick);
+    }
+
+    if (type === 'unit') {
+      btn.addEventListener('click', handleButtonModeUnitClick);
+    }
   });
 
   buttonList.forEach((el) => {

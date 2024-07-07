@@ -6,14 +6,6 @@ const tableBtn = document.querySelectorAll('.table-switch > button');
 const inputInactive = 'text__color_ligth-grey';
 const selectorInactive = 'disabled';
 
-//disable input in switcher box
-const inputDisabled = (item) => {
-  let inputEl = item
-    .closest('.switcher-wrap')
-    .querySelectorAll("[data-input='input-field'] > div > input");
-  inputEl.forEach((i) => i.classList.toggle('hidden'));
-};
-
 //change input style
 const field = (...data) => {
   const [item, state] = data;
@@ -70,28 +62,35 @@ const checkSwitcherState = (item) => {
 
 //table switcher
 const checkTableBtnState = (item) => {
-  let inputState = item.closest('.table-switch').querySelector('input');
-  let handlerEl = item
+  const inputState = item.closest('.table-switch').querySelector('input');
+  const handlerEl = item
     .closest('.switcher-wrap')
     .querySelectorAll('.handler-box [data-type]'); // atention to this var
-  let btnDataState = item;
-  let active = 'btn-active';
-  let shadow = 'btn-shadow';
+  const btnDataState = item;
+  const active = 'btn-active';
+  const shadow = 'btn-shadow';
+  const inputs = item
+    .closest('.switcher-wrap')
+    .querySelectorAll('.handler-box input');
   //handled checkbox
   if (inputState.checked) {
     inputState.checked = false; // Set checked state to false
-    btnDataState.setAttribute('data-state', false); // Update data-state attribute
+    btnDataState.setAttribute('data-state', 'false'); // Update data-state attribute
     changeNestedState(handlerEl, false);
-    inputDisabled(item);
-    item.classList.remove(shadow);
-    item.classList.add(active);
+    inputs.forEach((el) => {
+      customInput.disable(el);
+    });
+    item.classList.add(shadow);
+    item.classList.remove(active);
   } else {
     inputState.checked = true; // Set checked state to true
-    btnDataState.setAttribute('data-state', true); // Update data-state attribute
+    btnDataState.setAttribute('data-state', 'true'); // Update data-state attribute
     changeNestedState(handlerEl, true);
-    inputDisabled(item);
-    item.classList.remove(active);
-    item.classList.add(shadow);
+    inputs.forEach((el) => {
+      customInput.enable(el);
+    });
+    item.classList.add(active);
+    item.classList.remove(shadow);
   }
 };
 
@@ -105,7 +104,7 @@ const initRegSwitcherHandler = () => {
 
 const initTableSwitcherHandler = () => {
   tableBtn.forEach((item) => {
-    item.addEventListener('click', (e) => checkTableBtnState(e.target));
+    item.addEventListener('click', (e) => checkTableBtnState(e.currentTarget));
   });
 };
 

@@ -102,6 +102,17 @@ const swapInnerText = (newElement, oldElement) => {
     } else {
       renderFieldsTemplate(oldElement);
     }
+
+    if (oldElement.dataset.showOnSelectId) {
+      const id = oldElement.dataset.showOnSelectId;
+      const elementToShow = document.querySelector(`#${id}`);
+
+      if (oldElement.dataset.selectorValue === id) {
+        elementToShow.classList.remove('d-none');
+      } else {
+        elementToShow.classList.add('d-none');
+      }
+    }
   }
 };
 
