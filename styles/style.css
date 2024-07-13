@@ -1047,6 +1047,7 @@ svg {
 .button-new,
 .button-non-press {
   height: 26px;
+  padding: 0 2px;
   border: 1px solid white;
   border-radius: 6px;
   background-color: #f6f6f6;
@@ -1113,6 +1114,18 @@ svg {
 .button-new_gradient,
 .button-non-press_gradient {
   background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+.button-new--navbar,
+.button-non-press--navbar {
+  border-radius: 0;
+}
+.button-new--navbar-first,
+.button-non-press--navbar-first {
+  border-radius: 0 0 0 6px;
+}
+.button-new--navbar-last,
+.button-non-press--navbar-last {
+  border-radius: 0 0 6px 0;
 }
 
 .btn-navbar {
@@ -1242,8 +1255,9 @@ svg {
 
 .data-wrap {
   display: inline-flex;
+  height: 100%;
   white-space: nowrap;
-  align-items: baseline;
+  align-items: center;
 }
 
 .text {

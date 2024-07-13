@@ -32,7 +32,9 @@ const switchActiveButtonInGroup = (button) => {
   const buttonGroup = button.closest('.button-new-wrap');
 
   if (buttonGroup) {
-    const buttonsInGroup = buttonGroup.querySelectorAll('.button-group');
+    const buttonsInGroup = buttonGroup.querySelectorAll(
+      '.button-group, .groupBtn',
+    );
 
     buttonsInGroup.forEach((btn) => {
       btn.classList.remove('btn-active');
@@ -198,7 +200,10 @@ export function handleButtonListClick(event) {
     }
 
     // For group of buttons
-    if (currentTarget.classList.contains('button-group')) {
+    if (
+      currentTarget.classList.contains('button-group') ||
+      currentTarget.classList.contains('groupBtn')
+    ) {
       switchActiveButtonInGroup(currentTarget);
     }
 
