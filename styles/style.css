@@ -3247,4 +3247,17 @@ svg {
   backdrop-filter: blur(4px);
 }
 
+.statistic-chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 75px 50px;
+}
+
+.statistic-chart {
+  min-height: 650px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */
