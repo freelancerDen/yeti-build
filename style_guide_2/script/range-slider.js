@@ -186,17 +186,6 @@ function handleSwitchDualRange(id, checkbox) {
       }
     });
   });
-
-  const inputRange = document.querySelectorAll(`#${id} .dual-range span`);
-  if (!checkbox.checked) {
-    inputRange.forEach((item) => {
-      item.style.display = 'none';
-    });
-  } else {
-    inputRange.forEach((item) => {
-      item.style.display = 'block';
-    });
-  }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
