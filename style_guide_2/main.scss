@@ -718,9 +718,8 @@ svg {
 //new style
 .data-wrap {
   display: inline-flex;
-  height: 100%;
   white-space: nowrap;
-  align-items: center;
+  align-items: baseline;
 }
 
 .text {
@@ -826,6 +825,9 @@ svg {
 }
 
 .input-text-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -1405,6 +1407,15 @@ svg {
   .block-content-wrap {
     // padding: 20px;
     padding: 20px;
+
+    &--statistic {
+      padding: 30px 50px 40px 40px;
+
+      .block-content-wrap__wrapper {
+        display: grid;
+        gap: 12px;
+      }
+    }
   }
 }
 

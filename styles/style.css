@@ -1255,9 +1255,8 @@ svg {
 
 .data-wrap {
   display: inline-flex;
-  height: 100%;
   white-space: nowrap;
-  align-items: center;
+  align-items: baseline;
 }
 
 .text {
@@ -1360,6 +1359,9 @@ svg {
 }
 
 .input-text-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -1903,6 +1905,13 @@ svg {
 }
 .block-container-wrap .block-content-wrap {
   padding: 20px;
+}
+.block-container-wrap .block-content-wrap--statistic {
+  padding: 30px 50px 40px 40px;
+}
+.block-container-wrap .block-content-wrap--statistic .block-content-wrap__wrapper {
+  display: grid;
+  gap: 12px;
 }
 
 .padding-block_medium {
@@ -3258,6 +3267,88 @@ svg {
   min-height: 650px;
   border: 1px solid #fff;
   border-radius: 20px;
+}
+
+.range-blocks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 50px;
+  padding: 50px 200px;
+}
+
+.range-blocks-column {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.dual-range-wrapper {
+  padding-top: 15px;
+}
+
+.dual-range-container {
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.dual-range {
+  --handle-size: 6px;
+  --range-color: #5e88a0;
+  position: relative;
+  height: 10px;
+  width: 100%;
+  max-width: 654px;
+  background-color: #f2f4f7;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1019607843) inset;
+  user-select: none;
+}
+.dual-range--red {
+  --range-color: #d23448;
+}
+.dual-range__highlight {
+  position: absolute;
+  left: var(--x-1);
+  z-index: 1;
+  height: 100%;
+  width: calc(var(--x-2) - var(--x-1) + var(--handle-size));
+  background-color: var(--range-color);
+  border-radius: 50px;
+}
+.dual-range__handle {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: var(--handle-size);
+  height: var(--handle-size);
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  cursor: grab;
+}
+.dual-range__handle:active {
+  cursor: grabbing;
+}
+.dual-range__handle--left {
+  left: calc(var(--x-1) + 1px);
+}
+.dual-range__handle--right {
+  left: calc(var(--x-2) - 1px);
+}
+.dual-range__handle::after {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  padding: 0 4px;
+  background-color: #f2f4f7;
+  font-size: 15px;
+  line-height: 18px;
+  transform: translateX(-50%);
+  content: attr(data-value);
 }
 
 /*# sourceMappingURL=style.css.map */
