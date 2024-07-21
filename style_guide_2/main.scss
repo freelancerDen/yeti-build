@@ -505,6 +505,21 @@ svg {
   }
 }
 
+.hide-value {
+  .data-wrap {
+    p {
+      display: none;
+    }
+
+    &::before {
+      font-size: 16px;
+      line-height: 1;
+      color: $lightGray;
+      content: '-';
+    }
+  }
+}
+
 // button
 .button-new,
 .button-non-press {
@@ -1405,15 +1420,19 @@ svg {
     }
   }
   .block-content-wrap {
-    // padding: 20px;
     padding: 20px;
 
     &--statistic {
       padding: 30px 50px 40px 40px;
 
       .block-content-wrap__wrapper {
-        display: grid;
-        gap: 12px;
+        max-height: 360px;
+        overflow-y: auto;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
       }
     }
   }

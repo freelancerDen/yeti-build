@@ -165,7 +165,7 @@ class dualRangeSlider {
  * @param checkbox - The `checkbox` parameter is a reference to the checkbox element that is being used
  * to toggle the visibility of the dual range input elements.
  */
-function handleSwitchDualRange(id, checkbox) {
+function handleSwitchProgress(id, checkbox) {
   const switchDualRange = document.querySelectorAll('.switchDualRange');
 
   switchDualRange.forEach((item) => {
@@ -196,5 +196,5 @@ window.addEventListener('DOMContentLoaded', () => {
     range.init();
   });
 
-  handleSwitchDualRange();
+  handleSwitchProgress();
 });
