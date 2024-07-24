@@ -13,6 +13,7 @@
 @import './components/dual-range';
 @import './components/progress';
 @import './components/rating-label';
+@import './components/statistic-panel.scss';
 
 @import '../template/modals/modals';
 @import '../template/modals/risk-manager/risk-manager';
@@ -30,6 +31,7 @@
 @import '../template/modals/key-performance/key-performance';
 @import '../template/modals/settings/settings';
 @import '../template/modals/runner-panel/runner-panel';
+@import '../template/modals/statistic/statistic-modal';
 
 @import '../template/statistic/bar.scss';
 @import '../template/statistic/chart.scss';
