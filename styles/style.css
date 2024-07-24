@@ -781,7 +781,6 @@ svg {
   justify-content: flex-start;
   align-items: center;
   white-space: nowrap;
-  overflow-x: hidden;
   position: relative;
   padding: 0 6px;
 }
@@ -3394,6 +3393,9 @@ svg {
 }
 .runner-panel__subgrid .block-wrapper {
   max-width: unset;
+}
+.runner-panel__subgrid--align-left {
+  justify-items: flex-start;
 }
 .runner-panel__box {
   height: 500px;
