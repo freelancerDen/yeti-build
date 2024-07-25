@@ -1,4 +1,4 @@
-const hideValueButton = document.querySelector('.hideValueButton');
+const hideValueButtons = document.querySelectorAll('.hideValueButton');
 
 function changeState(button) {
   const hideState = button.dataset.hideState;
@@ -12,8 +12,8 @@ function changeState(button) {
   }
 }
 
-export function hideMonetaryValue() {
-  const hideState = hideValueButton.dataset.hideState;
+export function hideMonetaryValue(button) {
+  const hideState = button.dataset.hideState;
   const allInputs = document.querySelectorAll('input[data-unit="$"]');
   const allDataFields = document.querySelectorAll('[data-value="data-field"]');
 
@@ -38,17 +38,31 @@ export function hideMonetaryValue() {
   });
 }
 
+function toggleBodyClass(currentState) {
+  const body = document.querySelector('body');
+
+  if (currentState === 'true') {
+    body.classList.add('hide-monetary-value');
+  } else {
+    body.classList.remove('hide-monetary-value');
+  }
+}
+
 function handleHideValueButtonClick(event) {
   const { currentTarget } = event;
+  const currentState = currentTarget.dataset.hideState;
 
   changeState(currentTarget);
-  hideMonetaryValue();
+  hideMonetaryValue(currentTarget);
+  toggleBodyClass(currentState);
 }
 
 function init() {
-  if (!hideValueButton) return;
+  if (!hideValueButtons.length === 0) return;
 
-  hideValueButton.addEventListener('click', handleHideValueButtonClick);
+  hideValueButtons.forEach((button) => {
+    button.addEventListener('click', handleHideValueButtonClick);
+  });
 }
 
 init();

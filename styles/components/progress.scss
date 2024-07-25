@@ -25,6 +25,12 @@
       width: 5px;
       content: '';
     }
+
+    .hide-monetary-value & {
+      span {
+        display: none;
+      }
+    }
   }
 }
 

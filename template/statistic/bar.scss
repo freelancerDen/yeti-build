@@ -22,6 +22,32 @@
   box-shadow: 4px 4px 10px 0px hsla(205, 37%, 37%, 0.15),
     -4px -4px 10px 0px hsla(0, 0%, 100%, 1);
 
+  &[data-unit='$'] {
+    .hide-monetary-value & {
+      .statistic-bar-item__value-wrapper {
+        &::before {
+          color: $lightGray;
+          content: '-';
+        }
+      }
+
+      .statistic-bar-item__value {
+        display: none;
+      }
+
+      .statistic-bar-item__footer-value-wrapper {
+        &::before {
+          color: $lightGray;
+          content: '-';
+        }
+      }
+
+      .statistic-bar-item__footer-value {
+        display: none;
+      }
+    }
+  }
+
   &:hover {
     .statistic-bar-item__popup {
       display: flex;
@@ -40,7 +66,7 @@
     line-height: 1.2;
   }
 
-  &__value {
+  &__value-wrapper {
     font-size: 48px;
     font-weight: 600;
     line-height: 1.2;
@@ -60,7 +86,7 @@
     line-height: 1.2;
   }
 
-  &__footer-value {
+  &__footer-value-wrapper {
     font-size: 16px;
     line-height: 1.2;
     font-weight: 600;

@@ -1763,7 +1763,7 @@ svg {
 
 .modal-window-wrap {
   width: auto;
-  height: 100%;
+  height: auto;
   min-width: 300px;
   max-width: 50vw;
   min-height: 150px;
@@ -2508,6 +2508,9 @@ svg {
 .progress-bar::after {
   width: 5px;
   content: "";
+}
+.hide-monetary-value .progress-bar span {
+  display: none;
 }
 
 .progress-container {
@@ -3449,6 +3452,20 @@ svg {
   border-radius: 15px;
   box-shadow: 4px 4px 10px 0px hsla(205, 37%, 37%, 0.15), -4px -4px 10px 0px hsl(0, 0%, 100%);
 }
+.hide-monetary-value .statistic-bar-item[data-unit="$"] .statistic-bar-item__value-wrapper::before {
+  color: RGBA(52, 64, 84, 0.25);
+  content: "-";
+}
+.hide-monetary-value .statistic-bar-item[data-unit="$"] .statistic-bar-item__value {
+  display: none;
+}
+.hide-monetary-value .statistic-bar-item[data-unit="$"] .statistic-bar-item__footer-value-wrapper::before {
+  color: RGBA(52, 64, 84, 0.25);
+  content: "-";
+}
+.hide-monetary-value .statistic-bar-item[data-unit="$"] .statistic-bar-item__footer-value {
+  display: none;
+}
 .statistic-bar-item:hover .statistic-bar-item__popup {
   display: flex;
   flex-direction: column;
@@ -3462,7 +3479,7 @@ svg {
   font-size: 20px;
   line-height: 1.2;
 }
-.statistic-bar-item__value {
+.statistic-bar-item__value-wrapper {
   font-size: 48px;
   font-weight: 600;
   line-height: 1.2;
@@ -3478,7 +3495,7 @@ svg {
   font-size: 12px;
   line-height: 1.2;
 }
-.statistic-bar-item__footer-value {
+.statistic-bar-item__footer-value-wrapper {
   font-size: 16px;
   line-height: 1.2;
   font-weight: 600;
