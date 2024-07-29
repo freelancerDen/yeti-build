@@ -365,6 +365,9 @@ svg {
   display: flex;
   position: relative;
   border-radius: 6px;
+  &--auto {
+    width: auto;
+  }
   &_large-2 {
     width: 212px;
   }
@@ -826,8 +829,10 @@ svg {
 }
 
 .form-switch {
+  display: flex;
+  align-items: center;
   padding: 0;
-  margin-top: 13px;
+  margin: 0;
 }
 
 .handler-box {

@@ -913,6 +913,9 @@ svg {
   position: relative;
   border-radius: 6px;
 }
+.data-info-container--auto {
+  width: auto;
+}
 .data-info-container_large-2 {
   width: 212px;
 }
@@ -1355,8 +1358,10 @@ svg {
 }
 
 .form-switch {
+  display: flex;
+  align-items: center;
   padding: 0;
-  margin-top: 13px;
+  margin: 0;
 }
 
 .handler-box {
@@ -2586,17 +2591,27 @@ svg {
 .statistic-panel__indicator {
   width: 35px;
   height: 35px;
+  background-color: #eaf2f5;
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15) inset;
   border-radius: 50%;
+}
+.statistic-panel__indicator--disable {
+  background-color: rgba(52, 64, 84, 0.15);
 }
 .statistic-panel__title {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
 }
+.statistic-panel__title--disable {
+  color: rgba(52, 64, 84, 0.25);
+}
 .statistic-panel__number {
   font-size: 10px;
   line-height: 12px;
+}
+.statistic-panel__number--disable {
+  color: rgba(52, 64, 84, 0.25);
 }
 .statistic-panel__button {
   height: 20px;
@@ -2614,6 +2629,14 @@ svg {
   color: #fff;
   border-radius: 16px;
   background-color: #eaf3f5;
+}
+
+.statistic-panel-grid {
+  padding: 65px 65px 100px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 872px));
+  gap: 10px 90px;
+  justify-content: center;
 }
 
 .modal-container {

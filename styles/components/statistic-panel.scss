@@ -14,9 +14,6 @@
     gap: 12px;
   }
 
-  &__central-part {
-  }
-
   &__right-part {
     display: flex;
     align-items: center;
@@ -27,19 +24,32 @@
   &__indicator {
     width: 35px;
     height: 35px;
+    background-color: #eaf2f5;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15) inset;
     border-radius: 50%;
+
+    &--disable {
+      background-color: rgba(52, 64, 84, 0.15);
+    }
   }
 
   &__title {
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
+
+    &--disable {
+      color: rgba(52, 64, 84, 0.25);
+    }
   }
 
   &__number {
     font-size: 10px;
     line-height: 12px;
+
+    &--disable {
+      color: rgba(52, 64, 84, 0.25);
+    }
   }
 
   &__button {
@@ -60,4 +70,12 @@
     border-radius: 16px;
     background-color: #eaf3f5;
   }
+}
+
+.statistic-panel-grid {
+  padding: 65px 65px 100px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 872px));
+  gap: 10px 90px;
+  justify-content: center;
 }
