@@ -51,7 +51,10 @@
       </div>
       <div
         class="stretch-panel__header-actions pe-2 d-flex align-items-center justify-content-end gap-2">
-        <div class="status_wrapper"></div>
+        <div
+          class="status_wrapper"
+          data-modal-name="status-terminal"
+          role="button"></div>
 
         <div
           class="stretch-panel__header-actions__block d-flex align-items-center">
@@ -92,10 +95,8 @@
           class="stretch-panel__header-actions__block d-flex gap-2 align-items-center">
           <!-- Hide StretchPanel (stretchPanelActions.js) -->
           <button type="button" class="button-new button-normalize button-hide">
-            <img
-              src="./img/stretchPanel/icon-button-hide.svg"
-              alt="Icon" /></button
-          >
+            <img src="./img/stretchPanel/icon-button-hide.svg" alt="Icon" />
+          </button>
           <!-- Close StretchPanel (stretchPanelActions.js) -->
           <button
             type="button"
@@ -157,6 +158,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large">
+                                        Binance Futures
+                                      </p>
+                                    </li>
+
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large">
@@ -234,6 +242,12 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large">
+                                        FORTHUSDT
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large">
@@ -319,6 +333,12 @@
 
                               <div class="selector__dropdown">
                                 <ul>
+                                  <li class="padding-contaier_xsmall active">
+                                    <p
+                                      class="selector__dropdown-text text_large">
+                                      Preset_name_01
+                                    </p>
+                                  </li>
                                   <li class="padding-contaier_xsmall">
                                     <p
                                       class="selector__dropdown-text text_large">
@@ -715,34 +735,71 @@
 
                         <div class="data-wrap">
                           <p class="text text_regular text__color_dark-grey">
-                            Stop if profit of balance %
+                            Stop if profit
                           </p>
                         </div>
 
                         <div class="handler-box ms-auto">
-                          <div
-                            class="data-info-container data-info-container_tiny">
+                          <div class="d-flex gap-2 align-items-center">
                             <div
-                              class="input-container-wrap input-container-wrap_tiny"
-                              data-input="input-field">
-                              <div class="input-wrapp">
-                                <input
-                                  class="input-field text_large text__color_dark-grey"
-                                  type="text"
-                                  data-type="number"
-                                  data-unit="%" />
+                              class="data-info-container data-info-container_tiny">
+                              <div
+                                class="input-container-wrap input-container-wrap_tiny-3 left"
+                                data-input="input-field">
+                                <div class="input-wrapp">
+                                  <input
+                                    class="input-field input-field_left text_large text__color_dark-grey"
+                                    type="text"
+                                    data-type="number"
+                                    data-unit="date" />
+                                </div>
+                                <div class="input-text-center">
+                                  <div
+                                    class="data-wrap"
+                                    data-type="dynamic"
+                                    data-state="ture">
+                                    <p class="text_large text__color_dark-grey">
+                                      5k
+                                    </p>
+                                    <p
+                                      class="text_small text__color_dark-grey"
+                                      data-mode="hour">
+                                      $
+                                    </p>
+                                  </div>
+                                </div>
                               </div>
-                              <div class="input-text-center">
+                              <button
+                                class="button-input button-time-small right text_small"
+                                data-type="unit"
+                                data-mode="monetary"
+                                data-unit-values="percent,monetary,r">
+                                $
+                              </button>
+                            </div>
+                            <div
+                              class="data-info-container data-info-container_tiny">
+                              <div
+                                class="input-container-wrap input-container-wrap_tiny"
+                                data-input="input-field">
+                                <div class="input-wrapp hidden">
+                                  <input
+                                    class="input-field text_large text__color_dark-grey"
+                                    type="text"
+                                    data-type="number"
+                                    data-unit="%" />
+                                </div>
                                 <div
-                                  class="data-wrap"
-                                  data-type="dynamic"
-                                  data-state="ture">
-                                  <p class="text_large text__color_dark-grey">
-                                    1.5
-                                  </p>
-                                  <p class="text_small text__color_dark-grey">
-                                    %
-                                  </p>
+                                  class="input-text-center input-border input-disabled">
+                                  <div
+                                    class="data-wrap"
+                                    data-type="dynamic"
+                                    data-state="ture">
+                                    <p class="text_large text__color_grey">
+                                      0.04
+                                    </p>
+                                    <p class="text_small text__color_grey">%</p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -1213,6 +1270,14 @@
 
                               <div class="selector__dropdown">
                                 <ul>
+                                  <li class="padding-contaier_xsmall active">
+                                    <p
+                                      class="selector__dropdown-text text_large"
+                                      data-selector-value="strategy-candlestick-pattern"
+                                      data-container-id="strategyContainer">
+                                      Candlestick Pattern
+                                    </p>
+                                  </li>
                                   <li class="padding-contaier_xsmall">
                                     <p
                                       class="selector__dropdown-text text_large"
@@ -4335,6 +4400,13 @@
                                               <div class="selector__dropdown">
                                                 <ul>
                                                   <li
+                                                    class="padding-contaier_xsmall active">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Buy volume Impact
+                                                    </p>
+                                                  </li>
+                                                  <li
                                                     class="padding-contaier_xsmall">
                                                     <p
                                                       class="selector__dropdown-text text_large">
@@ -4483,6 +4555,13 @@
                                               <div class="selector__dropdown">
                                                 <ul>
                                                   <li
+                                                    class="padding-contaier_xsmall active">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Only Green Bar
+                                                    </p>
+                                                  </li>
+                                                  <li
                                                     class="padding-contaier_xsmall">
                                                     <p
                                                       class="selector__dropdown-text text_large">
@@ -4535,6 +4614,13 @@
                                               <div class="selector__dropdown">
                                                 <ul>
                                                   <li
+                                                    class="padding-contaier_xsmall active">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Only Red Bar
+                                                    </p>
+                                                  </li>
+                                                  <li
                                                     class="padding-contaier_xsmall">
                                                     <p
                                                       class="selector__dropdown-text text_large">
@@ -4586,6 +4672,13 @@
 
                                               <div class="selector__dropdown">
                                                 <ul>
+                                                  <li
+                                                    class="padding-contaier_xsmall active">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Simple
+                                                    </p>
+                                                  </li>
                                                   <li
                                                     class="padding-contaier_xsmall">
                                                     <p
@@ -4690,6 +4783,13 @@
                                               <div class="selector__dropdown">
                                                 <ul>
                                                   <li
+                                                    class="padding-contaier_xsmall active">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Only Red Bar
+                                                    </p>
+                                                  </li>
+                                                  <li
                                                     class="padding-contaier_xsmall">
                                                     <p
                                                       class="selector__dropdown-text text_large">
@@ -4741,6 +4841,13 @@
 
                                               <div class="selector__dropdown">
                                                 <ul>
+                                                  <li
+                                                    class="padding-contaier_xsmall active">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Only Red Bar
+                                                    </p>
+                                                  </li>
                                                   <li
                                                     class="padding-contaier_xsmall">
                                                     <p
@@ -4830,6 +4937,13 @@
 
                                               <div class="selector__dropdown">
                                                 <ul>
+                                                  <li
+                                                    class="padding-contaier_xsmall active">
+                                                    <p
+                                                      class="selector__dropdown-text text_large">
+                                                      Simple
+                                                    </p>
+                                                  </li>
                                                   <li
                                                     class="padding-contaier_xsmall">
                                                     <p
@@ -4987,6 +5101,13 @@
 
                               <div class="selector__dropdown">
                                 <ul>
+                                  <li class="padding-contaier_xsmall active">
+                                    <p
+                                      class="selector__dropdown-text text_large"
+                                      data-selector-value="position-size-sl-$">
+                                      SL $
+                                    </p>
+                                  </li>
                                   <li class="padding-contaier_xsmall">
                                     <p
                                       class="selector__dropdown-text text_large"
@@ -5432,6 +5553,13 @@
 
                               <div class="selector__dropdown">
                                 <ul>
+                                  <li class="padding-contaier_xsmall active">
+                                    <p
+                                      class="selector__dropdown-text text_large"
+                                      data-selector-value="breakeven-rr">
+                                      R/R
+                                    </p>
+                                  </li>
                                   <li class="padding-contaier_xsmall">
                                     <p
                                       class="selector__dropdown-text text_large"
@@ -5939,6 +6067,13 @@
 
                             <div class="selector__dropdown">
                               <ul>
+                                <li class="padding-contaier_xsmall active">
+                                  <p
+                                    class="selector__dropdown-text text_large"
+                                    data-selector-value="stop-loss-bars">
+                                    Bars
+                                  </p>
+                                </li>
                                 <li class="padding-contaier_xsmall">
                                   <p
                                     class="selector__dropdown-text text_large"
@@ -6724,6 +6859,13 @@
 
                             <div class="selector__dropdown">
                               <ul>
+                                <li class="padding-contaier_xsmall active">
+                                  <p
+                                    class="selector__dropdown-text text_large"
+                                    data-selector-value="take-profit-rr">
+                                    R/R
+                                  </p>
+                                </li>
                                 <li class="padding-contaier_xsmall">
                                   <p
                                     class="selector__dropdown-text text_large"
@@ -7336,6 +7478,74 @@
                         data-type="btn">
                         Reverse Take Profit
                       </button>
+                    </div>
+
+                    <div class="line">
+                      <div
+                        class="d-flex align-items-center justify-content-between">
+                        <div
+                          class="d-flex size-large align-items-center switcher-wrap_gap-medium">
+                          <div class="data-wrap">
+                            <p class="text text_regular text__color_dark-grey">
+                              Minimal Take Profit
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="d-flex gap-2 align-items-center">
+                          <div
+                            class="data-info-container data-info-container_tiny">
+                            <div
+                              class="input-container-wrap input-container-wrap_tiny"
+                              data-input="input-field">
+                              <div class="input-wrapp hidden">
+                                <input
+                                  class="input-field text_large text__color_dark-grey"
+                                  type="text"
+                                  data-type="number" />
+                              </div>
+                              <div
+                                class="input-text-center input-border input-disabled">
+                                <div
+                                  class="data-wrap"
+                                  data-type="dynamic"
+                                  data-state="ture">
+                                  <p class="text_large text__color_grey">
+                                    0.04
+                                  </p>
+                                  <p class="text_small text__color_grey">%</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="data-info-container data-info-container_tiny">
+                            <div
+                              class="input-container-wrap input-container-wrap_tiny"
+                              data-input="input-field">
+                              <div class="input-wrapp hidden">
+                                <input
+                                  class="input-field text_large text__color_dark-grey"
+                                  type="text"
+                                  data-type="number" />
+                              </div>
+                              <div
+                                class="input-text-center input-border input-disabled">
+                                <div
+                                  class="data-wrap"
+                                  data-type="dynamic"
+                                  data-state="ture">
+                                  <p class="text_large text__color_grey">15</p>
+                                  <p class="text_small text__color_grey">
+                                    ticks
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -9484,6 +9694,12 @@
 
                               <div class="selector__dropdown">
                                 <ul>
+                                  <li class="padding-contaier_xsmall active">
+                                    <p
+                                      class="selector__dropdown-text text_large">
+                                      Engulfing Bullish
+                                    </p>
+                                  </li>
                                   <li class="padding-contaier_xsmall">
                                     <p
                                       class="selector__dropdown-text text_large">
@@ -9554,6 +9770,117 @@
                                   </p>
                                 </div>
                               </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="line">
+                      <div
+                        class="switcher-wrap align-items-center justify-content-between line-grid grid-row-switcher-2">
+                        <div
+                          class="d-flex size-large align-items-center switcher-wrap_gap-medium">
+                          <div class="form-switch">
+                            <input
+                              class="form-check-input custom-outline m-auto"
+                              type="checkbox"
+                              role="switch"
+                              checked="" />
+                          </div>
+                          <div class="selector-wrapper">
+                            <div
+                              data-type="dynamic"
+                              data-state="ture"
+                              class="selector selector_regular">
+                              <div class="selector__header selector-arrow">
+                                <div class="text-wrapp">
+                                  <p
+                                    class="selector__inner-text text_large"
+                                    data-move="false">
+                                    Touch & close above
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div class="selector__dropdown">
+                                <ul>
+                                  <li class="padding-contaier_xsmall active">
+                                    <p
+                                      class="selector__dropdown-text text_large">
+                                      Touch & close above
+                                    </p>
+                                  </li>
+                                  <li class="padding-contaier_xsmall">
+                                    <p
+                                      class="selector__dropdown-text text_large">
+                                      Touch & close below
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="handler-box me-3">
+                          <div class="d-flex gap-2 align-items-center">
+                            <div
+                              class="input-container-wrap input-container-wrap_tiny"
+                              data-input="input-field">
+                              <div class="input-wrapp">
+                                <input
+                                  class="input-field text_large text__color_dark-grey"
+                                  type="text"
+                                  data-type="number" />
+                              </div>
+                              <div class="input-text-center">
+                                <div
+                                  class="data-wrap"
+                                  data-type="dynamic"
+                                  data-state="ture">
+                                  <p class="text_large text__color_dark-grey">
+                                    0.4993
+                                  </p>
+                                  <p
+                                    class="text_small text__color_dark-grey"></p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div
+                              class="data-info-container data-info-container_tiny">
+                              <div
+                                class="input-container-wrap input-container-wrap_tiny-3 left"
+                                data-input="input-field">
+                                <div class="input-wrapp">
+                                  <input
+                                    class="input-field input-field_left text_large text__color_dark-grey"
+                                    type="text"
+                                    data-type="number"
+                                    data-unit="date" />
+                                </div>
+                                <div class="input-text-center">
+                                  <div
+                                    class="data-wrap"
+                                    data-type="dynamic"
+                                    data-state="ture">
+                                    <p class="text_large text__color_dark-grey">
+                                      4
+                                    </p>
+                                    <p
+                                      class="text_small text__color_dark-grey"
+                                      data-mode="hour">
+                                      h
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <button
+                                class="button-input button-time-small right text_small"
+                                data-type="time"
+                                data-mode="hour">
+                                h
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -10145,6 +10472,13 @@
 
                   <div class="selector__dropdown">
                     <ul>
+                      <li class="padding-contaier_xsmall active">
+                        <p
+                          class="selector__dropdown-text text_large"
+                          data-selector-value="take-profit-percent">
+                          Percent
+                        </p>
+                      </li>
                       <li class="padding-contaier_xsmall">
                         <p
                           class="selector__dropdown-text text_large"
@@ -11167,7 +11501,7 @@
             <button
               class="button-non-press button-non-press_large text_large"
               data-type="btn"
-              data-name="dates">
+              data-name="dates-single">
               Date & Time
             </button>
 
@@ -11206,7 +11540,7 @@
             <button
               class="button-non-press button-non-press_large text_large"
               data-type="btn"
-              data-name="dates">
+              data-name="dates-single">
               Date & Time
             </button>
 
@@ -11614,5 +11948,90 @@
     <div class="modal-overlay closeModalTrigger"></div>
 
     <div class="profit-range"></div>
+  </div>
+
+  <div
+    class="modal-wrapper modal-terminal modal-draggable d-none"
+    data-modal="status-terminal">
+    <div class="modal-window-wrap terminal-content">
+      <div class="modal-window-header modal-drag-drop">
+        <h4 class="modal-window-title text_regular text__color_dark-grey">
+          Terminal
+        </h4>
+        <img
+          class="modal-window-close-icon closeModalTrigger"
+          src="./img/close.svg"
+          alt="close-cross" />
+      </div>
+      <div class="modal-window-content">
+        <pre>
+        <code class="text_regular text__color_dark-grey">
+Time           Type           Name         Status                Log 
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+        </code>
+      </pre>
+
+        <button
+          class="button-non-press button-non-press_save-small text_regular btn-non-style">
+          Clean
+        </button>
+      </div>
+    </div>
   </div>
 </section>

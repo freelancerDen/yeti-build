@@ -48,6 +48,32 @@
     }
   }
 
+  &[data-prediction='true'] {
+    .hide-prediction-value & {
+      .statistic-bar-item__value-wrapper {
+        &::before {
+          color: $lightGray;
+          content: '-';
+        }
+      }
+
+      .statistic-bar-item__value {
+        display: none;
+      }
+
+      .statistic-bar-item__footer-value-wrapper {
+        &::before {
+          color: $lightGray;
+          content: '-';
+        }
+      }
+
+      .statistic-bar-item__footer-value {
+        display: none;
+      }
+    }
+  }
+
   &:hover {
     .statistic-bar-item__popup {
       display: flex;

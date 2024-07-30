@@ -1,60 +1,66 @@
 const hideValueButtons = document.querySelectorAll('.hideValueButton');
 
-function changeState(button) {
-  const hideState = button.dataset.hideState;
+function getCurrentState() {
+  return document
+    .querySelector('body')
+    .classList.contains('hide-monetary-value');
+}
 
-  if (hideState === 'true') {
-    button.dataset.hideState = 'false';
+function changeButtonState(button) {
+  const currentState = getCurrentState();
+
+  button.dataset.hideState = currentState;
+
+  if (currentState) {
     button.classList.remove('btn-active');
   } else {
-    button.dataset.hideState = 'true';
     button.classList.add('btn-active');
   }
 }
 
-export function hideMonetaryValue(button) {
-  const hideState = button.dataset.hideState;
+export function hideMonetaryValue() {
+  const currentState = getCurrentState();
   const allInputs = document.querySelectorAll('input[data-unit="$"]');
   const allDataFields = document.querySelectorAll('[data-value="data-field"]');
 
   allInputs.forEach((input) => {
     const wrapper = input.closest('[data-input="input-field"]');
 
-    if (hideState === 'true') {
-      wrapper.classList.remove('hide-value');
-    } else {
+    if (currentState) {
       wrapper.classList.add('hide-value');
+    } else {
+      wrapper.classList.remove('hide-value');
     }
   });
 
   allDataFields.forEach((field) => {
     if (field.dataset.unit === '$') {
-      if (hideState === 'true') {
-        field.classList.remove('hide-value');
-      } else {
+      if (currentState) {
         field.classList.add('hide-value');
+      } else {
+        field.classList.remove('hide-value');
       }
     }
   });
 }
 
-function toggleBodyClass(currentState) {
+function toggleBodyClass() {
+  const currentState = getCurrentState();
   const body = document.querySelector('body');
 
-  if (currentState === 'true') {
-    body.classList.add('hide-monetary-value');
-  } else {
+  if (currentState) {
     body.classList.remove('hide-monetary-value');
+  } else {
+    body.classList.add('hide-monetary-value');
   }
 }
 
 function handleHideValueButtonClick(event) {
   const { currentTarget } = event;
-  const currentState = currentTarget.dataset.hideState;
 
-  changeState(currentTarget);
+  toggleBodyClass();
+  changeButtonState(currentTarget);
   hideMonetaryValue(currentTarget);
-  toggleBodyClass(currentState);
 }
 
 function init() {

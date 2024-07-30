@@ -82,20 +82,21 @@ const swapInnerText = (newElement, oldElement) => {
     return;
   }
 
-  // Swap inner text of the elements
-  const tempText = newElement.innerText;
+  oldElement.innerText = newElement.innerText;
 
-  newElement.innerText = oldElement.innerText;
-  oldElement.innerText = tempText;
+  const listItems = newElement.closest('ul').querySelectorAll('li');
+  listItems.forEach((item) => {
+    item.classList.remove('active');
+  });
+
+  const listItem = newElement.closest('li');
+  listItem.classList.add('active');
 
   /* This block of code is swapping the `dataset.selectorValue` attribute values between `newElement`
   and `oldElement`. It first checks if both `newElement` and `oldElement` have
   `dataset.selectorValue` values. If they do, it swaps these values between the two elements. */
   if (newElement.dataset.selectorValue && oldElement.dataset.selectorValue) {
-    const tempValue = newElement.dataset.selectorValue;
-
-    newElement.dataset.selectorValue = oldElement.dataset.selectorValue;
-    oldElement.dataset.selectorValue = tempValue;
+    oldElement.dataset.selectorValue = newElement.dataset.selectorValue;
 
     if (oldElement.dataset.containerId) {
       renderFieldsTemplate(oldElement, `#${oldElement.dataset.containerId}`);

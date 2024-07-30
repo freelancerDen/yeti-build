@@ -240,7 +240,7 @@ function openModal(name, panel) {
 export function handleClickModalButton(event) {
   const { currentTarget } = event;
   const modalName = currentTarget.dataset.modalName;
-  const panel = currentTarget.closest('[data-panel-id');
+  const panel = currentTarget.closest('[data-panel-id]');
 
   openModal(modalName, panel);
 }

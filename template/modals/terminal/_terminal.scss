@@ -1,14 +1,23 @@
 .modal-terminal {
-    width: 800px;
-    height: 500px;
+  width: 800px;
+  height: 500px;
 }
 
 .terminal-content {
-    background: #EAF2F5;
-    position: relative;
-    .button-non-press {
-        position: absolute;
-        bottom: 3px;
-        right: 3px;
-    }
+  height: 100%;
+  background: #eaf2f5;
+  position: relative;
+  .button-non-press {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+  }
+
+  .modal-window-content {
+    height: 100%;
+    display: block;
+    align-items: unset;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
 }

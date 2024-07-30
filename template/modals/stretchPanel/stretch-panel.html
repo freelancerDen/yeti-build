@@ -65,7 +65,10 @@
       </div>
       <div
         class="stretch-panel__header-actions pe-2 d-flex align-items-center justify-content-end gap-2">
-        <div class="status_wrapper">
+        <div
+          class="status_wrapper"
+          data-modal-name="status-terminal"
+          role="button">
           <!-- 
     This div serves as a wrapper for displaying status information.
     It will contain dynamically generated status blocks based on the provided status and message.
@@ -184,6 +187,12 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large">
+                                        Binance Futures
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large">
@@ -265,6 +274,12 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large">
+                                        FORTHUSDT
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large">
@@ -404,6 +419,12 @@
 
                               <div class="selector__dropdown">
                                 <ul>
+                                  <li class="padding-contaier_xsmall active">
+                                    <p
+                                      class="selector__dropdown-text text_large">
+                                      Preset_name_01
+                                    </p>
+                                  </li>
                                   <li class="padding-contaier_xsmall">
                                     <p
                                       class="selector__dropdown-text text_large">
@@ -452,6 +473,12 @@
 
                               <div class="selector__dropdown">
                                 <ul>
+                                  <li class="padding-contaier_xsmall active">
+                                    <p
+                                      class="selector__dropdown-text text_large">
+                                      Teg_name_e233231
+                                    </p>
+                                  </li>
                                   <li class="padding-contaier_xsmall">
                                     <p
                                       class="selector__dropdown-text text_large">
@@ -517,6 +544,13 @@
 
                               <div class="selector__dropdown">
                                 <ul>
+                                  <li class="padding-contaier_xsmall active">
+                                    <p
+                                      class="selector__dropdown-text text_large"
+                                      data-selector-value="activate-limit-r-r">
+                                      R/R
+                                    </p>
+                                  </li>
                                   <li class="padding-contaier_xsmall">
                                     <p
                                       class="selector__dropdown-text text_large"
@@ -1253,6 +1287,13 @@
 
                               <div class="selector__dropdown">
                                 <ul>
+                                  <li class="padding-contaier_xsmall active">
+                                    <p
+                                      class="selector__dropdown-text text_large"
+                                      data-selector-value="position-size-sl-%">
+                                      SL %
+                                    </p>
+                                  </li>
                                   <li class="padding-contaier_xsmall">
                                     <p
                                       class="selector__dropdown-text text_large"
@@ -1573,6 +1614,14 @@
 
                               <div class="selector__dropdown">
                                 <ul>
+                                  <li class="padding-contaier_xsmall active">
+                                    <p
+                                      class="selector__dropdown-text text_large"
+                                      data-selector-value="limit-order-manipulation"
+                                      data-show-on-select-id="limit-order-manipulation">
+                                      Manipulation
+                                    </p>
+                                  </li>
                                   <li class="padding-contaier_xsmall">
                                     <p
                                       class="selector__dropdown-text text_large"
@@ -2092,6 +2141,13 @@
 
                               <div class="selector__dropdown">
                                 <ul>
+                                  <li class="padding-contaier_xsmall active">
+                                    <p
+                                      class="selector__dropdown-text text_large"
+                                      data-selector-value="breakeven-rr">
+                                      R/R
+                                    </p>
+                                  </li>
                                   <li class="padding-contaier_xsmall">
                                     <p
                                       class="selector__dropdown-text text_large"
@@ -2472,29 +2528,42 @@
                       <div class="grid grid-cols-2 line-grid align-items-end">
                         <div>
                           <button
-                            class="button-non-press button-non-press_large text_large"
+                            class="button-new button-new_large text_large"
                             data-type="btn">
                             Breakeven now
                           </button>
                         </div>
-                        <div class="d-flex gap-2 align-items-center ms-auto">
-                          <div
-                            class="button-new-wrapper button-new-wrapper--normal btn-shadow"
-                            data-type="btn">
-                            <button
-                              class="button-new button-group button-group_normal-1 text_regular"
-                              data-type="btn">
-                              Margin
-                            </button>
-                            <button
-                              class="button-new button-group button-group_normal-2 text_regular btn-active"
-                              data-type="btn">
-                              Fee
-                            </button>
-                          </div>
-                        </div>
                       </div>
                     </div>
+
+                    <div class="line">
+                      <div class="d-flex justify-content-between">
+                        <button
+                          class="button-new button-new_save-small text_regular"
+                          data-type="btn">
+                          Margin
+                        </button>
+
+                        <button
+                          class="button-new button-new_save-small text_regular"
+                          data-type="btn">
+                          Mnt
+                        </button>
+
+                        <button
+                          class="button-new button-new_save-small text_regular btn-active"
+                          data-type="btn">
+                          Fee
+                        </button>
+
+                        <button
+                          class="button-new button-new_save-small text_regular btn-active"
+                          data-type="btn">
+                          Funding
+                        </button>
+                      </div>
+                    </div>
+
                     <div class="line">
                       <div
                         class="switcher-wrap align-items-center justify-content-between line-grid grid-row-switcher-2">
@@ -2612,6 +2681,13 @@
 
                               <div class="selector__dropdown">
                                 <ul>
+                                  <li class="padding-contaier_xsmall active">
+                                    <p
+                                      class="selector__dropdown-text text_large"
+                                      data-selector-value="stop-loss-bars">
+                                      Bars
+                                    </p>
+                                  </li>
                                   <li class="padding-contaier_xsmall">
                                     <p
                                       class="selector__dropdown-text text_large"
@@ -3343,11 +3419,10 @@
                 <div class="block-content-wrap">
                   <div class="block-content-wrap__wrapper">
                     <div class="line">
-                      <div
-                        class="grid grid-cols-2 line-grid align-items-center">
-                        <div class="d-flex align-items-center gap-2">
-                          <div
-                            class="text text_regular text__color_dark-grey block-label text-center">
+                      <div class="grid grid-cols-2 gap-2 align-items-center">
+                        <div
+                          class="d-flex align-items-center justify-content-between gap-2">
+                          <div class="text text_regular text__color_dark-grey">
                             Margin
                           </div>
                           <div
@@ -3374,9 +3449,9 @@
                             </div>
                           </div>
                         </div>
-                        <div class="d-flex align-items-center gap-2">
-                          <div
-                            class="text text_regular text__color_dark-grey block-label text-center">
+                        <div
+                          class="d-flex align-items-center justify-content-between gap-2">
+                          <div class="text text_regular text__color_dark-grey">
                             Maintenance
                           </div>
                           <div
@@ -3404,13 +3479,48 @@
                         </div>
                       </div>
                     </div>
+
+                    <div class="line">
+                      <div class="grid grid-cols-2 gap-2 align-items-center">
+                        <div
+                          class="d-flex align-items-center justify-content-between gap-2">
+                          <div class="text text_regular text__color_dark-grey">
+                            Fee
+                          </div>
+                          <div
+                            class="data-info-container data-info-container_tiny ms-3">
+                            <div
+                              class="input-container-wrap input-container-wrap_normal"
+                              data-input="input-field">
+                              <div class="input-wrapp hidden">
+                                <input
+                                  class="input-field text_large text__color_dark-grey"
+                                  type="text"
+                                  data-unit="$" />
+                              </div>
+                              <div
+                                class="input-text-center input-border input-disabled">
+                                <div
+                                  class="data-wrap"
+                                  data-type="dynamic"
+                                  data-state="ture">
+                                  <p class="text_large text__color_grey">0.2</p>
+                                  <p class="text_small text__color_grey">$</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="content-stretch-panel__right right-side d-grid align-items-center">
+        <div
+          class="content-stretch-panel__right right-side d-grid align-items-center">
           <div class="block-wrapper block-take-profit mw-100">
             <div class="block-container-wrap mw-100">
               <div class="block-header-wrap overflow-hidden">
@@ -3491,6 +3601,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="take-profit-price">
+                                        Price
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -4487,6 +4604,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="trailing-r">
+                                        Trailing R
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -4581,7 +4705,8 @@
                                         type="text"
                                         data-type="number" />
                                     </div>
-                                    <div class="input-text-center input-border input-disabled">
+                                    <div
+                                      class="input-text-center input-border input-disabled">
                                       <div
                                         class="data-wrap"
                                         data-type="dynamic"
@@ -4591,9 +4716,7 @@
                                           -
                                         </p>
                                         <p
-                                          class="text_small text__color_ligth-grey">
-                                          
-                                        </p>
+                                          class="text_small text__color_ligth-grey"></p>
                                       </div>
                                     </div>
                                   </div>
@@ -4630,7 +4753,7 @@
                                   </div>
                                 </div>
                               </template>
-                              
+
                               <button
                                 class="button-new button-new_tiny"
                                 data-type="btn">
@@ -4698,6 +4821,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="take-profit-bars">
+                                        Bars
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -5709,7 +5839,7 @@
                               </div>
                             </div>
                           </div>
-                          
+
                           <div
                             class="d-flex handler-box_gap-small selectorWrap">
                             <div class="selector-wrapper">
@@ -5730,11 +5860,18 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="trailing-disable">
+                                        Disable
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
                                         data-selector-value="trailing-r">
-                                         Trailing R
+                                        Trailing R
                                       </p>
                                     </li>
                                     <li class="padding-contaier_xsmall">
@@ -5761,7 +5898,8 @@
                                         type="text"
                                         data-type="number" />
                                     </div>
-                                    <div class="input-text-center input-border input-disabled">
+                                    <div
+                                      class="input-text-center input-border input-disabled">
                                       <div
                                         class="data-wrap"
                                         data-type="dynamic"
@@ -5771,8 +5909,7 @@
                                           -
                                         </p>
                                         <p
-                                          class="text_small text__color_ligth-grey">
-                                        </p>
+                                          class="text_small text__color_ligth-grey"></p>
                                       </div>
                                     </div>
                                   </div>
@@ -5822,7 +5959,8 @@
                                         type="text"
                                         data-type="number" />
                                     </div>
-                                    <div class="input-text-center input-border input-disabled">
+                                    <div
+                                      class="input-text-center input-border input-disabled">
                                       <div
                                         class="data-wrap"
                                         data-type="dynamic"
@@ -5832,9 +5970,7 @@
                                           -
                                         </p>
                                         <p
-                                          class="text_small text__color_ligth-grey">
-                                          
-                                        </p>
+                                          class="text_small text__color_ligth-grey"></p>
                                       </div>
                                     </div>
                                   </div>
@@ -5871,7 +6007,7 @@
                                   </div>
                                 </div>
                               </template>
-                              
+
                               <button
                                 class="button-new button-new_tiny"
                                 data-type="btn">
@@ -5941,6 +6077,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="take-profit-high">
+                                        High
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -6952,7 +7095,7 @@
                               </div>
                             </div>
                           </div>
-                          
+
                           <div
                             class="d-flex handler-box_gap-small selectorWrap">
                             <div class="selector-wrapper">
@@ -6973,6 +7116,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="trailing-disable">
+                                        Disable
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -7004,13 +7154,16 @@
                                         type="text"
                                         data-type="number" />
                                     </div>
-                                    <div class="input-text-center input-border input-disabled">
+                                    <div
+                                      class="input-text-center input-border input-disabled">
                                       <div
                                         class="data-wrap"
                                         data-type="dynamic"
                                         data-state="ture">
                                         <p
-                                          class="text_large text__color_ligth-grey">-</p>
+                                          class="text_large text__color_ligth-grey">
+                                          -
+                                        </p>
                                         <p
                                           class="text_small text__color_ligth-grey"></p>
                                       </div>
@@ -7062,7 +7215,8 @@
                                         type="text"
                                         data-type="number" />
                                     </div>
-                                    <div class="input-text-center input-border input-disabled">
+                                    <div
+                                      class="input-text-center input-border input-disabled">
                                       <div
                                         class="data-wrap"
                                         data-type="dynamic"
@@ -7072,9 +7226,7 @@
                                           -
                                         </p>
                                         <p
-                                          class="text_small text__color_ligth-grey">
-                                          
-                                        </p>
+                                          class="text_small text__color_ligth-grey"></p>
                                       </div>
                                     </div>
                                   </div>
@@ -7111,7 +7263,7 @@
                                   </div>
                                 </div>
                               </template>
-                              
+
                               <button
                                 class="button-new button-new_tiny"
                                 data-type="btn">
@@ -7119,9 +7271,6 @@
                               </button>
                             </div>
                           </div>
-                          
-
-
 
                           <div
                             class="data-info-container data-info-container_big">
@@ -7184,6 +7333,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="take-profit-r-r">
+                                        R/R
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -8162,7 +8318,7 @@
                               </div>
                             </div>
                           </div>
-                          
+
                           <div
                             class="d-flex handler-box_gap-small selectorWrap">
                             <div class="selector-wrapper">
@@ -8183,6 +8339,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="trailing-%">
+                                        Trailing %
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -8277,7 +8440,8 @@
                                         type="text"
                                         data-type="number" />
                                     </div>
-                                    <div class="input-text-center input-border input-disabled">
+                                    <div
+                                      class="input-text-center input-border input-disabled">
                                       <div
                                         class="data-wrap"
                                         data-type="dynamic"
@@ -8287,9 +8451,7 @@
                                           -
                                         </p>
                                         <p
-                                          class="text_small text__color_ligth-grey">
-                                          
-                                        </p>
+                                          class="text_small text__color_ligth-grey"></p>
                                       </div>
                                     </div>
                                   </div>
@@ -8326,7 +8488,7 @@
                                   </div>
                                 </div>
                               </template>
-                              
+
                               <button
                                 class="button-new button-new_tiny"
                                 data-type="btn">
@@ -8396,6 +8558,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="take-profit-time">
+                                        Time
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -9403,7 +9572,7 @@
                               </div>
                             </div>
                           </div>
-                          
+
                           <div
                             class="d-flex handler-box_gap-small selectorWrap">
                             <div class="selector-wrapper">
@@ -9424,6 +9593,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="trailing-%">
+                                        Trailing %
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -9518,7 +9694,8 @@
                                         type="text"
                                         data-type="number" />
                                     </div>
-                                    <div class="input-text-center input-border input-disabled">
+                                    <div
+                                      class="input-text-center input-border input-disabled">
                                       <div
                                         class="data-wrap"
                                         data-type="dynamic"
@@ -9528,9 +9705,7 @@
                                           -
                                         </p>
                                         <p
-                                          class="text_small text__color_ligth-grey">
-                                          
-                                        </p>
+                                          class="text_small text__color_ligth-grey"></p>
                                       </div>
                                     </div>
                                   </div>
@@ -9567,7 +9742,7 @@
                                   </div>
                                 </div>
                               </template>
-                              
+
                               <button
                                 class="button-new button-new_tiny"
                                 data-type="btn">
@@ -9637,6 +9812,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="take-profit-balance-%">
+                                        Balance %
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -10615,7 +10797,7 @@
                               </div>
                             </div>
                           </div>
-                          
+
                           <div
                             class="d-flex handler-box_gap-small selectorWrap">
                             <div class="selector-wrapper">
@@ -10636,6 +10818,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="trailing-r">
+                                        Trailing R
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -10730,7 +10919,8 @@
                                         type="text"
                                         data-type="number" />
                                     </div>
-                                    <div class="input-text-center input-border input-disabled">
+                                    <div
+                                      class="input-text-center input-border input-disabled">
                                       <div
                                         class="data-wrap"
                                         data-type="dynamic"
@@ -10740,9 +10930,7 @@
                                           -
                                         </p>
                                         <p
-                                          class="text_small text__color_ligth-grey">
-                                          
-                                        </p>
+                                          class="text_small text__color_ligth-grey"></p>
                                       </div>
                                     </div>
                                   </div>
@@ -10779,7 +10967,7 @@
                                   </div>
                                 </div>
                               </template>
-                              
+
                               <button
                                 class="button-new button-new_tiny"
                                 data-type="btn">
@@ -10849,6 +11037,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="take-profit-atr">
+                                        ATR
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -11861,7 +12056,7 @@
                               </div>
                             </div>
                           </div>
-                          
+
                           <div
                             class="d-flex handler-box_gap-small selectorWrap">
                             <div class="selector-wrapper">
@@ -11882,6 +12077,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="trailing-r">
+                                        Trailing R
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -11976,7 +12178,8 @@
                                         type="text"
                                         data-type="number" />
                                     </div>
-                                    <div class="input-text-center input-border input-disabled">
+                                    <div
+                                      class="input-text-center input-border input-disabled">
                                       <div
                                         class="data-wrap"
                                         data-type="dynamic"
@@ -11986,9 +12189,7 @@
                                           -
                                         </p>
                                         <p
-                                          class="text_small text__color_ligth-grey">
-                                          
-                                        </p>
+                                          class="text_small text__color_ligth-grey"></p>
                                       </div>
                                     </div>
                                   </div>
@@ -12025,7 +12226,7 @@
                                   </div>
                                 </div>
                               </template>
-                              
+
                               <button
                                 class="button-new button-new_tiny"
                                 data-type="btn">
@@ -12094,6 +12295,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="take-profit-manual">
+                                        Manual
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -13095,7 +13303,7 @@
                               </div>
                             </div>
                           </div>
-                          
+
                           <div
                             class="d-flex handler-box_gap-small selectorWrap">
                             <div class="selector-wrapper">
@@ -13116,6 +13324,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="trailing-disable">
+                                        Disable
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -13147,7 +13362,8 @@
                                         type="text"
                                         data-type="number" />
                                     </div>
-                                    <div class="input-text-center input-border input-disabled">
+                                    <div
+                                      class="input-text-center input-border input-disabled">
                                       <div
                                         class="data-wrap"
                                         data-type="dynamic"
@@ -13207,7 +13423,8 @@
                                         type="text"
                                         data-type="number" />
                                     </div>
-                                    <div class="input-text-center input-border input-disabled">
+                                    <div
+                                      class="input-text-center input-border input-disabled">
                                       <div
                                         class="data-wrap"
                                         data-type="dynamic"
@@ -13217,9 +13434,7 @@
                                           -
                                         </p>
                                         <p
-                                          class="text_small text__color_ligth-grey">
-                                          
-                                        </p>
+                                          class="text_small text__color_ligth-grey"></p>
                                       </div>
                                     </div>
                                   </div>
@@ -13256,7 +13471,7 @@
                                   </div>
                                 </div>
                               </template>
-                              
+
                               <button
                                 class="button-new button-new_tiny"
                                 data-type="btn">
@@ -13264,7 +13479,6 @@
                               </button>
                             </div>
                           </div>
-                          
 
                           <div
                             class="data-info-container data-info-container_big">
@@ -13327,6 +13541,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="take-profit-manual">
+                                        Manual
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -14328,7 +14549,7 @@
                               </div>
                             </div>
                           </div>
-                          
+
                           <div
                             class="d-flex handler-box_gap-small selectorWrap">
                             <div class="selector-wrapper">
@@ -14349,6 +14570,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="trailing-disable">
+                                        Disable
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -14380,7 +14608,8 @@
                                         type="text"
                                         data-type="number" />
                                     </div>
-                                    <div class="input-text-center input-border input-disabled">
+                                    <div
+                                      class="input-text-center input-border input-disabled">
                                       <div
                                         class="data-wrap"
                                         data-type="dynamic"
@@ -14390,9 +14619,7 @@
                                           -
                                         </p>
                                         <p
-                                          class="text_small text__color_ligth-grey">
-                                          
-                                        </p>
+                                          class="text_small text__color_ligth-grey"></p>
                                       </div>
                                     </div>
                                   </div>
@@ -14442,7 +14669,8 @@
                                         type="text"
                                         data-type="number" />
                                     </div>
-                                    <div class="input-text-center input-border input-disabled">
+                                    <div
+                                      class="input-text-center input-border input-disabled">
                                       <div
                                         class="data-wrap"
                                         data-type="dynamic"
@@ -14452,9 +14680,7 @@
                                           -
                                         </p>
                                         <p
-                                          class="text_small text__color_ligth-grey">
-                                          
-                                        </p>
+                                          class="text_small text__color_ligth-grey"></p>
                                       </div>
                                     </div>
                                   </div>
@@ -14491,7 +14717,7 @@
                                   </div>
                                 </div>
                               </template>
-                              
+
                               <button
                                 class="button-new button-new_tiny"
                                 data-type="btn">
@@ -14561,6 +14787,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="take-profit-manual">
+                                        Manual
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -15562,7 +15795,7 @@
                               </div>
                             </div>
                           </div>
-                          
+
                           <div
                             class="d-flex handler-box_gap-small selectorWrap">
                             <div class="selector-wrapper">
@@ -15583,6 +15816,13 @@
 
                                 <div class="selector__dropdown">
                                   <ul>
+                                    <li class="padding-contaier_xsmall active">
+                                      <p
+                                        class="selector__dropdown-text text_large"
+                                        data-selector-value="trailing-disable">
+                                        Disable
+                                      </p>
+                                    </li>
                                     <li class="padding-contaier_xsmall">
                                       <p
                                         class="selector__dropdown-text text_large"
@@ -15615,7 +15855,8 @@
                                         data-unit="R"
                                         data-type="number" />
                                     </div>
-                                    <div class="input-text-center input-border input-disabled">
+                                    <div
+                                      class="input-text-center input-border input-disabled">
                                       <div
                                         class="data-wrap"
                                         data-type="dynamic"
@@ -15625,9 +15866,7 @@
                                           -
                                         </p>
                                         <p
-                                          class="text_small text__color_ligth-grey">
-                                          
-                                        </p>
+                                          class="text_small text__color_ligth-grey"></p>
                                       </div>
                                     </div>
                                   </div>
@@ -15677,7 +15916,8 @@
                                         type="text"
                                         data-type="number" />
                                     </div>
-                                    <div class="input-text-center input-border input-disabled">
+                                    <div
+                                      class="input-text-center input-border input-disabled">
                                       <div
                                         class="data-wrap"
                                         data-type="dynamic"
@@ -15687,9 +15927,7 @@
                                           -
                                         </p>
                                         <p
-                                          class="text_small text__color_ligth-grey">
-                                          
-                                        </p>
+                                          class="text_small text__color_ligth-grey"></p>
                                       </div>
                                     </div>
                                   </div>
@@ -15726,7 +15964,7 @@
                                   </div>
                                 </div>
                               </template>
-                              
+
                               <button
                                 class="button-new button-new_tiny"
                                 data-type="btn">
@@ -15801,8 +16039,6 @@
       </div>
     </div>
   </div>
-
-  
 
   <div class="modal-container d-none" data-modal="start">
     <div class="modal-overlay closeModalTrigger"></div>
@@ -16676,6 +16912,91 @@
           </div>
         </div>
         <div class="modal-chart__chart"></div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="modal-wrapper modal-terminal modal-draggable d-none"
+    data-modal="status-terminal">
+    <div class="modal-window-wrap terminal-content">
+      <div class="modal-window-header modal-drag-drop">
+        <h4 class="modal-window-title text_regular text__color_dark-grey">
+          Terminal
+        </h4>
+        <img
+          class="modal-window-close-icon closeModalTrigger"
+          src="./img/close.svg"
+          alt="close-cross" />
+      </div>
+      <div class="modal-window-content">
+        <pre>
+        <code class="text_regular text__color_dark-grey">
+Time           Type           Name         Status                Log 
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+17:15:30   Limiter#16836   Stop Loss       Change       ticks[150] -> ticks[250]
+        </code>
+      </pre>
+
+        <button
+          class="button-non-press button-non-press_save-small text_regular btn-non-style">
+          Clean
+        </button>
       </div>
     </div>
   </div>

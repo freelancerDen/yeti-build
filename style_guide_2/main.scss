@@ -312,7 +312,8 @@ svg {
           text-align: left;
           text-transform: capitalize;
           border-bottom: 1px solid white;
-          &:hover {
+          &:hover,
+          &.active {
             background-color: #eaf2f5;
           }
           &:first-of-type {
@@ -1424,7 +1425,7 @@ svg {
     }
   }
   .block-content-wrap {
-    padding: 20px;
+    padding: 18px;
 
     &--statistic {
       padding: 30px 50px 40px 40px;
