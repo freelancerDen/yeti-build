@@ -87,12 +87,13 @@ function handleCreatePresetClick() {
 /**
  * The function sets an event listener on a button with the class 'createNewPresetButton' to handle a
  * click event.
- */
 function setEventListeners() {
   const createNewButton = document.querySelector('.createNewPresetButton');
-
+  
   createNewButton.addEventListener('click', handleCreatePresetClick);
 }
+  >>>>>>> this function is deprecated
+*/ 
 
 /**
  * The `init` function asynchronously fetches data, renders each field, and sets event listeners.
@@ -108,7 +109,7 @@ async function init() {
     renderField(item);
   });
 
-  setEventListeners();
+  // setEventListeners(); >>>>> remove this comment to active event listeners
 }
 
 init();
