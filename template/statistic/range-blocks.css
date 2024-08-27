@@ -1,0 +1,17 @@
+.range-blocks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 50px;
+  padding: 50px 200px;
+}
+
+.range-blocks-column {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.range-blocks-container {
+  display: grid;
+  gap: 12px;
+}/*# sourceMappingURL=range-blocks.css.map */

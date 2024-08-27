@@ -1,0 +1,21 @@
+.modal-statistic {
+  width: unset;
+  height: auto;
+  min-width: 1960px;
+  max-width: unset;
+}
+.modal-statistic__content {
+  padding: 32px 64px;
+}
+.modal-statistic__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 90px;
+}
+.modal-statistic__column {
+  display: grid;
+  gap: 10px;
+}
+.modal-statistic .modal-window-wrap {
+  max-width: unset;
+}/*# sourceMappingURL=statistic-modal.css.map */

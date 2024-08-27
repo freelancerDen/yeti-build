@@ -185,6 +185,12 @@ svg {
   width: 140px;
   height: 100%;
 }
+.selector-wrapper .selector_small {
+  min-width: 100px;
+  max-width: 100px;
+  width: 100px;
+  height: 100%;
+}
 .selector-wrapper .selector_big {
   width: 285px;
   height: 100%;
@@ -201,7 +207,6 @@ svg {
   justify-content: flex-start;
   align-items: center;
   white-space: nowrap;
-  overflow-x: hidden;
   position: relative;
   padding: 0 6px;
 }
@@ -257,6 +262,12 @@ svg {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.selector-wrapper .selector .text-wrapp-small {
+  max-width: 60px;
+  padding-left: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .selector-wrapper .selector .text-wrapp-big {
   max-width: 245px;
   overflow: hidden;
@@ -291,7 +302,7 @@ svg {
   text-transform: capitalize;
   border-bottom: 1px solid white;
 }
-.selector-wrapper .selector__dropdown ul li:hover {
+.selector-wrapper .selector__dropdown ul li:hover, .selector-wrapper .selector__dropdown ul li.active {
   background-color: #eaf2f5;
 }
 .selector-wrapper .selector__dropdown ul li:first-of-type {
@@ -333,6 +344,9 @@ svg {
   display: flex;
   position: relative;
   border-radius: 6px;
+}
+.data-info-container--auto {
+  width: auto;
 }
 .data-info-container_large-2 {
   width: 212px;
@@ -464,9 +478,20 @@ svg {
   content: "-";
 }
 
+.hide-value .data-wrap p {
+  display: none;
+}
+.hide-value .data-wrap::before {
+  font-size: 16px;
+  line-height: 1;
+  color: RGBA(52, 64, 84, 0.25);
+  content: "-";
+}
+
 .button-new,
 .button-non-press {
   height: 26px;
+  padding: 0 2px;
   border: 1px solid white;
   border-radius: 6px;
   background-color: #f6f6f6;
@@ -533,6 +558,18 @@ svg {
 .button-new_gradient,
 .button-non-press_gradient {
   background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+.button-new--navbar,
+.button-non-press--navbar {
+  border-radius: 0;
+}
+.button-new--navbar-first,
+.button-non-press--navbar-first {
+  border-radius: 0 0 0 6px;
+}
+.button-new--navbar-last,
+.button-non-press--navbar-last {
+  border-radius: 0 0 6px 0;
 }
 
 .btn-navbar {
@@ -613,6 +650,14 @@ svg {
 .button-new-wrap-big .button-new_big-2 {
   width: 90px;
   border-radius: 0 6px 6px 0;
+}
+
+.button-new-wrapper {
+  display: flex;
+  border-radius: 6px;
+}
+.button-new-wrapper--normal {
+  width: 120px;
 }
 
 .button-new-wrap {
@@ -745,8 +790,10 @@ svg {
 }
 
 .form-switch {
+  display: flex;
+  align-items: center;
   padding: 0;
-  margin-top: 13px;
+  margin: 0;
 }
 
 .handler-box {
@@ -758,6 +805,9 @@ svg {
 }
 
 .input-text-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -1152,7 +1202,7 @@ svg {
 
 .modal-window-wrap {
   width: auto;
-  height: 100%;
+  height: auto;
   min-width: 300px;
   max-width: 50vw;
   min-height: 150px;
@@ -1257,8 +1307,6 @@ svg {
   width: auto;
   height: auto;
   min-width: 324px;
-  max-width: -moz-max-content;
-  max-width: max-content;
   max-height: -moz-max-content;
   max-height: max-content;
   border-radius: 10px;
@@ -1305,7 +1353,18 @@ svg {
   border-radius: 0 10px 0 0;
 }
 .block-container-wrap .block-content-wrap {
-  padding: 20px;
+  padding: 18px;
+}
+.block-container-wrap .block-content-wrap--statistic {
+  padding: 30px 50px 40px 40px;
+}
+.block-container-wrap .block-content-wrap--statistic .block-content-wrap__wrapper {
+  max-height: 360px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.block-container-wrap .block-content-wrap--statistic .block-content-wrap__wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .padding-block_medium {
